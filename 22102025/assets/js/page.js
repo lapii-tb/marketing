@@ -4,7 +4,11 @@ var components = [
   '../../components/opportunity.html',
   '../../components/aggregator.html',
   '../../components/features.html',
-  '../../components/providers.html'
+  '../../components/providers.html',
+  '../../components/markets.html',
+  '../../components/operators.html',
+  '../../components/faq.html',
+  '../../components/register.html'
 ];
 
 module.exports = { components };

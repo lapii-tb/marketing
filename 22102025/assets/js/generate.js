@@ -3,17 +3,14 @@ const path = require('path');
 
 const { components } = require('./page.js');
 const { languages } = require('./language.js');
+
 const TEMPLATE = `<!DOCTYPE html>
   <html lang="{LANG}">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{TITLE}</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/menu.css">
-    <link rel="stylesheet" href="assets/css/banner.css">
-    <link rel="stylesheet" href="assets/css/opportunity.css">
-    <link rel="stylesheet" href="assets/css/aggregator.css">
+    {CSS_LINKS}
   </head>
   <body>{CONTENT}
   </body>
@@ -34,6 +31,7 @@ function generateHTML() {
   console.log('HTML generating ...');
   languages.forEach(lang => {
     let contentHTML = '';
+    const LINKS = ['<link rel="stylesheet" href="assets/css/style.css">'];
     components.forEach((component, index) => {
       try {
         const componentPath = component;
@@ -44,6 +42,8 @@ function generateHTML() {
           const PREFIX = index === 0 ? '\n' : '';
           const BREAKE = components.length !== index + 1;
           contentHTML += PREFIX + '    ' + CONTENT.trim() + (BREAKE ? '\n' : '');
+          const NAMED = path.basename(component, '.html');
+          LINKS.push(`    <link rel="stylesheet" href="assets/css/${NAMED}.css">`);
         }
       } catch (error) {
         console.error(`✗ Error reading ${component}:`, error.message);
@@ -54,7 +54,8 @@ function generateHTML() {
     const finalHTML = TEMPLATE
       .replace('{CONTENT}', contentHTML)
       .replace('{LANG}', lang.code)
-      .replace('{TITLE}', lang.locale.title);
+      .replace('{TITLE}', lang.locale.title)
+      .replace('{CSS_LINKS}', LINKS.join('\n'));
 
     try {
       fs.writeFileSync(outputPath, finalHTML, 'utf8');

@@ -1,0 +1,40 @@
+.navbar {
+  display: flex;
+  position: absolute;
+  justify-content: center;
+  width: 100%;
+  font-family: "Outfit", sans-serif;
+
+  .nav-container {
+    display: flex;
+    align-items: center;
+    min-height: 60px;
+    max-width: 1200px;
+
+    .logo {
+      width: 120px;
+    }
+    .nav-menu {
+      flex: auto;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 8px;
+
+      .nav-item-link {
+        height: 32px;
+        display: flex;
+        padding: 0 2px;
+        align-items: center;
+        color: #fff;
+        text-decoration: none;
+        font-size: 16px;
+        text-transform: uppercase;
+      }
+    }
+    .social-icons {
+      display: flex;
+      align-items: center;
+    }
+  }
+}

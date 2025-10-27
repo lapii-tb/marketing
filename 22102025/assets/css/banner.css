@@ -2,17 +2,117 @@
   width: 100%;
   aspect-ratio: 1440 / 800;
   overflow: hidden;
+  position: relative;
+  font-family: "Outfit", sans-serif;
 
   .background-container {
     width: 100%;
     height: 100%;
+    position: relative;
 
     .banner-background {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: bottom;
+      display: block;
+    }
 
+    .banner-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      max-width: 800px;
+      width: 100%;
+      text-align: center;
+      color: white;
+      padding: 20px;
+      
+        .main-title {
+          font-size: 3.5rem;
+          color: var(--text-color, #fff);
+          font-weight: 900;
+          line-height: 1.2;
+          margin-bottom: 15px;
+          text-transform: uppercase;
+        }
+
+        .subtitle {
+          font-size: 1.2rem;
+          color: var(--text-color, #fff);
+          font-weight: 400;
+          margin-bottom: 40px;
+        }
+    .hero-image-container {
+        flex-basis: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: radial-gradient(circle at center, rgba(43, 73, 219, 0.2), transparent 70%); 
+        padding: 20px;
+    }
+    .hero-image {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
     }
   }
+}
+/* --- Banner Tablet View (max-width: 1024px) --- */
+@media (max-width: 1024px) {
+    .banner-container {
+        /* Reduce the aspect ratio height slightly for tablets */
+        aspect-ratio: 1440 / 650;
+    }
+
+    .banner-container .background-container .banner-content {
+        max-width: 90%; /* Allow content to use more horizontal space */
+        padding: 15px;
+    }
+
+    .banner-container .background-container .banner-content .main-title {
+        font-size: 3rem; /* Reduce main title size */
+        margin-bottom: 10px;
+    }
+
+    .banner-container .background-container .banner-content .subtitle {
+        font-size: 1.1rem; /* Reduce subtitle size */
+        margin-bottom: 30px;
+    }
+
+    /* Adjust the focus of the background image */
+    .banner-container .background-container .banner-background {
+        object-position: center bottom;
+    }
+}
+
+/* --- Banner Mobile View (max-width: 600px) --- */
+@media (max-width: 600px) {
+    .banner-container {
+        /* Use a standard mobile vertical ratio (taller) */
+        aspect-ratio: 1 / 1.5; 
+        min-height: 550px; /* Ensure a minimum visible height */
+    }
+
+    .banner-container .background-container .banner-content {
+        max-width: 95%; 
+        padding: 10px;
+    }
+    
+    .banner-container .background-container .banner-content .main-title {
+        font-size: 2rem; /* Significant reduction for small screens */
+        margin-bottom: 8px;
+    }
+
+    .banner-container .background-container .banner-content .subtitle {
+        font-size: 1rem;
+        margin-bottom: 25px;
+    }
+    
+    .banner-container .background-container .banner-content .hero-image-container {
+        padding: 10px;
+    }
 }

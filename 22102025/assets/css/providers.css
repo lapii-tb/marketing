@@ -2,6 +2,8 @@
   width: 100%;
   aspect-ratio: 1440 / 640;
   overflow: hidden;
+  position: relative;
+  font-family: "Outfit", sans-serif;
 
   .background-container {
     width: 100%;
@@ -12,6 +14,267 @@
       height: 100%;
       object-fit: cover;
       object-position: top;
+      top: 0;
+      left: 0;
+    }
+    .content-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+    .provider-filters {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 40px;
+
+      .filter-tab {
+        display: inline-block;
+        padding: 10px 25px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 500;
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        color: rgba(255, 255, 255, 0.7);
+        transition: all 0.3s ease;
+
+        &:hover {
+          border-color: var(--primary-color);
+          color: var(--primary-color);
+        }
+      }
+    }
+
+    .providers-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 10px;
+      text-align: center;
+      color: #fff;
+    }
+    .providers-description {
+      text-align: center;
+       color: #fff;
+    }
+    .logos-strip{
+      text-align: center;
     }
   }
+}
+@media (max-width: 900px) {
+    .provider-container {
+        padding: 60px 0;
+        height: 700px;
+    }
+    
+    .provider-container .background-container .providers-title {
+        font-size: 2rem; /* Reduced title size */
+    }
+
+   .provider-container {
+  width: 100%;
+  aspect-ratio: 1440 / 640;
+  overflow: hidden;
+  position: relative;
+  font-family: "Outfit", sans-serif;
+
+  .background-container {
+    width: 100%;
+    height: 100%;
+
+    .provider-background {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+      top: 0;
+      left: 0;
+    }
+    .content-wrapper {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    max-width: 1200px;
+    width: 100%;
+    padding: 0 20px;
+}
+
+    .provider-filters {
+      display: flex;
+       flex-wrap: wrap; 
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 40px;
+
+      .filter-tab {
+        display: inline-block;
+        padding: 10px 25px;
+        border-radius: 50px;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: 500;
+        background-color: transparent;
+        border: 1px solid rgba(255, 255, 255, 0.4);
+        color: rgba(255, 255, 255, 0.7);
+        transition: all 0.3s ease;
+
+        &:hover {
+          border-color: var(--primary-color);
+          color: var(--primary-color);
+        }
+      }
+    }
+
+    .providers-title {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-top: 0;
+      margin-bottom: 10px;
+      text-align: center;
+      color: #fff;
+    }
+    .providers-description {
+      text-align: center;
+       color: #fff;
+    }
+    .logos-strip{
+      text-align: center;
+    }
+  }
+}
+@media (max-width: 900px) {
+    .provider-container {
+        padding: 60px 0;
+        height: 700px;
+    }
+    
+    .provider-container .background-container .providers-title {
+        font-size: 2rem; /* Reduced title size */
+    }
+
+    /* Filter tabs wrapping */
+    .provider-filters {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); /* 2 equal columns */
+      gap: 10px;
+      margin-bottom: 30px;
+  }
+
+    .provider-filters .filter-tab {
+        flex: 1 1 calc(50% - 10px);
+        max-width: calc(50% - 10px);
+        font-size: 0.95rem;
+        padding: 8px 15px;
+    }
+    
+    /* Logos strip padding adjustment */
+    .provider-container .background-container .logos-strip img {
+        max-width: 80%; /* Ensure logos scale down */
+        height: auto;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/* --- Provider Section Mobile View (max-width: 600px) --- */
+@media (max-width: 600px) {
+    .provider-container {
+        padding: 40px 0;
+    }
+
+    .provider-container .content-wrapper {
+        padding: 0 15px;
+    }
+
+    .provider-container .background-container .providers-title {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+    .provider-container .background-container .providers-description {
+         font-size: 0.9rem;
+         margin-bottom: 20px;
+    }
+
+     .provider-filters {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin-bottom: 20px;
+    }
+
+    .provider-filters .filter-tab {
+        flex: 1 1 100%;
+        max-width: 100%;
+        width: 80%;
+        margin: 0 auto; /* Center tabs */
+    }
+    /* Logos strip adjustment */
+    .provider-container .background-container .logos-strip img {
+        max-width: 100%; 
+        height: auto;
+    }
+}
+
+    .provider-filters .filter-tab {
+        padding: 8px 15px; /* Smaller padding for tabs */
+        font-size: 0.95rem;
+    }
+    
+    /* Logos strip padding adjustment */
+    .provider-container .background-container .logos-strip img {
+        max-width: 80%; /* Ensure logos scale down */
+        height: auto;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/* --- Provider Section Mobile View (max-width: 600px) --- */
+@media (max-width: 600px) {
+    .provider-container {
+        padding: 40px 0;
+    }
+
+    .provider-container .content-wrapper {
+        padding: 0 15px;
+    }
+
+    .provider-container .background-container .providers-title {
+        font-size: 1.5rem;
+        margin-bottom: 5px;
+    }
+    .provider-container .background-container .providers-description {
+         font-size: 0.9rem;
+         margin-bottom: 20px;
+    }
+
+    /* Filter tabs stacking */
+    .provider-filters {
+        flex-direction: column; /* Stack tabs vertically */
+        gap: 8px;
+        margin-bottom: 20px;
+        display: grid;
+       grid-template-columns: repeat(2, 1fr);
+    }
+
+    .provider-filters .filter-tab {
+        width: 80%; /* Make tabs wider for easier tapping */
+        max-width: 250px;
+        margin: 0 auto; /* Center the stacked tabs */
+    }
+    
+    /* Logos strip adjustment */
+    .provider-container .background-container .logos-strip img {
+        max-width: 100%; 
+        height: auto;
+    }
 }

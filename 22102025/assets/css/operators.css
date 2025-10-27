@@ -2,6 +2,8 @@
   width: 100%;
   aspect-ratio: 1440 / 480;
   overflow: hidden;
+  position: relative;
+  font-family: "Outfit", sans-serif;
 
   .background-container {
     width: 100%;
@@ -13,5 +15,44 @@
       object-fit: cover;
       object-position: bottom;
     }
+    .operator-container-wrapper { 
+      position: absolute;
+      top: 50%; 
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+      max-width: 900px; 
+      width: 100%;
+      padding: 20px;
+      text-align: center;
   }
+    .prepare-title {
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    color: #fff;
+}
+
+.prepare-description {
+    font-size: 1.15rem;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+    color: rgba(255, 255, 255, 0.85);
+}
+  }
+}
+@media (max-width: 768px) {
+    .operator-container {
+        height: 500px;
+    }
+    
+    .prepare-title {
+        font-size: 1.7rem;
+    }
+
+    .prepare-description {
+        font-size: 1rem;
+        max-width: 90%;
+    }
 }

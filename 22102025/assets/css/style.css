@@ -9,7 +9,72 @@ html {
 		scroll-behavior: auto;
 	}
 }
+:root {
+    --primary-color: #5eff00; 
+    --secondary-color: #7b00ff; 
+    --text-color: #ffffff;
+    --dark-text: #000000;
+    --button-transition: all 0.3s ease;
+    --feature-color-text:#2B49DB;
+}
 
 body {
   position: relative;
+}
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+.btn {
+    display: inline-block;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: var(--button-transition);
+    border: none;
+    min-width: 180px;
+    text-align: center;
+}
+.btn-primary {
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+}
+.btn-secondary {
+    background-color: var(--primary-color);
+    color: var(--dark-text);
+}
+.highlight {
+    color: var(--primary-color);
+}
+.highlight1 {
+    color: var(--feature-color-text);
+}
+@media (max-width: 600px) {
+    .cta-buttons {
+        flex-direction: column;
+        gap: 12px; 
+        padding: 0 15px;
+        align-items: center;    
+    }
+
+    .btn {
+        width: 50%;           /* Let content define width */
+        max-width: 180px;      /* Limit button width */
+        min-width: unset;      
+        padding: 12px 20px; 
+        font-size: 1rem; 
+        text-align: center;
+    }
+}
+
+@media (max-width: 400px) {
+    .btn {
+        max-width: 150px;
+        padding: 10px 15px; 
+        font-size: 0.9rem;  
+    }
 }

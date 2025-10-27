@@ -1,17 +1,95 @@
 .opportunity-container {
   width: 100%;
-  aspect-ratio: 1440 / 640;
+  height: 640px;
+  position: relative;
   overflow: hidden;
+  font-family: "Outfit", sans-serif;
 
   .background-container {
     width: 100%;
     height: 100%;
+    position: relative;
 
     .opportunity-background {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: top;
+      display: block;
+    }
+
+    .opportunity-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      max-width: 1000px;
+      width: 90%;
+      text-align: center;
+      color: white;
+      z-index: 2;
+      padding: 20px;
+
+      .opportunity-title {
+        font-size: 2.5rem;
+        font-weight: 900;
+        margin-bottom: 20px;
+        color: #fff;
+      }
+
+      .opportunity-description {
+        font-size: 1.15rem;
+        margin-bottom: 40px;
+        color: #fff;
+      }
+
+      .feature-cards {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px;
+        margin-bottom: 40px;
+      }
+
+      .card {
+        flex: 1 1 250px;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        text-align: center;
+        color: #fff;
+
+        .card-icon {
+          width: 60px;
+          height: 60px;
+          margin: 0 auto 15px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .card-image {
+            max-width: 100%;
+            height: auto;
+          }
+        }
+
+        .card-text {
+          font-size: 0.95rem;
+        }
+      }
     }
   }
+}
+
+@media (max-width: 600px) {
+    .opportunity-container {
+        min-height: 1200px;
+    }
+    .opportunity-title {
+        font-size: 1.5rem;
+        font-weight: 700;
+        margin-bottom: 20px;
+        color: #fff;
+      }
 }

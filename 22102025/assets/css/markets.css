@@ -1,4 +1,300 @@
+
 .market-container {
-  width: 100%;
-  height: 1520px;
+    width: 100%;
+    height: 1520px; 
+    font-family: "Outfit", sans-serif;
+    color: var(--text-color, #fff); 
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start; 
+    padding-top: 200px; 
+    padding-bottom: 80px; 
+}
+
+.market-container .market-content-wrapper {
+    /* Replaces the old .container styles for centering and padding */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    
+    /* Flexbox for the two-column layout */
+    display: flex;
+    align-items: center; 
+    gap: 40px; 
+    width: 100%;
+}
+
+/* 3. Left Column: Content (.hero-content) */
+.hero-content {
+    flex-basis: 50%;
+    max-width: 500px;
+    padding-right: 50px;
+    text-align: left; 
+    color: black;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+.highlight1 {
+    color: var(--accent-color-1, #6b4cff); 
+}
+
+/* Benefit List Styles */
+.benefit-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+.benefit-item {
+    font-size: 1.15rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    padding-left: 25px;
+    position: relative;
+     color: black; 
+}
+
+.benefit-item::before {
+    content: '\2022'; 
+    position: absolute;
+    left: 0;
+    font-size: 1.2em;
+    top: 0;
+}
+
+/* 4. Right Column: Image (.hero-image-container) */
+.hero-image-container {
+    flex: 1; 
+    max-width: 50%;
+    text-align: center;
+}
+
+.hero-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px; 
+}
+.market-container.package-cards-grid-wrapper {
+    max-width: 1200px;
+    margin: 80px auto 0 auto; /* Add margin above the package section */
+    padding: 0 20px;
+    width: 100%;
+}
+.package-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    line-height: 1.2;
+    margin-bottom: 50px;
+    text-align: center;
+    color: #6b4cff;
+}
+.package-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1000px;
+    margin: 0 auto 50px;
+}
+
+.package-card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    padding: 30px;
+    text-align: left;
+    color: #333;
+    border: 1px solid rgba(43, 73, 219, 0.1);
+    box-shadow: 0 5px 20px rgba(43, 73, 219, 0.2); 
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Row for icon + title */
+.package-card .card-row {
+    display: flex;
+    align-items: center;
+    gap: 15px; /* space between image and text */
+    margin-bottom: 15px;
+}
+
+.package-card .card-icon-package img {
+    width: 60px;
+    height: 60px;
+    display: block;
+}
+
+.package-card .card-title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #1A2F8A;
+    margin: 0;
+}
+
+.package-card .card-description {
+    font-size: 0.9rem;
+    color: #555;
+}
+
+/* 5. CTA Buttons for this section */
+/* Target CTA buttons inside the new wrapper */
+.market-container .package-cards-grid-wrapper .cta-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+    margin-bottom: 80px;
+}
+/* 5. Responsive Adjustments */
+@media (max-width: 900px) {
+    .market-container {
+        height: auto; 
+        padding-top: 40px;
+        padding-bottom: 40px;
+        justify-content: flex-start; 
+    }
+    
+    /* Target the new wrapper for responsive flex behavior */
+    .market-content-wrapper {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .hero-content {
+        max-width: 100%; 
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .hero-image-container {
+        max-width: 100%;
+        order: -1; 
+        margin-bottom: 30px;
+    }
+    
+    .benefit-item {
+        padding-left: 0;
+        text-align: left;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 300px;
+    }
+    
+    .benefit-item::before {
+        left: -25px; 
+    }
+}
+/* --- Market Section Tablet/Medium Screens (max-width: 1024px) --- */
+@media (max-width: 1024px) {
+    /* Main Content (Already handled in 900px block, but adjusting titles) */
+    .hero-title {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    .benefit-item {
+        font-size: 1.1rem;
+    }
+    
+    /* Package Card Grid: Allow 2 columns, but adjust padding */
+    .package-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    .package-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+}
+
+/* -------------------------------------------------------------------------- */
+/* --- Market Section Mobile View (max-width: 600px) --- */
+@media (max-width: 600px) {
+    .market-container {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    /* Main Content */
+    .hero-content {
+        padding: 0 15px; /* Add internal padding for mobile text */
+    }
+
+    .hero-title {
+        font-size: 2rem; /* Reduce title size further */
+        margin-bottom: 15px;
+    }
+    
+    .benefit-list {
+        margin-bottom: 20px;
+    }
+
+    .benefit-item {
+        font-size: 1rem;
+        line-height: 1.5;
+        /* Reset positioning for centered lists on mobile */
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+        max-width: 100%;
+        padding-left: 0;
+    }
+    
+    .benefit-item::before {
+        /* Hide the bullet point for simple centered text */
+        content: none; 
+    }
+    
+    .hero-image-container {
+        margin-bottom: 20px;
+    }
+    
+    /* Package Card Grid */
+    .package-cards-grid-wrapper {
+        margin-top: 40px;
+        padding: 0 15px;
+    }
+    
+    .package-title {
+        font-size: 1.5rem; /* Smallest title size */
+        margin-bottom: 30px;
+    }
+    
+    .package-cards-grid {
+        /* CRITICAL: Switch to a single column grid */
+        grid-template-columns: 1fr;
+        gap: 15px;
+        margin-bottom: 30px;
+    }
+
+    .package-card {
+        padding: 20px; /* Smaller card padding */
+    }
+    
+    .package-card .card-icon-package img {
+        width: 50px; /* Smaller icon size */
+        height: 50px;
+    }
+
+    .package-card .card-title {
+        font-size: 1rem;
+    }
+
+    .package-card .card-description {
+        font-size: 0.85rem;
+    }
+    
+    /* CTA Buttons stacking (if not handled by global button CSS) */
+    .market-container .package-cards-grid-wrapper .cta-buttons {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 40px;
+    }
+    .market-container .package-cards-grid-wrapper .cta-buttons .btn {
+        width: 100%;
+    }
 }

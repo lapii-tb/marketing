@@ -1,17 +1,182 @@
 .aggregator-container {
   width: 100%;
-  aspect-ratio: 1440 / 1060;
+  min-height: 1060px;
+  position: relative;
   overflow: hidden;
+  font-family: "Outfit", sans-serif;
 
   .background-container {
     width: 100%;
     height: 100%;
+    position: relative;
 
     .aggregator-background {
       width: 100%;
       height: 100%;
       object-fit: cover;
       object-position: top;
+      display: block;
+    }
+    .aggregator-header {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 50px;
+      padding-bottom: 20px;
+      z-index: 2;
+      top: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 90%;
+      max-width: 1200px;
+    }
+    .section-title{
+      color: white;
+      font-size: 2.5rem;
+      font-weight: 900;
+      line-height: 1.2;
+      margin-bottom: 15px;
+    }
+    .section-description {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      opacity: 0.8;
+      color: white;
+  }
+   .comparison-table {
+      display: block;
+      max-width: 1100px;
+      width: 100%;
+      margin: 500px auto 50px auto; /* pushes it below header */
+      position: absolute;           /* ensure it's in normal flow */
+      z-index: 2;
+      color: #fff;
+      border-radius: 8px;
+      overflow: hidden;
+      padding: 10px 0;
+    }
+
+
+    .api-comparison-table,
+    .table-row {
+      display: grid;
+      grid-template-columns: 35% 1fr 1fr;
+      width: 100%;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .table-row:last-child {
+      border-bottom: none;
+    }
+
+    .table-row .cell {
+      display: flex;
+      flex: none;
+      align-items: center;
+      padding: 15px 20px;
+      font-weight: 400;
+    }
+
+    .table-header .cell.table-head {
+      font-weight: 700;
+      text-align: center;
+      justify-content: center;
+      background-color: #000;
+      color: #fff;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .table-header .cell.table-head.function-col {
+      background-color: #1a2f8a;
+      justify-content: flex-start;
+      color: #fff;
+    }
+
+    .data-row .cell {
+      border-right: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .data-row .cell:last-child {
+      border-right: none;
+    }
+
+    .data-row .function-col {
+      justify-content: flex-start;
+      text-align: left;
+    }
+
+    .data-row .cell:nth-child(2),
+    .data-row .cell:nth-child(3) {
+      justify-content: center;
+      text-align: center;
+    }
+
+    .tick-icon-img {
+      height: 16px;
+      margin-left: 5px;
     }
   }
+  @media (max-width: 1024px) {
+    .aggregator-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+    }
+
+    .api-comparison-table,
+    .table-row {
+      grid-template-columns: 1fr;
+    }
+
+    .data-row .cell {
+      justify-content: flex-start;
+      text-align: left;
+      border-right: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .data-row .cell:last-child {
+      border-bottom: none;
+    }
+  }
+
+  @media (max-width: 600px) {
+    .aggregator-header {
+      width: 95%;
+      padding: 10px 0;
+    }
+
+    .cta-request .btn-primary {
+      width: 100%;
+      text-align: center;
+    }
+  }
+}
+/* --- Aggregator Header Mobile View (around 900px breakpoint) --- */
+@media (max-width: 900px) {
+    .aggregator-header {
+        /* CRITICAL: Switch from horizontal to vertical layout */
+        flex-direction: column;
+        text-align: center;
+        gap: 30px; /* Add vertical space between text and visual */
+    }
+
+    .aggregator-text, 
+    .aggregator-visual {
+        /* CRITICAL: Allow both columns to take full width */
+        max-width: 100%;
+        width: 100%; /* Ensure it's not constrained by desktop max-width */
+        flex: none; /* Remove desktop flex basis */
+    }
+    
+    .aggregator-visual {
+        /* Ensure visual content is centered in the mobile stack */
+        text-align: center;
+    }
+
+    .mobile-image {
+        /* Center the image within the visual container */
+        margin: 0 auto; 
+    }
 }

@@ -13,6 +13,16 @@ const TEMPLATE = `<!DOCTYPE html>
     {CSS_LINKS}
   </head>
   <body>{CONTENT}
+  <script>
+    window.addEventListener('scroll', function() {
+      const navbar = document.querySelector('.navbar');
+      if (window.scrollY > 60) {
+        navbar.classList.add('sticky');
+      } else {
+        navbar.classList.remove('sticky');
+      }
+    });
+  </script>
   </body>
 </html>`;
 

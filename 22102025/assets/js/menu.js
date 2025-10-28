@@ -1,14 +1,10 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const toggle = document.querySelector('.menu-toggle');
-  const menu = document.querySelector('.nav-menu');
-  const socials = document.querySelector('.social-icons');
-  if (!toggle || !menu || !socials) {
-    return;
-  }
+const toggle = document.querySelector('.menu-toggle');
+const menu = document.querySelector('.nav-menu');
+const socials = document.querySelector('.social-icons');
 
-  // Attach the click event listener
+if (toggle && menu && socials) {
   toggle.addEventListener('click', () => {
     menu.classList.toggle('active');
     socials.classList.toggle('active');
   });
-});
+}

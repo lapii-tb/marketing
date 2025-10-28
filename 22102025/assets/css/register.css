@@ -106,7 +106,7 @@
 
       .coin-top {
         top: 6%;
-        left: 10px;
+        left: -6px;
         transform: rotate(-12deg);
         max-width: 260px;
       }

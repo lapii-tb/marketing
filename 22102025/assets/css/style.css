@@ -18,8 +18,9 @@ html {
     --feature-color-text:#2B49DB;
 }
 
-body {
-  position: relative;
+html, body {
+    overflow-x: hidden;  /* disable horizontal scrolling */
+    overflow-y: auto;    /* allow vertical scrolling */
 }
 .cta-buttons {
     display: flex;

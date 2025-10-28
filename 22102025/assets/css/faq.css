@@ -76,112 +76,84 @@
     gap: 15px;
 }
 
-/* Image Column and Chip Positioning */
 .faq-image-column {
-    flex-basis: 50%;
-    position: relative;
+  flex-basis: 50%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 420px;
+  max-width: 520px;
+  box-sizing: border-box;
+}
+
+/* target the actual image elements inside the image column */
+.faq-image-column img.chip-top,
+.faq-image-column img.chip-bottom {
+  position: absolute;
+  max-width: 48%;
+  height: auto;
+  object-fit: contain;
+  pointer-events: none;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* top chip — upper-right, in front */
+.faq-image-column img.chip-top {
+  top: 8%;
+  right: 8%;
+  transform: rotate(-12deg);
+  z-index: 3;
+}
+
+/* bottom chip — lower-right, slightly larger and behind */
+.faq-image-column img.chip-bottom {
+  bottom: -6%;
+  right: -6%;
+  transform: rotate(8deg);
+  z-index: 1;
+  opacity: 0.98;
+}
+
+/* Responsive: stack columns and make chips inline (not absolute) */
+@media (max-width: 992px) {
+  .faq-content-wrapper {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .faq-column {
+    max-width: 100%;
+  }
+
+  .faq-image-column {
+    min-height: 0px;
+    width: 100%;
+    order: 2;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 450px; /* Set fixed height for visual space */
-    max-width: 500px;
+  }
+
+  .faq-image-column img.chip-top,
+  .faq-image-column img.chip-bottom {
+    position: relative;
+    max-width: 46%;
+    transform: none;
+    margin: 6px;
+    right: auto;
+    bottom: auto;
+    top: auto;
+    z-index: 2;
+    opacity: 1;
+  }
 }
 
-.faq-chip {
-    position: absolute;
-    max-width: 300px;
-    height: auto;
-}
-.faq-column {
-    position: relative; /* Make it the reference for absolutely positioned children */
-}
-
-.chip-top {
-    position: absolute;
-    top: 20px;     /* distance from top */
-    left: 0;      /* distance from right */
-    width: 240px;
-    z-index: 1;
-}
-
-.chip-bottom {
-    position: absolute;
-    bottom: -10px; 
-    right: 0;
-    width: 400px;
-    transform: rotate(10deg);
-    z-index: 1;
-}
-
-
-/* --- Responsive Adjustments --- */
-@media (max-width: 992px) {
-    .faq-title {
-        font-size: 2.5rem;
-        margin-bottom: 40px;
-    }
-    
-    /* Stack columns vertically */
-    .faq-content-wrapper {
-        flex-direction: column;
-        gap: 20px;
-    }
-    
-    .faq-column {
-        max-width: 100%;
-        padding: 0;
-    }
-
-    /* --- CRITICAL FIX: HIDE CHIPS AND COLLAPSE IMAGE COLUMN --- */
-    .faq-chip {
-        display: none !important; /* Hide chips explicitly */
-    }
-    
-    .faq-image-column {
-        position: absolute;
-        order: -1; 
-        height: 0; /* Collapse the image column's height */
-        margin: 0; /* Remove any residual margin */
-        padding: 0;
-    }
-    .faq-item {
-        margin-bottom: 20px; 
-    }
-   .chip-top {
-  position: absolute;   /* ✅ needed to use top/right */
-  top: 40px;
-  right: 100px;
-  width: 90px;
-  z-index: 1;
-}
-
-.chip-bottom {
-  position: absolute;   /* ✅ needed to use bottom/right */
-  bottom: 0;
-  right: 0;
-  transform: rotate(10deg);
-  width: 185px;
-  z-index: 1;
-}
-
-}
-
+/* Small phones: hide the decorative bottom chip to save space */
+/* Small phones: hide the decorative chips to save space */
 @media (max-width: 600px) {
-    .faq-container-wrapper {
-        padding: 0 15px;
-    }
-    .faq-title {
-        font-size: 2rem;
-    }
-    
-    .faq-question {
-        font-size: 1rem;
-    }
-    .faq-item {
-        border-left-width: 3px; 
-        padding-top: 10px;    
-        padding-bottom: 10px;
-        padding-left: 15px;
-        margin-bottom: 15px;
-    }
+  .faq-image-column img.chip-top,
+  .faq-image-column img.chip-bottom {
+    display: none;
+  }
 }

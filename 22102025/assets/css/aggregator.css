@@ -1,182 +1,312 @@
+/* ...existing code... */
+/* Flattened and updated styles to keep table and CTA contained above the background image */
+
 .aggregator-container {
   width: 100%;
   min-height: 1060px;
   position: relative;
   overflow: hidden;
   font-family: "Outfit", sans-serif;
+}
 
-  .background-container {
+/* background and stacking context */
+.background-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* background image (no change to image itself) */
+.aggregator-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+  display: block;
+  pointer-events: none;
+}
+
+/* Header - placed above background */
+.aggregator-header {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0;
+  padding-bottom: 20px;
+  z-index: 2;
+  top: 36px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1200px;
+  box-sizing: border-box;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.aggregator-text {
+  flex: 1 1 420px;
+  min-width: 260px;
+  color: #fff;
+}
+
+.section-title {
+  color: white;
+  font-size: 2.5rem;
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 15px;
+}
+
+.section-description {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  opacity: 0.8;
+  color: white;
+}
+
+/* visual */
+.aggregator-visual {
+  flex: 0 0 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 600px;
+}
+
+.mobile-image {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0;
+}
+.comparison-table {
+  position: absolute;
+  top: 380px; /* adjust if header height changes */
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 1100px;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+  z-index: 2;
+  color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 10px 0;
+  box-sizing: border-box;
+  background: rgba(0,0,0,0.08); /* subtle overlay to improve contrast without changing bg */
+}
+.aggregator-button{
+  position: absolute;
+  bottom: 50px; /* adjust if table height changes */
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 2;
+  margin-top: 20px;
+}
+
+/* grid rows */
+.api-comparison-table,
+.table-row {
+  display: grid;
+  grid-template-columns: 35% 1fr 1fr;
+  width: 100%;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  box-sizing: border-box;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+/* cell base */
+.table-row .cell {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  font-weight: 400;
+  box-sizing: border-box;
+}
+
+/* header row */
+.table-header .cell.table-head {
+  font-weight: 700;
+  text-align: center;
+  justify-content: center;
+  background-color: rgba(0,0,0,0.45);
+  color: #fff;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.table-header .cell.table-head.function-col {
+  background-color: #1a2f8a;
+  justify-content: flex-start;
+  color: #fff;
+}
+
+/* data row separators */
+.data-row .cell {
+  border-right: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.data-row .cell:last-child {
+  border-right: none;
+}
+
+.data-row .function-col {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.data-row .cell:nth-child(2),
+.data-row .cell:nth-child(3) {
+  justify-content: center;
+  text-align: center;
+}
+
+.tick-icon-img {
+  height: 16px;
+  margin-left: 8px;
+}
+/* Responsive: keep 3-column grid but allow horizontal scroll on narrower viewports */
+@media (max-width: 1024px) {
+  .comparison-table {
+    position: absolute;
+    top: auto;
+    transform: none;
+    margin-top: 20px;
     width: 100%;
-    height: 100%;
-    position: relative;
-
-    .aggregator-background {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top;
-      display: block;
-    }
-    .aggregator-header {
-      position: absolute;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 50px;
-      padding-bottom: 20px;
-      z-index: 2;
-      top: 0;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 90%;
-      max-width: 1200px;
-    }
-    .section-title{
-      color: white;
-      font-size: 2.5rem;
-      font-weight: 900;
-      line-height: 1.2;
-      margin-bottom: 15px;
-    }
-    .section-description {
-      font-size: 1.1rem;
-      line-height: 1.6;
-      opacity: 0.8;
-      color: white;
+    left: auto;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 12px; /* space for touch scroll */
   }
-   .comparison-table {
-      display: block;
-      max-width: 1100px;
-      width: 100%;
-      margin: 500px auto 50px auto; /* pushes it below header */
-      position: absolute;           /* ensure it's in normal flow */
-      z-index: 2;
-      color: #fff;
-      border-radius: 8px;
-      overflow: hidden;
-      padding: 10px 0;
-    }
-
-
-    .api-comparison-table,
-    .table-row {
-      display: grid;
-      grid-template-columns: 35% 1fr 1fr;
-      width: 100%;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    }
-
-    .table-row:last-child {
-      border-bottom: none;
-    }
-
-    .table-row .cell {
-      display: flex;
-      flex: none;
-      align-items: center;
-      padding: 15px 20px;
-      font-weight: 400;
-    }
-
-    .table-header .cell.table-head {
-      font-weight: 700;
-      text-align: center;
-      justify-content: center;
-      background-color: #000;
-      color: #fff;
-      transition: background-color 0.3s ease, color 0.3s ease;
-    }
-
-    .table-header .cell.table-head.function-col {
-      background-color: #1a2f8a;
-      justify-content: flex-start;
-      color: #fff;
-    }
-
-    .data-row .cell {
-      border-right: 1px solid rgba(255, 255, 255, 0.08);
-    }
-
-    .data-row .cell:last-child {
-      border-right: none;
-    }
-
-    .data-row .function-col {
-      justify-content: flex-start;
-      text-align: left;
-    }
-
-    .data-row .cell:nth-child(2),
-    .data-row .cell:nth-child(3) {
-      justify-content: center;
-      text-align: center;
-    }
-
-    .tick-icon-img {
-      height: 16px;
-      margin-left: 5px;
-    }
+  .api-comparison-table,
+  .table-row {
+    display: inline-grid;                /* inline grid so the parent can scroll horizontally */
+    grid-template-columns: 35% 1fr 1fr;  /* preserve three columns */
+    min-width: 760px;                    /* adjust this min-width to control when scroll appears */
+    width: auto;
+    box-sizing: border-box;
   }
-  @media (max-width: 1024px) {
-    .aggregator-header {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 15px;
-    }
-
-    .api-comparison-table,
-    .table-row {
-      grid-template-columns: 1fr;
-    }
-
-    .data-row .cell {
-      justify-content: flex-start;
-      text-align: left;
-      border-right: none;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    .data-row .cell:last-child {
-      border-bottom: none;
-    }
+  .data-row .cell {
+    justify-content: center;
+    text-align: center;
+    border-right: 1px solid rgba(255,255,255,0.06);
+    border-bottom: none;
   }
 
-  @media (max-width: 600px) {
-    .aggregator-header {
-      width: 95%;
-      padding: 10px 0;
-    }
-
-    .cta-request .btn-primary {
-      width: 100%;
-      text-align: center;
-    }
+  .data-row .cell:last-child {
+    border-right: none;
+  }
+  .table-header,
+  .api-comparison-table {
+    display: inline-grid;
+    grid-template-columns: 35% 1fr 1fr;
+    min-width: 760px;
   }
 }
-/* --- Aggregator Header Mobile View (around 900px breakpoint) --- */
+
+@media (max-width: 600px) {
+  .aggregator-container{
+    min-height: 600px;
+  }
+  .aggregator-background{
+    height: 800px;
+  }
+  .comparison-table {
+    position: absolute;
+    top: 350px;
+    width: calc(100% - 24px);
+    padding-bottom: 18px;
+  }
+  .api-comparison-table,
+  .table-row,
+  .table-header {
+    min-width: 820px; /* bump if icons/long text are clipped */
+  }
+
+  /* reduce cell padding to improve fit */
+  .table-row .cell { padding: 12px 14px; }
+}
+
 @media (max-width: 900px) {
-    .aggregator-header {
-        /* CRITICAL: Switch from horizontal to vertical layout */
-        flex-direction: column;
-        text-align: center;
-        gap: 30px; /* Add vertical space between text and visual */
-    }
+.aggregator-header {
+    justify-content: center; /* center header children */
+    align-items: center;
+    text-align: center;      /* base text alignment */
+  }
 
-    .aggregator-text, 
-    .aggregator-visual {
-        /* CRITICAL: Allow both columns to take full width */
-        max-width: 100%;
-        width: 100%; /* Ensure it's not constrained by desktop max-width */
-        flex: none; /* Remove desktop flex basis */
-    }
-    
-    .aggregator-visual {
-        /* Ensure visual content is centered in the mobile stack */
-        text-align: center;
-    }
+  .aggregator-text {
+    width: 100%;
+    max-width: 720px;
+    text-align: center !important; /* ensure override */
+    margin: 0 auto;
+  }
 
-    .mobile-image {
-        /* Center the image within the visual container */
-        margin: 0 auto; 
-    }
+  .section-title,
+  .section-description {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    color: white;
+  }
+
+  /* make visual block sit below text and centered */
+  .aggregator-visual {
+    order: 2;
+    margin-top: 12px;
+    width: 100%;
+    max-width: 420px;
+    display: none;
+  }
+  .aggregator-button {
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    transform: none !important;
+    margin: 18px auto 24px;
+    display: flex;
+    justify-content: center;
+    z-index: 3;
+  }
+  .aggregator-button .btn-primary {
+    width: 220px; /* or 100% for full-width on phones */
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .aggregator-header { padding: 8px 12px; }
+  .aggregator-text { padding: 0 8px; }
+  .section-title { font-size: 1.6rem; color: white; }
+
+  .comparison-table {
+    margin-left: 10px;
+    position: absolute;
+    width: calc(100% - 24px);
+    padding-bottom: 18px;
+  }
+  .api-comparison-table,
+  .table-row,
+  .table-header {
+    min-width: 820px;
+  }
+  .table-row .cell { padding: 12px 14px; }
+  .aggregator-button .btn-primary {
+    position: absolute;
+    bottom: 50px;
+    left: 50%;              /* ✅ Centers horizontally */
+    transform: translateX(-50%);
+    width: 50%;
+    padding: 12px 20px;
+    border-radius: 28px;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* ✅ Centers text inside the button */
+  }
+
 }

@@ -4,6 +4,7 @@
   justify-content: center;
   width: 100%;
   font-family: "Outfit", sans-serif;
+  z-index: 1000;
 
   .nav-container {
     display: flex;
@@ -19,6 +20,12 @@
         height: 100%;
         object-fit: contain;
       }
+    }
+     .menu-toggle {
+      display: none;
+      font-size: 2rem;
+      cursor: pointer;
+      color: #fff;
     }
     .nav-menu {
       flex: auto;
@@ -39,8 +46,119 @@
       }
     }
     .social-icons {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+      margin-left: 20px;
+
+  .social-language {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+
+    .language-dropdown {
+      display: none;
+      position: absolute;
+      top: 120%; 
+      right: 0;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      list-style: none;
+      padding: 5px 0;
+      min-width: 100px;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      z-index: 10;
+
+      li {
+        padding: 8px 12px;
+        cursor: pointer;
+        font-size: 14px;
+        color: #333;
+
+        &:hover {
+          background-color: #f0f0f0;
+        }
+      }
+    }
+
+    &.active .language-dropdown {
+      display: block;
+    }
+  }
+}
+  }
+}
+@media (max-width: 768px) {
+  .nav-container {
+    .menu-toggle {
+      display: block;
+    }
+
+    .nav-menu,
+    .social-icons {
+      display: none;
+      flex-direction: column;
+      width: 100%;
+      text-align: center;
+      margin-top: 10px;
+    }
+
+    .nav-menu.active,
+    .social-icons.active {
       display: flex;
-      align-items: center;
+    }
+
+    .nav-menu .nav-item-link {
+      padding: 10px 0;
+      width: 100%;
+    }
+  }
+}
+@media (max-width: 900px) {
+  .menu-toggle {
+    display: block; /* Show hamburger */
+    cursor: pointer;
+  }
+
+  .nav-menu,
+  .social-icons {
+    display: none; /* Hide menu initially */
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-menu.active,
+  .social-icons.active {
+    display: flex; /* Show menu when active */
+  }
+}
+@media (max-width: 768px) {
+  .nav-container {
+    flex-wrap: wrap; 
+    padding: 0 20px;
+    
+    .menu-toggle {
+      display: block;
+    }
+    .nav-menu,
+    .social-icons {
+      display: none; 
+      flex-direction: column;
+      width: 100%; /* Take up the full width below the logo/toggle */
+      text-align: center;
+      margin: 10px 0;
+    }
+
+    /* 2. SHOW when the 'active' class is toggled by JavaScript */
+    .nav-menu.active,
+    .social-icons.active {
+      display: flex; 
+    }
+
+    .nav-menu .nav-item-link {
+      padding: 10px 0;
+      width: 100%;
     }
   }
 }

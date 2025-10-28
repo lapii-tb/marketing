@@ -21,7 +21,11 @@
     z-index: 10;
     text-align: center; /* Centering the title */
 }
-
+.hero-title {
+  text-align: left;
+  margin-left: 10px;
+  margin-right: 0;
+}
 .faq-title {
     font-size: 3rem;
     font-weight: 700;
@@ -100,15 +104,19 @@
 
 /* top chip — upper-right, in front */
 .faq-image-column img.chip-top {
-  top: 8%;
-  right: 8%;
+  top: 40%;
+  right: 40%;
+  width: 150px;
+  max-width: 150px;
   transform: rotate(-12deg);
   z-index: 3;
 }
 
 /* bottom chip — lower-right, slightly larger and behind */
 .faq-image-column img.chip-bottom {
-  bottom: -6%;
+  width: 250px;
+  max-width: 250px;
+  bottom: -35%;
   right: -6%;
   transform: rotate(8deg);
   z-index: 1;

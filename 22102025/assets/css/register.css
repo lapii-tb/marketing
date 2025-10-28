@@ -8,7 +8,7 @@
 
   .background-container {
     width: 100%;
-    height: 100%;
+    height: 900px;
     position: relative;
 
     .register-background {
@@ -112,7 +112,7 @@
       }
 
       .coin-bottom {
-        bottom: 0;
+        bottom: 20%;
         right: 2%;
         transform: rotate(6deg);
         max-width: 420px;
@@ -180,11 +180,15 @@
     width: 100%;          
     max-width: 520px;
   }
+  .contact-details-column {
+    align-items: center;          /* center contact details */
+    text-align: center;           /* center text */
+  }
 }
 
 @media (max-width: 600px) {
   .register-container {
-    height: 800px;
+    height: 850px;
   }
   .background-container{
     height: 100px;
@@ -193,19 +197,18 @@
     justify-content: flex-start;
     align-items: start;
   }
-  .register-container{
-    height: 1000px;
-  }
   .register-container-wrapper {
     padding: 24px 12px;
     gap: 20px;
   }
   .contact-details-column {
+    display: flex;
     align-items: center; /* reinforce centering */
   }
 
   .contact-links {
     align-items: center;
+    display: flex;
     gap: 12px;
   }
 
@@ -232,6 +235,20 @@
   .register-button{
     width: 30px;
   }
+  .register-container {
+    .background-container {
+      .contact-details-column {
+        width: 100%; 
+        max-width: 360px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+        text-align: center;
+      }
+    }
+  }
   
 }
 
@@ -240,6 +257,7 @@
   width: 100%;
   aspect-ratio: 1440 / 130;
   overflow: hidden;
+  font-family: "Outfit", sans-serif;
 
   .background-container {
     width: 100%;
@@ -288,5 +306,8 @@
     flex-direction: column;
     gap: 12px;
     padding: 12px 16px;
+  }
+  .contact-icon {
+    width: 128px; /* mobile */
   }
 }

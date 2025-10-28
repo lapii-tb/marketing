@@ -89,12 +89,11 @@
 
 @media (max-width: 650px) {
     .feature-container {
-        height: 1000px;
+        height: 1400px;
     }
     
     .feature-cards-grid {
-        display: flex;
-        flex-wrap: wrap; 
+        flex-direction: column;
         gap: 20px;
     }
     
@@ -115,12 +114,10 @@
         font-size: 1rem;
         margin-bottom: 50px;
     }
-    .section-title {
-    font-size: 1.5rem;
-    font-weight: 500;
-    line-height: 1.2;
-    margin-bottom: 15px;
+     .section-title {
+    font-size: 1.2rem !important;
+    font-weight: 600;
+    margin-bottom: 20px;
     text-align: center;
-    color: #2B49DB;
-}
+  }
 }

@@ -137,6 +137,9 @@
 }
 
 .package-card .card-description {
+    display: block;
+    margin-left: 10px;
+    margin-right: 0;
     font-size: 0.9rem;
     color: #555;
 }

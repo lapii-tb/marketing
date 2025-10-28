@@ -22,6 +22,7 @@
     <div class="logo">
       <img src="assets/image/568win.png" />
     </div>
+    <div class="menu-toggle">&#9776;</div>
     <div class="nav-menu">
       <a class="nav-item-link" href="#opportunity">机会</a>
       <a class="nav-item-link" href="#aggregator">为什么选择</a>
@@ -33,9 +34,15 @@
       <a class="nav-item-link" href="#start" class="start-now">立即开始</a>
     </div>
     <div class="social-icons">
-      <div>01</div>
-      <div>02</div>
-      <div>03</div>
+      <div class="social-language">
+        <img src="assets/image/social-icons/icon-1.png" alt="Language Icon" class="social-icon" />
+        <ul class="language-dropdown">
+          <li data-lang="en"><a href="index.html">English</a></li>
+          <li data-lang="zh-CN"><a href="index_cn.html">中文</a></li>
+        </ul>
+      </div>
+      <img src="assets/image/social-icons/icon-2.png" alt="Facebook Icon" class="social-icon" />
+      <img src="assets/image/social-icons/icon-3.png" alt="Linkedin Icon " class="social-icon" />
     </div>
   </div>
 </nav>
@@ -43,13 +50,13 @@
   <div class="background-container">
     <img src="assets/image/header.jpg" class="banner-background" />
     <div class="banner-content">
-        <h1 class="main-title">YOUR 2026 WORLD CUP IN ONE CLICK</h1>
+        <h1 class="main-title">{banner_title}</h1>
         <p class="subtitle">
-            Connect 568Win Sportsbook and start FIFA 2026 bets
+            {banner_subtitle}
         </p>
         <div class="cta-buttons">
-            <a href="#" class="btn btn-primary">Talk to Us</a>
-            <a href="#" class="btn btn-secondary">Our Website</a>
+            <a href="#" class="btn btn-primary">{banner_cta_primary}</a>
+            <a href="#" class="btn btn-secondary">{banner_cta_secondary}</a>
         </div>
     </div>
   </div>
@@ -361,7 +368,7 @@
                 </div>
             </div>
             <div class="faq-column faq-image-column">
-                <img src="assets/image/faq/chip-1.png" alt="Black Casino Chip" class="chip-top" >
+                <img src="assets/image/faq/chip-1.png" alt="Black Casino Chip" class="chip-top" style="width: 240px;" >
                 <img src="assets/image/faq/chip-2.png" alt="White Casino Chip" class="chip-bottom">
             </div>
         </div>
@@ -408,8 +415,8 @@
     <div class="background-container">
       <img src="assets/image/contact.jpg" class="contact-background" />
       <div class="contact-container-wrapper">
-        <div class="social-icons">
-               <img src="assets/image/footer/contact us.png" alt="social icon" style="width: 198pxxs;">
+        <div class="footer-social-icons">
+               <img src="assets/image/footer/contact us.png" alt="social icon" style="width: 198px;" class="contact-icons">
         </div>
          <p class="copyright-text">
                 © 2025 by 568Win Powered and secured by SBOBET
@@ -418,5 +425,6 @@
     </div>
   </div>
 </div>
+  <script src="assets/js/menu.js"></script>
   </body>
 </html>

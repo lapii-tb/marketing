@@ -3,6 +3,7 @@ const path = require('path');
 
 const { components } = require('./page.js');
 const { languages } = require('./language.js');
+const SCRIPT_TAG = `<script src="assets/js/menu.js"></script>`;
 
 const TEMPLATE = `<!DOCTYPE html>
   <html lang="{LANG}">
@@ -13,6 +14,7 @@ const TEMPLATE = `<!DOCTYPE html>
     {CSS_LINKS}
   </head>
   <body>{CONTENT}
+  {SCRIPTS}
   </body>
 </html>`;
 
@@ -55,7 +57,8 @@ function generateHTML() {
       .replace('{CONTENT}', contentHTML)
       .replace('{LANG}', lang.code)
       .replace('{TITLE}', lang.locale.title)
-      .replace('{CSS_LINKS}', LINKS.join('\n'));
+      .replace('{CSS_LINKS}', LINKS.join('\n'))
+      .replace('{SCRIPTS}', SCRIPT_TAG);
 
     try {
       fs.writeFileSync(outputPath, finalHTML, 'utf8');

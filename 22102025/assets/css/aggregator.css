@@ -1,5 +1,4 @@
-/* ...existing code... */
-/* Flattened and updated styles to keep table and CTA contained above the background image */
+
 
 .aggregator-container {
   width: 100%;
@@ -111,7 +110,7 @@
   display: grid;
   grid-template-columns: 35% 1fr 1fr;
   width: 100%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.87);
   box-sizing: border-box;
 }
 
@@ -130,6 +129,8 @@
 
 /* header row */
 .table-header .cell.table-head {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
   font-weight: 700;
   text-align: center;
   justify-content: center;
@@ -138,13 +139,13 @@
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.table-header .cell.table-head.function-col {
+.table-header .cell.table-head.our-api-col {
   background-color: #1a2f8a;
-  justify-content: flex-start;
+  justify-content: center;
   color: #fff;
 }
 .table-row.data-row.active {
-  background-color: rgba(43, 73, 219, 0.25); /* blue glow */
+  background-color: rgba(10, 35, 160, 0.25); /* blue glow */
   border-left: 4px solid #2B49DB; /* accent line */
 }
 
@@ -156,7 +157,7 @@
 
 /* data row separators */
 .data-row .cell {
-  border-right: 1px solid rgba(255, 255, 255, 0.06);
+  border-bottom: white;
 }
 
 .data-row .cell:last-child {
@@ -173,7 +174,9 @@
   justify-content: start;
   text-align: left;
 }
-
+.data-row .cell:nth-child(2) {
+  background-color: #2B49DB33;
+}
 .tick-icon-img {
   height: 16px;
   margin-left: 8px;
@@ -201,10 +204,8 @@
     box-sizing: border-box;
   }
   .data-row .cell {
-    justify-content: center;
-    text-align: center;
     border-right: 1px solid rgba(255,255,255,0.06);
-    border-bottom: none;
+    border-bottom: 1px solid #ffffff;
   }
 
   .data-row .cell:last-child {

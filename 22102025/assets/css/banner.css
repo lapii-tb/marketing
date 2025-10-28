@@ -64,7 +64,6 @@
 /* --- Banner Tablet View (max-width: 1024px) --- */
 @media (max-width: 1024px) {
     .banner-container {
-        /* Reduce the aspect ratio height slightly for tablets */
         aspect-ratio: 1440 / 650;
     }
 

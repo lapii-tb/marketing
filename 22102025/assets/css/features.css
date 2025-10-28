@@ -1,7 +1,7 @@
 .feature-container {
   position: relative;
   width: 100%;
-  height: 800px;
+  height: 600px;
   font-family: "Outfit", sans-serif;
 
   .gradient-background-color {
@@ -49,6 +49,8 @@
     border: 1px solid #ddd;
     border-radius: 40px;
     border-top: 3px solid #2B49DB;
+    border-left: 3px solid #2B49DB;
+    height: 250px;
 }
 .feature-icon {
     width: 80px;
@@ -80,15 +82,19 @@
         max-width: 45%;
         margin-bottom: 20px;
     }
+     .section-title {
+        font-size: 2rem;
+    }
 }
 
 @media (max-width: 650px) {
     .feature-container {
-        height: 1400px;
+        height: 1000px;
     }
     
     .feature-cards-grid {
-        flex-direction: column;
+        display: flex;
+        flex-wrap: wrap; 
         gap: 20px;
     }
     
@@ -104,12 +110,17 @@
         height: 1000px;
         transform: translate(-50%, -100px); /* Adjust position */
     }
-    .section-title {
-        font-size: 1.5rem;
-        font-weight: 700;
-        line-height: 1.2;
-        margin-bottom: 15px;
-        text-align: center;
-        color: #2B49DB;
+    .features-section .section-title {
+        color: var(--feature-color-text); 
+        font-size: 1rem;
+        margin-bottom: 50px;
     }
+    .section-title {
+    font-size: 1.5rem;
+    font-weight: 500;
+    line-height: 1.2;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #2B49DB;
+}
 }

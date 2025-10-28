@@ -41,31 +41,6 @@
       }
 
       /* decorative coins (use <img class="coin coin-top"> and coin-bottom in HTML) */
-      .coin {
-        position: absolute;
-        pointer-events: none;
-        user-select: none;
-        z-index: 1;
-        max-width: 420px;
-        height: auto;
-        opacity: 0.98;
-        transform-origin: center;
-      }
-
-      .coin-top {
-        top: 6%;
-        left: 10px;
-        transform: rotate(-12deg);
-        max-width: 260px;
-      }
-
-      .coin-bottom {
-        bottom: 0;
-        right: 2%;
-        transform: rotate(6deg);
-        max-width: 420px;
-        opacity: 0.96;
-      }
     }
 
     .contact-form-column {
@@ -111,7 +86,6 @@
           border-radius: 28px;
           font-weight: 800;
           text-align: center;
-          background: linear-gradient(90deg,#8b4bff,#5b7bff);
           color: #fff;
           border: none;
           cursor: pointer;
@@ -119,6 +93,31 @@
         }
       }
     }
+     .coin {
+        position: absolute;
+        pointer-events: none;
+        user-select: none;
+        z-index: 1;
+        max-width: 420px;
+        height: auto;
+        opacity: 0.98;
+        transform-origin: center;
+      }
+
+      .coin-top {
+        top: 6%;
+        left: 10px;
+        transform: rotate(-12deg);
+        max-width: 260px;
+      }
+
+      .coin-bottom {
+        bottom: 0;
+        right: 2%;
+        transform: rotate(6deg);
+        max-width: 420px;
+        opacity: 0.96;
+      }
 
     .contact-details-column {
       width: 360px;
@@ -166,69 +165,76 @@
       }
     }
   }
-  @media (max-width: 1024px) {
-    .background-container {
-      .register-container-wrapper {
-        /* reduce vertical overflow on smaller screens */
-        height: auto;
-        flex-direction: column;
-        align-items: center;
-        padding: 40px 20px;
-        gap: 28px;
-      }
-
-      .contact-details-column {
-        width: 100%;
-        max-width: 520px;
-        align-items: flex-start;
-      }
-
-      .contact-form-column {
-        width: 100%;
-        max-width: none;
-      }
-
-      /* coin size adjustments on tablet */
-      .register-container-wrapper {
-        .coin-top { max-width: 180px; top: 4%; right: 4%; }
-        .coin-bottom { max-width: 260px; right: -4%; bottom: -8%; }
-      }
-    }
+  
+}
+@media (max-width: 1024px) {
+  .register-container-wrapper {
+    flex-direction: column;       /* stack columns vertically */
+    align-items: center;          /* center content */
+    gap: 28px;                    /* space between form and contact */
+    padding: 40px 20px;           /* adjust padding */
   }
-  @media (max-width: 600px) {
-    .register-container{
-      height: 1200px;
-    }
-    .background-container {
-      .register-container-wrapper {
-        padding: 24px 12px;
-        height: auto;
-      }
 
-      .api-access-form {
-        input,
-        textarea {
-          padding: 10px 12px;
-        }
-        .btn.btn-primary {
-          width: 100%;
-          text-align: center;
-          max-width: none;
-        }
-      }
-
-      .contact-details-column .contact-link {
-        padding: 10px 12px;
-        font-size: 13px;
-      }
-
-      /* hide decorative coins on small phones */
-      .register-container-wrapper .coin {
-        display: none;
-      }
-    }
+  .contact-form-column,
+  .contact-details-column {
+    width: 100%;          
+    max-width: 520px;
   }
 }
+
+@media (max-width: 600px) {
+  .register-container {
+    height: 800px;
+  }
+  .background-container{
+    height: 100px;
+  }
+  .details-title{
+    justify-content: flex-start;
+    align-items: start;
+  }
+  .register-container{
+    height: 1000px;
+  }
+  .register-container-wrapper {
+    padding: 24px 12px;
+    gap: 20px;
+  }
+  .contact-details-column {
+    align-items: center; /* reinforce centering */
+  }
+
+  .contact-links {
+    align-items: center;
+    gap: 12px;
+  }
+
+  .contact-link {
+    text-align: center;
+    left: 50%;
+    width: 90%;         /* make links almost full width */
+    max-width: 280px;   /* optional max width */
+  }
+  .contact-form-column,
+  .contact-details-column {
+    width: 100%;                  /* ensure columns take full width */
+    max-width: none;              /* remove max-width limits */
+  }
+  .coin {
+    display: none;
+  }
+
+  .api-access-form .btn.btn-primary {
+    width: 100%;                  /* full width button */
+    max-width: none;
+    text-align: center;
+  }
+  .register-button{
+    width: 30px;
+  }
+  
+}
+
 /* keep contact-container background block unchanged (preserve convention) */
 .contact-container {
   width: 100%;
@@ -272,5 +278,15 @@
       color: rgba(255,255,255,0.85);
       font-size: 13px;
     }
+  }
+}
+@media (max-width: 600px) {
+  .contact-container {
+    height: 180px;
+  }
+  .contact-container-wrapper {
+    flex-direction: column;
+    gap: 12px;
+    padding: 12px 16px;
   }
 }

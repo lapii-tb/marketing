@@ -150,7 +150,7 @@
         font-size: 1rem;
         font-weight: 500;
         background-color: transparent;
-        border: 1px solid rgba(255, 255, 255, 0.4);
+        border: 2px solid rgba(255, 255, 255, 0.4);
         color: rgba(255, 255, 255, 0.7);
         transition: all 0.3s ease;
 
@@ -183,25 +183,24 @@
         padding: 60px 0;
         height: 1000px;
     }
-    
-    .provider-container .background-container .providers-title {
-        font-size: 2rem; /* Reduced title size */
-    }
-
-    /* Filter tabs wrapping */
-    .provider-filters {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-      margin-bottom: 30px;
+    .provider-container .provider-filters {
+      width: 50%;
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(140px, 1fr)); /* 2 balanced columns */
+    justify-content: center; /* centers grid within container */
+    align-items: center;
+    gap: 10px; /* smaller space between items */
+    margin: 0 auto 30px auto;
+    max-width: 600px; /* optional: keeps it from stretching too wide */
   }
 
-    .provider-filters .filter-tab {
-        flex: 1 1 calc(50% - 10px);
-        max-width: calc(50% - 10px);
-        font-size: 0.95rem;
-        padding: 8px 15px;
-    }
+  .provider-container .provider-filters .filter-tab {
+    width: 65%; /* fills its grid cell */
+    text-align: center;
+    font-size: 0.95rem;
+    padding: 8px 12px;
+    border-radius: 40px;
+  }
     
     /* Logos strip padding adjustment */
     .provider-container .background-container .logos-strip img {
@@ -230,11 +229,9 @@
          margin-bottom: 20px;
     }
 
-     .provider-filters {
-        display: flex;
-        flex-direction: column;
-        gap: 8px;
-        margin-bottom: 20px;
+    .provider-filters {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
     }
 
     .provider-filters .filter-tab {

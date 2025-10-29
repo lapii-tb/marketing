@@ -228,12 +228,12 @@
   }
 
   .api-access-form .btn.btn-primary {
-    width: 100%;                  /* full width button */
-    max-width: none;
+    width: 50%;       /* wider, still smaller than full width */
+    max-width: unset; 
+    margin: 0 auto;     /* center horizontally */
+    display: block;     /* block to allow margin auto centering */
+    padding: 12px 28px; /* adjust padding for smaller size */
     text-align: center;
-  }
-  .register-button{
-    width: 30px;
   }
   .register-container {
     .background-container {

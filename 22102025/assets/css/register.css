@@ -215,7 +215,7 @@
   .contact-link {
     text-align: center;
     left: 50%;
-    width: 90%;         /* make links almost full width */
+    width: 100%;         /* make links almost full width */
     max-width: 280px;   /* optional max width */
   }
   .contact-form-column,
@@ -228,8 +228,8 @@
   }
 
   .api-access-form .btn.btn-primary {
-    width: 50%;       /* wider, still smaller than full width */
-    max-width: unset; 
+    width: 100px;       /* wider, still smaller than full width */
+    max-width: 100px; 
     margin: 0 auto;     /* center horizontally */
     display: block;     /* block to allow margin auto centering */
     padding: 12px 28px; /* adjust padding for smaller size */

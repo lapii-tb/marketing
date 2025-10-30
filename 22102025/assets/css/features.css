@@ -50,7 +50,7 @@
     border-radius: 40px;
     border-top: 3px solid #2B49DB;
     border-left: 3px solid #2B49DB;
-    height: 250px;
+    height: 300px;
 }
 .feature-icon {
     width: 80px;
@@ -99,17 +99,19 @@
         gap: 20px;
     }
     
-    .feature-card {
+   .feature-card {
         flex-basis: 100%;
+        width: 100%;
         max-width: 100%;
         margin-left: auto;
         margin-right: auto;
+        min-height: 200px; /* The original was 250px for desktop */
     }
     
     .gradient-background-color {
         width: 1000px;
         height: 1000px;
-        transform: translate(-50%, -100px); /* Adjust position */
+        transform: translate(-50%, -100px);
     }
     .features-section .section-title {
         color: var(--feature-color-text); 

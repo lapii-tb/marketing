@@ -1,7 +1,7 @@
 
 .market-container {
     width: 100%;
-    height: 1520px; 
+    /* height: 1520px;  */
     font-family: "Outfit", sans-serif;
     color: var(--text-color, #fff); 
     display: flex; 

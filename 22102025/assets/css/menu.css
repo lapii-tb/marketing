@@ -155,6 +155,9 @@
     .social-icons {
       display: none !important;
     }
+     .nav-container .logo {
+      margin-left: 100px; /* remove left margin on small screens */
+    }
   }
 }
 
@@ -162,12 +165,18 @@
 
 @media (max-width: 768px) {
   .nav-container {
-    flex-wrap: wrap; 
-    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* align items to start (left) */
+    padding-left: 10px; 
     
     .menu-toggle {
       display: block;
     }
+    .nav-container .logo {
+      margin-left: 100px; /* reset any extra margin */
+    }
+
     .nav-menu,
     .social-icons {
       display: none; 

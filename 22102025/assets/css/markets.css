@@ -47,6 +47,7 @@
 /* Benefit List Styles */
 .benefit-list {
     list-style: none;
+
     padding-left: 0;
     margin-bottom: 30px;
 }
@@ -177,9 +178,26 @@
   }
 
   .benefit-list {
-    text-align: center;   /* Center description/list */
-    margin-left: auto;
-    margin-right: auto;
+    display: flex;            /* make it flexible */
+    flex-direction: column;   /* stack vertically */
+    align-items: center;      /* center horizontally */
+    justify-content: center;  /* optional: center vertically if needed */
+    text-align: center;       /* center text inside items */
+    margin: 0 auto;           /* center the block itself */
+    padding: 0;
+  }
+  .benefit-item {
+    width: 100%;
+    max-width: 400px;         /* optional limit for nice text width */
+    text-align: center;
+    margin-bottom: 10px;
+  }
+    .benefit-item::before {
+    content: '\2022';          /* keep the bullet */
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 1.2em;
   }
    .hero-image {
     width: 100%;           
@@ -192,11 +210,10 @@
     margin-left: auto;
     margin-right: auto;
   }
-  .market-button{
-    margin-left: 50%;
-    margin-right: auto;
-    justify-content: center;
-    align-self: center;
+  .market-button {
+    display: block;          /* ensure it's a block-level element */
+    margin: 20px auto 0;     /* top margin optional, auto left/right centers it */
+    text-align: center;      /* centers text inside the button */
   }
 
 }
@@ -221,14 +238,11 @@
         margin-bottom: 40px;
     }
     .hero-image {
-    max-width: 95%;        /* take almost full width */
+    max-width: 95%;
     height: auto;          
     margin: 0 auto;        
   }
 }
-
-/* -------------------------------------------------------------------------- */
-/* --- Market Section Mobile View (max-width: 600px) --- */
 @media (max-width: 600px) {
     .market-container {
         padding-top: 30px;
@@ -237,7 +251,8 @@
 
     /* Main Content */
     .hero-content {
-        padding: 0 15px; /* Add internal padding for mobile text */
+        text-align: left !important;
+        padding: 0 15px;
     }
 
     .hero-title {
@@ -246,23 +261,18 @@
     }
     
     .benefit-list {
-        margin-bottom: 20px;
+        align-items: center;
+        justify-content: center;
     }
 
     .benefit-item {
-        font-size: 1rem;
         line-height: 1.5;
-        /* Reset positioning for centered lists on mobile */
-        margin-left: 0;
-        margin-right: 0;
-        text-align: center;
-        max-width: 100%;
-        padding-left: 0;
+        max-width: 320px;
+        text-align: start;
     }
     
     .benefit-item::before {
-        /* Hide the bullet point for simple centered text */
-        content: none; 
+        content: '\2022'; 
     }
     
     .hero-image-container {
@@ -303,14 +313,9 @@
     .package-card .card-description {
         font-size: 0.85rem;
     }
-    
-    /* CTA Buttons stacking (if not handled by global button CSS) */
-    .market-container .package-cards-grid-wrapper .cta-buttons {
-        flex-direction: column;
-        gap: 15px;
-        margin-bottom: 40px;
-    }
-    .market-container .package-cards-grid-wrapper .cta-buttons .btn {
-        width: 100%;
-    }
+   .market-button {
+    display: block;          /* ensure it's a block-level element */
+    margin: 20px auto 0;     /* top margin optional, auto left/right centers it */
+    text-align: center;      /* centers text inside the button */
+  }
 }

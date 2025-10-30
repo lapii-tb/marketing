@@ -82,8 +82,10 @@
         max-width: 45%;
         margin-bottom: 20px;
     }
-     .section-title {
-        font-size: 2rem;
+    .section-title {
+        font-size: 2.2rem; /* slightly smaller than desktop (2.5rem) */
+        font-weight: 800;
+        margin-bottom: 25px;
     }
 }
 
@@ -114,10 +116,11 @@
         font-size: 1rem;
         margin-bottom: 50px;
     }
-     .section-title {
-    font-size: 1.2rem !important;
-    font-weight: 600;
-    margin-bottom: 20px;
+    .section-title {
+    font-size: 1.8rem !important; /* was 1.2rem — now larger */
+    font-weight: 700;
+    margin-bottom: 30px;
     text-align: center;
+    line-height: 1.3;
   }
 }

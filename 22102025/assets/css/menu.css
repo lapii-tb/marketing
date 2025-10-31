@@ -269,7 +269,7 @@ html[lang="zh-CN"] .nav-menu {
 }
 @media (min-height: 800px) {
     .social-icons {
-      margin-top: 250px;
+      margin-top: 220px;
     }
     html[lang="zh-CN"] .social-icons {
       margin-top: 200px;
@@ -277,7 +277,7 @@ html[lang="zh-CN"] .nav-menu {
   }
 @media (min-height: 900px) {
     .social-icons {
-      margin-top: 340px;
+      margin-top: 300px;
     }
     html[lang="zh-CN"] .social-icons {
       margin-top: 290px;

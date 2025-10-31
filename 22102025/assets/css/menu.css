@@ -262,14 +262,14 @@ html[lang="zh-CN"] .nav-menu {
       margin-top: 250px;
     }
     html[lang="zh-CN"] .social-icons {
-      margin-top: 50px;
+      margin-top: 210px;
     }
   }
 @media (min-height: 900px) {
     .social-icons {
-      margin-top: 300px;
+      margin-top: 340px;
     }
     html[lang="zh-CN"] .social-icons {
-      margin-top: 80px;
+      margin-top: 310px;
     }
   }

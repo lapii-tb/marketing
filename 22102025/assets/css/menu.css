@@ -162,7 +162,7 @@ html[lang="zh-CN"] .nav-menu {
     flex-direction: row; /* or column if you prefer */
     justify-content: flex-start;
     gap: 24px;
-    margin-top: 300px;
+    margin-top: 250px;
     padding-left: 2px;
   }
 
@@ -257,3 +257,19 @@ html[lang="zh-CN"] .nav-menu {
     display: none;
   }
 }
+@media (min-height: 800px) {
+    .social-icons {
+      margin-top: 250px;
+    }
+    html[lang="zh-CN"] .social-icons {
+      margin-top: 50px;
+    }
+  }
+@media (min-height: 900px) {
+    .social-icons {
+      margin-top: 300px;
+    }
+    html[lang="zh-CN"] .social-icons {
+      margin-top: 80px;
+    }
+  }

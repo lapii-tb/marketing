@@ -122,14 +122,13 @@ html[lang="zh-CN"] .nav-menu {
     right: -100%;
     height: 100vh;
     width: 178px;
-    background-color: #00143BB3; /* semi-transparent dark blue */
+    background-color: #00143BB3;
     padding: 80px 20px 20px;
     transition: right 0.3s ease-in-out;
     z-index: 999;
     align-items: flex-start;
   }
 
-  /* When active (menu opened) */
   .nav-menu.active,
   .social-icons.active {
     right: 0;
@@ -140,7 +139,6 @@ html[lang="zh-CN"] .nav-menu {
     z-index: 1001;
   }
 
-  /* Menu items */
   .nav-menu .nav-item-link {
     height: 0;
     width: 100%;
@@ -155,15 +153,19 @@ html[lang="zh-CN"] .nav-menu {
     border-bottom: none;
   }
 
-  /* ✅ Show social icons inside the menu */
+  /* Social icons spacing using vh for responsive positioning */
   .social-icons {
     background-color: transparent !important;
-    position: static; /* so they stack below menu items */
-    flex-direction: row; /* or column if you prefer */
+    position: static;
+    flex-direction: row;
     justify-content: flex-start;
     gap: 24px;
-    margin-top: 250px;
+    margin-top: 30vh; /* 30% of viewport height */
     padding-left: 2px;
+  }
+
+  html[lang="zh-CN"] .social-icons {
+    margin-top: 25vh; /* slightly less for Chinese layout */
   }
 
   .social-icons a {
@@ -175,28 +177,29 @@ html[lang="zh-CN"] .nav-menu {
     }
   }
 
-  /* Language selector (optional) */
+  /* Mobile language dropdown */
   .language-select-mobile {
-    display: block; /* only on mobile */
+    display: block;
     margin-top: 20px;
     width: 100%;
 
-     .lang-btn {
-      background: none;      /* no box background */
-      border: none;          /* no border */
+    .lang-btn {
+      background: none;
+      border: none;
       color: #fff;
       font-size: 20px;
       cursor: pointer;
       text-align: left;
       display: flex;
       align-items: center;
-      gap: 6px;              /* space between text and arrow */
-      padding: 0;            /* remove padding */
+      gap: 6px;
+      padding: 0;
     }
+
     .lang-btn .arrow {
       font-size: 14px;
       line-height: 1;
-      margin-left: 80px;
+      margin-left: auto;
     }
 
     .language-dropdown-mobile {
@@ -230,27 +233,28 @@ html[lang="zh-CN"] .nav-menu {
       display: block;
     }
   }
-   .language-select-mobile.active .language-dropdown-mobile {
-      display: block;
-    }
+
+  .language-select-mobile.active .language-dropdown-mobile {
+    display: block;
+  }
+
   html[lang="zh-CN"] .nav-menu {
-    gap: 0; /* horizontal gap removed for column layout */
+    gap: 0;
   }
 
   html[lang="zh-CN"] .nav-menu .nav-item-link {
-    margin-bottom: 15px; /* vertical spacing between items */
+    margin-bottom: 15px;
   }
 
   html[lang="zh-CN"] .nav-menu .nav-item:last-child .nav-item-link {
-    margin-bottom: 0; /* remove extra space on last item */
+    margin-bottom: 0;
   }
-  html[lang="zh-CN"] .social-icons {
-    margin-top: 210px; /* override default 250px */
-  }
+
   .social-language .language-dropdown {
     display: none !important;
   }
 }
+
 
 @media (min-width: 993px) {
   .language-select-mobile {
@@ -270,6 +274,6 @@ html[lang="zh-CN"] .nav-menu {
       margin-top: 340px;
     }
     html[lang="zh-CN"] .social-icons {
-      margin-top: 310px;
+      margin-top: 290px;
     }
   }

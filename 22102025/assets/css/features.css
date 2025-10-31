@@ -91,7 +91,8 @@
 
 @media (max-width: 650px) {
     .feature-container {
-        height: 1400px;
+        margin-top: 30px;
+        height: 1300px;
     }
     
     .feature-cards-grid {

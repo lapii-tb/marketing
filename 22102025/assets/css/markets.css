@@ -62,11 +62,13 @@
 }
 
 .benefit-item::before {
-    content: '\2022'; 
-    position: absolute;
-    left: 0;
-    font-size: 1.2em;
-    top: 0;
+  content: '\2022'; 
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center with text */
+  font-size: 2.5em; /* Bigger bullet */
+  color: #7b00ff; /* Bullet color */
 }
 
 /* 4. Right Column: Image (.hero-image-container) */
@@ -212,10 +214,8 @@
   }
     .benefit-item::before {
     content: '\2022';          /* keep the bullet */
-    position: absolute;
-    left: 0;
-    top: 0;
-    font-size: 1.2em;
+    top: 50%;
+    font-size: 1.5em;
   }
    .hero-image {
     width: 100%;           

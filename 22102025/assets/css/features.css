@@ -114,6 +114,7 @@
     .feature-card {
         flex-basis: 45%; 
         max-width: 45%;
+        height: 50%;
         margin-bottom: 20px;
     }
     .section-title {
@@ -142,7 +143,7 @@
     flex-basis: calc(50% - 10px); /* 2 columns with gap */
     max-width: calc(50% - 10px);
     margin-bottom: 20px;
-    min-height: 200px;
+    min-height: 100px;
   }
 
   .gradient-background-color {

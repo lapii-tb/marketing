@@ -111,7 +111,7 @@
       }
 
       .coin-bottom {
-        bottom: 20%;
+        bottom: 10%;
         right: 2%;
         transform: rotate(6deg);
         max-width: 420px;
@@ -361,6 +361,7 @@
     gap: 12px;
     padding: 12px 16px;
     text-align: center;
+    justify-content: center;
   }
   .contact-icon {
     width: 100px; /* mobile */

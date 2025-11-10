@@ -144,17 +144,24 @@
     align-items: center;
   }
 
-  .faq-image-column img.chip-top,
+  ..faq-image-column img.chip-top,
   .faq-image-column img.chip-bottom {
-    position: relative;
-    max-width: 46%;
-    transform: none;
-    margin: 6px;
-    right: auto;
-    bottom: auto;
-    top: auto;
-    z-index: 2;
-    opacity: 1;
+    display: block;
+    position: absolute;
+    z-index: 10;
+  }
+
+  .faq-image-column img.chip-top {
+    width: 100px !important;
+    top: -50px;
+    right: 10px;
+  }
+
+  .faq-image-column img.chip-bottom {
+    width: 185.14px;
+    bottom: -130%;
+    right: -20%;
+    transform: translateX(-50%);
   }
 }
 

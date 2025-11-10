@@ -1,6 +1,6 @@
 .register-container {
   width: 100%;
-  aspect-ratio: 1440 / 720;
+
   overflow: hidden;
   box-sizing: border-box;
   position: relative;
@@ -8,7 +8,6 @@
 
   .background-container {
     width: 100%;
-    height: 900px;
     position: relative;
 
     .register-background {
@@ -167,91 +166,144 @@
   }
   
 }
-@media (max-width: 1024px) {
-  .register-container-wrapper {
-    flex-direction: column;       /* stack columns vertically */
-    align-items: center;          /* center content */
-    gap: 28px;                    /* space between form and contact */
-    padding: 40px 20px;           /* adjust padding */
-  }
-
-  .contact-form-column,
-  .contact-details-column {
-    width: 100%;          
-    max-width: 520px;
-  }
-  .contact-details-column {
-    align-items: center;          /* center contact details */
-    text-align: center;           /* center text */
-  }
-}
 
 @media (max-width: 600px) {
   .register-container {
-    height: 850px;
+    height: auto;
+    padding: 0;
   }
   .background-container{
-    height: 100px;
-  }
-  .details-title{
-    justify-content: flex-start;
-    align-items: start;
-  }
-  .register-container-wrapper {
-    padding: 24px 12px;
-    gap: 20px;
-  }
-  .contact-details-column {
-    display: flex;
-    align-items: center; /* reinforce centering */
+    /* Ensure the background covers all content */
+    height: auto;
   }
 
-  .contact-links {
-    align-items: center;
+  /* --- WRAPPER (Handles Stacking and Centering Columns) --- */
+  .register-container-wrapper {
+    flex-direction: column;       /* CRITICAL: Stack columns vertically */
+    align-items: center;          /* CRITICAL: Centers the stacked columns horizontally */
+    gap: 20px;                    /* Space between form and contact */
+    padding: 24px 12px;           /* Adjust padding */
+  }
+
+  /* --- COLUMN CONTAINERS --- */
+  .contact-form-column,
+  .contact-details-column {
+    width: 100%;                  /* Columns take full width of wrapper */
+    max-width: none;              /* Remove max-width limits */
+  }
+  
+  /* --- FORM COLUMN --- */
+  .contact-form-column .form-title {
+    text-align: left; /* Keep title aligned with input fields */
+  }
+  
+  /* Centering ONLY the button */
+  .api-access-form .btn.btn-primary {
+    width: 200px;
+    min-width: 200px;
+    margin: 0 auto;       /* CRITICAL: Center horizontally */
+    display: block;       /* Required for margin: auto */
+    padding: 12px 28px;
+    font-size: 16px;
+    border-radius: 8px;
+  }
+
+  /* --- CONTACT DETAILS COLUMN (Must be perfectly centered) --- */
+  .contact-details-column {
+    /* Overrides default desktop width and ensures centering */
+    width: 100%; 
+    max-width: 360px; /* Reapply a smaller max-width for cleaner text/link display */
+    margin: 0 auto;
     display: flex;
+    flex-direction: column;
+    gap: 18px;
+    align-items: center;    /* CRITICAL: Centers the items inside the column */
+    text-align: center;     /* Centers the text content */
+  }
+  
+  .contact-details-column .contact-links {
+    /* Ensure links container is centered */
+    display: flex;
+    flex-direction: column; /* Stack the individual links vertically */
+    align-items: center;
     gap: 12px;
   }
 
   .contact-link {
-    text-align: center;
-    left: 50%;
-    width: 100%;         /* make links almost full width */
-    max-width: 280px;   /* optional max width */
-  }
-  .contact-form-column,
-  .contact-details-column {
-    width: 100%;                  /* ensure columns take full width */
-    max-width: none;              /* remove max-width limits */
-  }
-  .coin {
-    display: none;
+    width: 100%;         
+    max-width: 280px;   /* Limits the link width for better appearance */
   }
 
-.api-access-form .btn.btn-primary {
-  width: 200px;         /* bigger width */
-  min-width: 200px;     /* ensures it doesn't shrink too much */
-  margin: 0 auto;       /* center horizontally */
-  display: block;       /* block to allow margin auto centering */
-  padding: 12px 28px;   /* adjust padding */
-  text-align: center;
-  font-size: 16px;      /* make text bigger */
-  border-radius: 8px;   /* slightly rounded corners */
+  /* --- DECORATIVE ELEMENTS --- */
+  .coin {
+    display: none; /* Hides coins on all mobile views */
+  }
 }
-  .register-container {
+@media (max-width: 900px) {
+    /* --- PARENT CONTAINER FIX --- */
     .background-container {
-      .contact-details-column {
-        width: 100%; 
-        max-width: 360px;
-        margin: 0 auto;
+        width: 100%; /* Ensure the background spans the full viewport */
+        margin: 0 auto; /* Explicitly center the background container */
+        height: auto; /* Allow height to adjust for stacked content */
+    }
+
+    /* --- WRAPPER (Handles Stacking and Centering the Block on the Page) --- */
+        .register-container-wrapper {
+      position: relative;
+      z-index: 2;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 72px 28px;
+      display: flex;
+      gap: 48px;
+      align-items: flex-start;
+      box-sizing: border-box;
+
+      /* keep content above coins */
+      > .contact-form-column,
+      > .contact-details-column {
+        position: relative;
+        z-index: 3;
+      }
+
+      /* decorative coins (use <img class="coin coin-top"> and coin-bottom in HTML) */
+    }
+
+
+    /* --- COLUMN CONTAINERS --- */
+    .contact-form-column,
+    .contact-details-column {
+        width: 100%;          
+        max-width: 520px; 
+    }
+
+    /* --- FORM SPECIFIC FIXES --- */
+    .contact-form-column .form-title {
+        text-align: left;
+    }
+    
+    .api-access-form .btn.btn-primary {
+        margin: 0 auto;       
+        display: block;       
+    }
+
+    /* --- CONTACT DETAILS FIXES --- */
+    .contact-details-column {
         display: flex;
         flex-direction: column;
-        gap: 18px;
         align-items: center;
-        text-align: start;
-      }
+        text-align: center;
     }
-  }
-  
+    
+    .contact-details-column .contact-links {
+        align-items: center;
+        justify-content: center; 
+    }
+
+    /* --- DECORATIVE ELEMENTS --- */
+    .coin {
+        display: none; 
+    }
 }
 
 /* keep contact-container background block unchanged (preserve convention) */
@@ -308,8 +360,9 @@
     flex-direction: column;
     gap: 12px;
     padding: 12px 16px;
+    text-align: center;
   }
   .contact-icon {
-    width: 128px; /* mobile */
+    width: 100px; /* mobile */
   }
 }

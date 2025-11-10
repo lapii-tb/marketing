@@ -190,43 +190,6 @@
   height: 16px;
   margin-left: 8px;
 }
-/* Responsive: keep 3-column grid but allow horizontal scroll on narrower viewports */
-@media (max-width: 1024px) {
-  .comparison-table {
-    position: absolute;
-    top: auto;
-    transform: none;
-    margin-top: 20px;
-    width: 100%;
-    left: auto;
-    overflow-x: auto;
-    overflow-y: hidden;
-    -webkit-overflow-scrolling: touch;
-    padding-bottom: 12px; /* space for touch scroll */
-  }
-  .api-comparison-table,
-  .table-row {
-    display: inline-grid;                /* inline grid so the parent can scroll horizontally */
-    grid-template-columns: 35% 1fr 1fr;  /* preserve three columns */
-    min-width: 760px;                    /* adjust this min-width to control when scroll appears */
-    width: auto;
-    box-sizing: border-box;
-  }
-  .data-row .cell {
-    border-right: 1px solid rgba(255,255,255,0.06);
-    border-bottom: 1px solid #ffffff;
-  }
-
-  .data-row .cell:last-child {
-    border-right: none;
-  }
-  .table-header,
-  .api-comparison-table {
-    display: inline-grid;
-    grid-template-columns: 35% 1fr 1fr;
-    min-width: 760px;
-  }
-}
 
 @media (max-width: 600px) {
   .aggregator-container{
@@ -236,10 +199,25 @@
     height: 800px;
   }
   .comparison-table {
-    position: absolute;
-    top: 350px;
-    width: calc(100% - 24px);
+    position: relative; /* Fixes the scrolling issue */
+    margin: 5px auto 0 auto; /* Sets vertical position and centers horizontally */
+    width: 100%; /* Use 100% and let padding/margin handle spacing */
+    overflow-x: auto; /* Keeps scroll */
+    overflow-y: hidden;
     padding-bottom: 18px;
+    -webkit-overflow-scrolling: touch;
+  }
+   .comparison-table::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .comparison-table::-webkit-scrollbar-thumb {
+    background-color: rgba(255,255,255,0.4);
+    border-radius: 4px;
+  }
+
+  .comparison-table::-webkit-scrollbar-track {
+    background: transparent;
   }
   .api-comparison-table,
   .table-row,
@@ -258,7 +236,6 @@
     }
   }
 }
-
 @media (max-width: 900px) {
 .aggregator-header {
     justify-content: center; /* center header children */

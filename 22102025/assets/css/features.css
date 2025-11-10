@@ -106,19 +106,26 @@
 }
 }
 @media (max-width: 1024px) {
-    .feature-cards-grid {
-        flex-wrap: wrap; 
-        max-width: 700px;
+  .feature-container {
+        margin-top: 30px;
+        height: 800px;
     }
-    
-    .feature-card {
-        flex-basis: 45%; 
-        max-width: 45%;
-        height: 50%;
-        margin-bottom: 20px;
-    }
+     .feature-cards-grid {
+    width: 50%;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+  }
+
+  .feature-card {
+    width: 316px;
+    flex-basis: calc(50% - 10px); /* 2 columns with gap */
+    max-width: calc(50% - 10px);
+    margin-bottom: 20px;
+    min-height: 100px;
+  }
     .section-title {
-        font-size: 2.2rem; /* slightly smaller than desktop (2.5rem) */
+        font-size: 2.2rem;
         font-weight: 800;
         margin-bottom: 25px;
     }

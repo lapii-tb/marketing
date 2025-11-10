@@ -166,7 +166,7 @@ html[lang="zh-CN"] .nav-menu {
     flex-direction: row;
     justify-content: flex-start;
     gap: 24px;
-    margin-top: 30vh; /* 30% of viewport height */
+    margin-top: 0; /* 30% of viewport height */
     padding-left: 2px;
   }
 
@@ -269,7 +269,7 @@ html[lang="zh-CN"] .nav-menu {
 }
 @media (min-height: 800px) {
     .social-icons {
-      margin-top: 220px;
+      margin-top: 0 !important;
     }
     html[lang="zh-CN"] .social-icons {
       margin-top: 200px;

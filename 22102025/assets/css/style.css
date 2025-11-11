@@ -83,3 +83,11 @@ html, body {
         font-size: 0.9rem;  
     }
 }
+@media (max-width: 600px) {
+    .btn {
+        max-width: 200px;
+        padding: 10px; 
+        font-size: 0.9rem;  
+    }
+}
+

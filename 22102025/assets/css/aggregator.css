@@ -105,6 +105,7 @@
   background: rgba(0,0,0,0.08); /* subtle overlay to improve contrast without changing bg */
 }
 .aggregator-button{
+  width: 100%;
   position: absolute;
   bottom: 50px; /* adjust if table height changes */
   left: 50%;
@@ -288,6 +289,8 @@
     z-index: 3;
   }
     .aggregator-button{
+      width: 100%;
+      max-width: 300%;
       position: absolute;
       bottom: 100px; /* adjust if table height changes */
       left: 50%;
@@ -314,12 +317,22 @@
     min-width: 820px;
   }
   .table-row .cell { padding: 12px 14px; }
+  .aggregator-button{
+      width: 100%;
+      max-width: 300%;
+      position: absolute;
+      bottom: 100px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      margin-top: 20px;
+    }
 }
 /* Tablet / iPad fix */
 @media (max-width: 1024px) {
   .background-container {
   width: 100%;
-  height: 70vh;
+  height: 120vh;
   position: relative;
 }
 }

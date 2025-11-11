@@ -309,7 +309,7 @@
 /* keep contact-container background block unchanged (preserve convention) */
 .contact-container {
   width: 100%;
-  aspect-ratio: 1440 / 130;
+  height: 10vh;
   overflow: hidden;
   font-family: "Outfit", sans-serif;
 

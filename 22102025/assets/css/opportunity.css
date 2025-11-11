@@ -81,15 +81,47 @@
     }
   }
 }
+@media (min-width: 768px) and (max-width: 1024px) {
+  .opportunity-container {
+    min-height: 800px;
+  }
+  .feature-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+  .opportunity-title {
+    font-size: 2rem;
+  }
+}
 
-@media (max-width: 600px) {
-    .opportunity-container {
-        min-height: 1200px;
-    }
-    .opportunity-title {
-        font-size: 1.5rem;
-        font-weight: 700;
-        margin-bottom: 20px;
-        color: #fff;
-      }
+/* Smaller tablets / large phones: 2 columns */
+@media (min-width: 600px) and (max-width: 767px) {
+  .opportunity-container {
+    min-height: 1000px;
+  }
+  .feature-cards {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+  .opportunity-title {
+    font-size: 1.8rem;
+  }
+}
+
+/* Mobile phones: 1 column */
+@media (max-width: 599px) {
+  .opportunity-container {
+    min-height: 1200px;
+  }
+  .feature-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+  .opportunity-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+  }
 }

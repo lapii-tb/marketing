@@ -309,7 +309,6 @@
 /* keep contact-container background block unchanged (preserve convention) */
 .contact-container {
   width: 100%;
-  height: 10vh;
   overflow: hidden;
   font-family: "Outfit", sans-serif;
 

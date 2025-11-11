@@ -207,9 +207,11 @@
     overflow-y: hidden;
     padding-bottom: 18px;
     -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: transparent transparent;
   }
    .comparison-table::-webkit-scrollbar {
-    height: 6px;
+    height: 2px;
   }
 
   .comparison-table::-webkit-scrollbar-thumb {

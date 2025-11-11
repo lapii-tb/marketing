@@ -144,7 +144,7 @@
     align-items: center;
   }
 
-  ..faq-image-column img.chip-top,
+  .faq-image-column img.chip-top,
   .faq-image-column img.chip-bottom {
     display: block;
     position: absolute;
@@ -193,3 +193,10 @@
   }
 }
 
+@media (min-width: 768px) and (max-width: 1024px) {
+  .hero-title {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

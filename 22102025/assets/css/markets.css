@@ -224,7 +224,7 @@
     margin: 0 auto;        
   }
   .benefit-item {
-    text-align: center;   /* Center individual benefit items */
+    text-align: start;   /* Center individual benefit items */
     margin-left: auto;
     margin-right: auto;
   }

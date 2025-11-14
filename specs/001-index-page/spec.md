@@ -104,7 +104,7 @@ Visitors on mobile devices with slower 3G/4G connections experience fast page lo
 - **FR-014**: Page MUST use semantic HTML5 elements (header, nav, main, section, article, footer)
 - **FR-015**: Page MUST include descriptive alt text for all content images
 - **FR-016**: Page MUST implement proper heading hierarchy (single H1, proper H2-H6 structure)
-- **FR-017**: Page MUST render correctly pixel-perfectly according to Figma design specifications [NEEDS CLARIFICATION: Figma design file URL or location not provided - please provide link to Figma design]
+- **FR-017**: Page MUST render correctly pixel-perfectly according to Figma design specifications at https://www.figma.com/design/dJcCSUD5YqppoUPzXXth2o/API-Landing-Page?node-id=51-236&p=f&t=KhOZJQh4YOUdc6Q3-0
 - **FR-018**: Page MUST maintain responsive design with breakpoints at 480px (mobile), 768px (tablet), 1024px+ (desktop)
 - **FR-019**: Page MUST include favicon and app icons for various devices
 - **FR-020**: Page MUST implement font-display: swap for web fonts to prevent render blocking

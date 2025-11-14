@@ -1,11 +1,69 @@
 {
-  "title": "Hello ME!",
-  "opportunity": "Opportunity",
-  "why_choose": "Why Choose",
-  "features": "Features",
-  "providers": "Providers",
-  "igaming_markets": "IGaming Markets",
-  "operators_gain": "Operators Gain",
-  "faq": "FAQ",
-  "start_now": "Start Now"
+  "meta": {
+    "title": "568Win - Premier iGaming API Aggregator Platform",
+    "description": "Experience seamless iGaming integration with 568Win. Access top providers, comprehensive sports betting, casino games, and live dealer solutions for operators worldwide.",
+    "ogTitle": "568Win | iGaming API Aggregator Platform",
+    "ogDescription": "Leading iGaming API aggregator connecting operators with premium providers. Sports betting, casino, live dealer & more.",
+    "twitterTitle": "568Win - iGaming API Aggregator",
+    "twitterDescription": "Premier iGaming API platform for operators. Seamless provider integration & comprehensive gaming solutions."
+  },
+  "navigation": {
+    "opportunity": "Opportunity",
+    "whyChoose": "Why Choose",
+    "features": "Features",
+    "providers": "Providers",
+    "markets": "IGaming Markets",
+    "operators": "Operators Gain",
+    "faq": "FAQ",
+    "startNow": "Start Now"
+  },
+  "sections": {
+    "banner": {
+      "headline": "568Win iGaming Platform",
+      "subheadline": "Premier API Aggregator for Seamless Integration",
+      "cta": "Get Started Today"
+    },
+    "opportunity": {
+      "title": "Opportunity",
+      "description": "Unlock the potential of iGaming with our comprehensive platform"
+    },
+    "aggregator": {
+      "title": "Why Choose 568Win",
+      "description": "Industry-leading aggregator with proven track record"
+    },
+    "features": {
+      "title": "Features",
+      "description": "Comprehensive solutions for modern iGaming operations"
+    },
+    "providers": {
+      "title": "Premium Providers",
+      "description": "Access to top-tier gaming providers worldwide"
+    },
+    "markets": {
+      "title": "IGaming Markets",
+      "description": "Global reach across major gaming markets"
+    },
+    "operators": {
+      "title": "Operators Gain",
+      "description": "Enhanced revenue and operational efficiency"
+    },
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "description": "Find answers to common questions"
+    },
+    "register": {
+      "title": "Start Now",
+      "description": "Join 568Win today and transform your iGaming operations",
+      "ctaButton": "Register Now",
+      "contactButton": "Contact Us"
+    }
+  },
+  "common": {
+    "learnMore": "Learn More",
+    "contactUs": "Contact Us",
+    "register": "Register",
+    "getStarted": "Get Started",
+    "readMore": "Read More",
+    "viewDetails": "View Details"
+  }
 }

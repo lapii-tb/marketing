@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 html {
 	scroll-behavior: smooth;
 }
@@ -12,4 +18,81 @@ html {
 
 body {
   position: relative;
+  font-family: "Roboto", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #ffffff;
+  color: #0a1128;
+  line-height: 1.6;
+}
+
+/* Common section title styles */
+.section-title {
+  font-family: "Outfit", sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: #0a1128;
+  margin-bottom: 16px;
+}
+
+.section-subtitle {
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  color: #5a6c7d;
+  margin-bottom: 40px;
+}
+
+/* Responsive typography */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 32px;
+  }
+
+  .section-subtitle {
+    font-size: 18px;
+  }
+}
+
+/* Utility classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Button styles */
+.btn {
+  font-family: "Outfit", sans-serif;
+  padding: 12px 32px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+}
+
+.btn-primary {
+  background: #2B49DB;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #1e35a8;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(43, 73, 219, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #2B49DB;
+  border: 2px solid #2B49DB;
+}
+
+.btn-secondary:hover {
+  background: #2B49DB;
+  color: white;
 }

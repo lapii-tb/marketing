@@ -1,6 +1,6 @@
 .aggregator-container {
   width: 100%;
-  aspect-ratio: 1440 / 1060;
+  aspect-ratio: 1440 / 800;
   overflow: hidden;
 
   .background-container {
@@ -11,7 +11,8 @@
       width: 100%;
       height: 100%;
       object-fit: cover;
-      object-position: top;
+      object-position: bottom;
+
     }
   }
 }

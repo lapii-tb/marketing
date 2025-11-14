@@ -1,11 +1,69 @@
 {
-  "title": "你好，我！",
-  "opportunity": "机会",
-  "why_choose": "为什么选择",
-  "features": "特色功能",
-  "providers": "服务提供商",
-  "igaming_markets": "游戏市场",
-  "operators_gain": "运营商收益",
-  "faq": "常见问题",
-  "start_now": "立即开始"
+  "meta": {
+    "title": "568Win - 顶级iGaming API聚合平台",
+    "description": "体验568Win无缝iGaming集成。为全球运营商提供顶级供应商、全面体育博彩、赌场游戏和真人荷官解决方案。",
+    "ogTitle": "568Win | iGaming API聚合平台",
+    "ogDescription": "领先的iGaming API聚合商，连接运营商与优质供应商。体育博彩、赌场、真人荷官等。",
+    "twitterTitle": "568Win - iGaming API聚合平台",
+    "twitterDescription": "为运营商提供优质iGaming API平台。无缝供应商集成与全面游戏解决方案。"
+  },
+  "navigation": {
+    "opportunity": "商机",
+    "whyChoose": "选择我们",
+    "features": "功能特色",
+    "providers": "供应商",
+    "markets": "iGaming市场",
+    "operators": "运营商优势",
+    "faq": "常见问题",
+    "startNow": "立即开始"
+  },
+  "sections": {
+    "banner": {
+      "headline": "568Win iGaming平台",
+      "subheadline": "顶级API聚合商实现无缝集成",
+      "cta": "立即开始"
+    },
+    "opportunity": {
+      "title": "商机",
+      "description": "通过我们的综合平台释放iGaming的潜力"
+    },
+    "aggregator": {
+      "title": "为什么选择568Win",
+      "description": "行业领先的聚合商，拥有卓越记录"
+    },
+    "features": {
+      "title": "功能特色",
+      "description": "现代iGaming运营的全面解决方案"
+    },
+    "providers": {
+      "title": "优质供应商",
+      "description": "全球顶级游戏供应商"
+    },
+    "markets": {
+      "title": "iGaming市场",
+      "description": "覆盖全球主要游戏市场"
+    },
+    "operators": {
+      "title": "运营商优势",
+      "description": "提升收入和运营效率"
+    },
+    "faq": {
+      "title": "常见问题",
+      "description": "查找常见问题的答案"
+    },
+    "register": {
+      "title": "立即开始",
+      "description": "立即加入568Win，转变您的iGaming运营",
+      "ctaButton": "立即注册",
+      "contactButton": "联系我们"
+    }
+  },
+  "common": {
+    "learnMore": "了解更多",
+    "contactUs": "联系我们",
+    "register": "注册",
+    "getStarted": "开始使用",
+    "readMore": "阅读更多",
+    "viewDetails": "查看详情"
+  }
 }

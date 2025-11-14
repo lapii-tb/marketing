@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+
+  <!-- English Landing Page -->
+  <url>
+    <loc>https://www.568win.best/index.html</loc>
+    <lastmod>2025-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <!-- Alternate language version -->
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.568win.best/index_cn.html"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.568win.best/index.html"/>
+  </url>
+
+  <!-- Chinese Landing Page -->
+  <url>
+    <loc>https://www.568win.best/index_cn.html</loc>
+    <lastmod>2025-11-13</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <!-- Alternate language version -->
+    <xhtml:link rel="alternate" hreflang="en" href="https://www.568win.best/index.html"/>
+    <xhtml:link rel="alternate" hreflang="zh-CN" href="https://www.568win.best/index_cn.html"/>
+  </url>
+
+</urlset>

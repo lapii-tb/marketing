@@ -1,0 +1,19 @@
+# robots.txt for 568Win Landing Page
+# https://www.568win.best/
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.568win.best/sitemap.xml
+
+# Disallow crawling of assets that don't need indexing
+Disallow: /assets/js/
+Disallow: /assets/css/
+Disallow: /*.json$
+
+# Allow crawling of images for image search
+Allow: /assets/image/
+
+# Crawl delay (optional - adjust as needed)
+# Crawl-delay: 1

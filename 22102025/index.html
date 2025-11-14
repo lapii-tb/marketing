@@ -1,9 +1,70 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello ME!</title>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Experience seamless iGaming integration with 568Win. Access top providers, comprehensive sports betting, casino games, and live dealer solutions for operators worldwide.">
+  <meta name="keywords" content="iGaming, API aggregator, sports betting, casino games, live dealer, gaming providers, 568Win">
+  <meta name="author" content="568Win">
+  <meta name="robots" content="index, follow">
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://www.568win.best/index.html">
+
+  <!-- Alternate Language Versions -->
+  <link rel="alternate" hreflang="en" href="https://www.568win.best/index.html">
+  <link rel="alternate" hreflang="zh-CN" href="https://www.568win.best/index_cn.html">
+  <link rel="alternate" hreflang="x-default" href="https://www.568win.best/index.html">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="assets/image/icons/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/image/icons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/image/icons/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/image/icons/favicon-16x16.png">
+  <link rel="manifest" href="assets/image/icons/site.webmanifest">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="568Win | iGaming API Aggregator Platform">
+  <meta property="og:description" content="Leading iGaming API aggregator connecting operators with premium providers. Sports betting, casino, live dealer & more.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.568win.best/index.html">
+  <meta property="og:image" content="https://www.568win.best/assets/image/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="568Win iGaming API Aggregator Platform">
+  <meta property="og:site_name" content="568Win">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="zh_CN">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="568Win - iGaming API Aggregator">
+  <meta name="twitter:description" content="Premier iGaming API platform for operators. Seamless provider integration & comprehensive gaming solutions.">
+  <meta name="twitter:image" content="https://www.568win.best/assets/image/og-image.jpg">
+  <meta name="twitter:image:alt" content="568Win iGaming API Aggregator Platform">
+
+  <title>568Win - Premier iGaming API Aggregator Platform</title>
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "568Win",
+    "url": "https://www.568win.best",
+    "logo": "https://www.568win.best/assets/image/568win.png",
+    "description": "Premier iGaming API aggregator connecting operators with top gaming providers worldwide",
+    "sameAs": [
+      "https://www.instagram.com/sbobet_568win_asia",
+      "https://t.me/sbo568winmk"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "url": "https://www.568win.best/API.html"
+    }
+  }
+  </script>
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/menu.css">
     <link rel="stylesheet" href="assets/css/banner.css">
@@ -17,20 +78,29 @@
     <link rel="stylesheet" href="assets/css/register.css">
   </head>
   <body>
+    <!-- Language Loading Indicator -->
+    <div id="language-loading" class="language-loading" style="display: none;">
+      <div class="loading-spinner"></div>
+    </div>
     <nav class="navbar">
   <div class="nav-container">
     <div class="logo">
       <img src="assets/image/568win.png" />
     </div>
     <div class="nav-menu">
-      <a class="nav-item-link" href="#opportunity">Opportunity</a>
-      <a class="nav-item-link" href="#aggregator">Why Choose</a>
-      <a class="nav-item-link" href="#features">Features</a>
-      <a class="nav-item-link" href="#providers">Providers</a>
-      <a class="nav-item-link" href="#markets">IGaming Markets</a>
-      <a class="nav-item-link" href="#operators">Operators Gain</a>
-      <a class="nav-item-link" href="#faq">FAQ</a>
-      <a class="nav-item-link" href="#start" class="start-now">Start Now</a>
+      <a class="nav-item-link" href="#opportunity" data-i18n="navigation.opportunity">Opportunity</a>
+      <a class="nav-item-link" href="#aggregator" data-i18n="navigation.whyChoose">Why Choose</a>
+      <a class="nav-item-link" href="#features" data-i18n="navigation.features">Features</a>
+      <a class="nav-item-link" href="#providers" data-i18n="navigation.providers">Providers</a>
+      <a class="nav-item-link" href="#markets" data-i18n="navigation.markets">IGaming Markets</a>
+      <a class="nav-item-link" href="#operators" data-i18n="navigation.operators">Operators Gain</a>
+      <a class="nav-item-link" href="#faq" data-i18n="navigation.faq">FAQ</a>
+      <a class="nav-item-link" href="#start" class="start-now" data-i18n="navigation.startNow">Start Now</a>
+    </div>
+    <div class="language-switcher">
+      <button class="lang-btn" data-lang="en" aria-label="Switch to English">EN</button>
+      <span class="lang-divider">|</span>
+      <button class="lang-btn" data-lang="zh-CN" aria-label="Switch to Chinese">CN</button>
     </div>
     <div class="social-icons">
       <a href="https://www.568win.best/API.html" class="icon-container"><img src="assets/image/icons/website.png" /></a>
@@ -81,14 +151,41 @@
     </div>
   </div>
 </div>
+  <script src="assets/js/language.js"></script>
+  <script src="assets/js/navigation.js"></script>
   <script>
-    window.addEventListener('scroll', function() {
-      const navbar = document.querySelector('.navbar');
-      if (window.scrollY > 60) {
-        navbar.classList.add('sticky');
-      } else {
-        navbar.classList.remove('sticky');
+    // Language switcher functionality
+    document.addEventListener('DOMContentLoaded', function() {
+      const langButtons = document.querySelectorAll('.lang-btn');
+
+      // Update active state based on current language
+      function updateActiveButton() {
+        const currentLang = window.LanguageManager.getCurrentLanguage();
+        langButtons.forEach(btn => {
+          if (btn.dataset.lang === currentLang) {
+            btn.classList.add('active');
+          } else {
+            btn.classList.remove('active');
+          }
+        });
       }
+
+      // Set initial active state
+      window.addEventListener('languagechange', updateActiveButton);
+
+      // Add click handlers to language buttons
+      langButtons.forEach(button => {
+        button.addEventListener('click', function(e) {
+          e.preventDefault();
+          const lang = this.dataset.lang;
+
+          // Switch language
+          window.LanguageManager.switchLanguage(lang);
+        });
+      });
+
+      // Set initial active state after language loads
+      setTimeout(updateActiveButton, 100);
     });
   </script>
   </body>

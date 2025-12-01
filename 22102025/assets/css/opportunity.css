@@ -4,7 +4,7 @@
   overflow: hidden;
   display: flex;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
   position: relative;
 
   .background-container {
@@ -23,7 +23,6 @@
     position: absolute;
     text-align: center;
     color: #fff;
-    bottom: 24px;
 
     .content-header {
       font-weight: 800;

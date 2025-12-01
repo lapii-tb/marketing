@@ -79,6 +79,20 @@ body {
     font-weight: 700;
     font-style: Bold;
     font-size: 24px;
+
+    color: inherit;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    &:hover {
+      transform: scale(1.1);
+      text-decoration: none;
+    }
+    &:visited {
+      color: inherit;
+    }
+    &:active {
+      color: inherit;
+    }
   }
   .btn-primary {
     background:#6C4EF1;

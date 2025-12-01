@@ -2,6 +2,8 @@
   width: 100%;
   aspect-ratio: 1440 / 720;
   overflow: hidden;
+  position: relative;
+  margin: auto;
 
   .background-container {
     width: 100%;
@@ -14,11 +16,133 @@
       object-position: top;
     }
   }
+  .register-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    gap: 100px;
+    top: 100px;
+
+    .form-section {
+      max-width: 572px;
+      text-align: center;
+      color: #fff;
+
+      .title {
+        max-width: 352px;
+        font-weight: 600;
+        font-size: 28px;
+        letter-spacing: 0%;
+        text-align: start;
+        margin-bottom: 20px;
+      }
+      .form-info {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 32px;
+        color: #fff;
+
+        input {
+          font-size: 20px;
+          height: 40px;
+          width: 100%;
+          color: #fff;
+          outline: unset;
+          border: 2px solid #D9D9D9;
+          margin-bottom: 20px;
+          padding: 10px 20px 10px;
+          border-radius: 4px;
+          fill: none;
+          background: transparent;
+        }
+
+        textarea {
+          font-size: 20px;
+          width: 100%;
+          color: #fff;
+          resize: vertical;
+          outline: unset;
+          border: 2px solid #D9D9D9;
+          padding: 10px 20px 10px;
+          border-radius: 4px;
+          fill: none;
+          background: transparent;
+        }
+      }
+      .button-group {
+        justify-content: start;
+      }
+    }
+    .info-section {
+      max-width: 400px;
+      text-align: center;
+      color: #fff;
+
+      .header {
+        font-weight: 800;
+        font-size: 28px;
+        letter-spacing: 0%;
+        text-align: start;
+        margin-bottom: 40px;
+      }
+      .title {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 28px;
+        letter-spacing: 0%;
+        color: #D9D9D9;
+        text-align: start;
+      }
+      .info-group {
+        .btn-info {
+          display: flex;
+          align-items: center;
+          padding: 0 20px;
+          width: 320px;
+          height: 60px;
+          border: 2px solid #fff;
+          border-radius: 40px;
+          cursor: pointer;
+          transition: transform 0.3s ease;
+          color: #fff;
+          text-decoration: none;
+          
+          &:visited {
+            color: inherit;
+          }
+          &:active {
+            color: inherit;
+          }
+          &:hover {
+            transform: scale(1.1);
+            text-decoration: none;
+          }
+          &:nth-child(1) {
+            margin: 40px 0;
+          }
+
+          img {
+            height: 40px;
+            object-fit: contain;
+          }
+
+          span {
+            flex: auto;
+            padding-left: 20px;
+            text-align: start;
+          }
+        }
+      }
+    }
+  }
 }
 .contact-container {
   width: 100%;
   aspect-ratio: 1440 / 130;
   overflow: hidden;
+  position: relative;
+  margin: auto;
 
   .background-container {
     width: 100%;
@@ -29,6 +153,54 @@
       height: 100%;
       object-fit: cover;
       object-position: top;
+    }
+  }
+  .contact-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+
+    .main-contact-info {
+      width: 100%;
+      max-width: 1100px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .contact-button-group {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 24px;
+  
+        .contact-icon {
+          width: 50px;
+          height: 50px;
+          transition: transform 0.3s ease;
+  
+          &:hover {
+            transform: scale(1.1);
+          }
+  
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+        }
+      }
+      .copyright-info {
+        flex: auto;
+        color: #fff;
+        text-align: end;
+        font-family: Roboto;
+        font-size: 14px;
+        letter-spacing: 4%;
+      }
     }
   }
 }

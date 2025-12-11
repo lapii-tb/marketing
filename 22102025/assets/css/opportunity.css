@@ -88,3 +88,36 @@
     }
   }
 }
+@media screen and (max-width: 1024px) {
+  .opportunity-container {
+    height: 1000px;
+    aspect-ratio: 9/25;
+
+    .content-header {
+      font-size: 24px !important;
+      line-height: 28px !important;
+    }
+    .card-container-render {
+      flex-direction: column;
+      align-items: center;
+    }
+    .content-info {
+      font-size: 13px !important;
+      line-height: 20px !important;
+      letter-spacing: 0.26px !important;
+    }
+    .card-container-render {
+      gap: 16px;
+      margin: 20px !important;
+
+      .card-item {
+        padding: 24px !important;
+        height: 200px !important;
+
+        .info {
+          font-size: 16px !important;
+        }
+      }
+    }
+  }
+}

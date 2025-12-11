@@ -6,6 +6,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: hidden;
 
   .gradient-background-color {
     z-index: -1;
@@ -34,6 +35,7 @@
       display: flex;
       gap: 16px;
       margin: 56px 0 80px 0;
+      flex-wrap: wrap;
 
       .card-item {
         padding: 52px 12px;
@@ -87,18 +89,43 @@
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 1024px) {
   .feature-container {
-    padding: 60px 20px;
+    height: 640px;
+
+    .gradient-background-color {
+      top: 100%;
+      border-radius: 1271px;
+      background: radial-gradient(59.84% 59.84% at 50.04% 68.43%, #2B49DB 0%, #FFF 100%);
+    }
 
     .feature-content {
-      .section-title {
-        font-size: 36px;
+      .feature-header {
+        color: #2B49DB;
+        font-size: 24px !important;
       }
 
-      .features-grid {
-        grid-template-columns: 1fr;
-        gap: 20px;
+      .card-container-render {
+        margin: 24px 0 !important;
+        justify-content: center !important;
+
+        .card-item {
+          max-width: 186px;
+          height: 275px;
+
+        .icon {
+          width: 60px;
+          height: 60px;
+        }
+        .title {
+          font-size: 17px;
+          margin-bottom: 8px;
+        }
+        .info {
+          font-size: 15px;
+          line-height: 18px;
+        }
+        }
       }
     }
   }

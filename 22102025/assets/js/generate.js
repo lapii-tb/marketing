@@ -13,6 +13,7 @@ const TEMPLATE = `<!DOCTYPE html>
     {CSS_LINKS}
   </head>
   <body>{CONTENT}
+  <script src="assets/js/menu.js"></script>
   <script>
     window.addEventListener('scroll', function() {
       const navbar = document.querySelector('.navbar');

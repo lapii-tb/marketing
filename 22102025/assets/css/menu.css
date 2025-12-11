@@ -282,10 +282,6 @@
   transition: opacity 0.2s ease;
 }
 
-.mobile-nav-item:first-child {
-  justify-content: center;
-}
-
 .mobile-nav-item:hover {
   opacity: 0.8;
 }

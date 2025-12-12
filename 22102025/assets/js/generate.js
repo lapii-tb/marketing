@@ -14,6 +14,7 @@ const TEMPLATE = `<!DOCTYPE html>
   </head>
   <body>{CONTENT}
   <script src="assets/js/menu.js"></script>
+  <script src="assets/js/counter.js"></script>
   <script>
     window.addEventListener('scroll', function() {
       const navbar = document.querySelector('.navbar');

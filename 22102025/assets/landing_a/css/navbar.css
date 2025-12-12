@@ -1,0 +1,95 @@
+.navbar-container {
+    display: flex !important;
+    background: transparent;
+    width: 100%;
+    line-height: 100px;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+}
+.navbar-container a {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navbar-container button {
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+}
+
+.navbar-container button > img {
+    background: transparent;
+    width: 32px;
+    height: 32px;
+    border-radius: 100%;
+}
+
+.navbar-container .logo {
+    width: auto;
+    height: 33px;
+}
+
+.hamburger-menu {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 250px;
+    height: 100dvh;
+    background: #000000db;
+    z-index: 9999;
+}
+.hamburger-menu nav {
+    display: grid;
+    gap: 40px;
+    padding: 20px;
+}
+.hamburger-menu > nav > a {
+    color: var(--text-1);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 12px;
+    text-transform: uppercase;
+}
+.hamburger-icon {
+    background: transparent;
+    box-sizing: border-box;
+    border: none;
+}
+.hamburger-icon img{
+    background: transparent;
+    object-fit: contain;
+}
+
+.hamburger-menu.active {
+    display: block;
+}
+
+.mobile-header {
+    height: 52px;
+    padding: 0 20px;
+    display: none;
+    width: 100%;
+    z-index: 999;
+    background-color: #00000026;
+    justify-content: space-between;
+    align-items: center;
+}
+.mobile-header .logo {
+    width: auto;
+    height: 20px;
+}
+
+.hamburger-menu .contact {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    gap: 24px;
+    position: absolute;
+    bottom: 20px;
+}

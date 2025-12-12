@@ -36,6 +36,10 @@
         letter-spacing: 0%;
         text-align: start;
         margin-bottom: 20px;
+
+        span {
+          color: #00FF90;
+        }
       }
       .form-info {
         font-weight: 500;
@@ -200,6 +204,109 @@
         font-family: Roboto;
         font-size: 14px;
         letter-spacing: 4%;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .register-container {
+    height: 780px;
+    aspect-ratio: 18/41;
+
+    .register-content {
+      flex-direction: column !important;
+      gap: 20px !important;
+      top: 0 !important;
+      padding: 30px 20px;
+
+      .form-section {
+        .title {
+          width: 285px;
+          font-size: 16px !important;
+          line-height: 24px !important;
+        }
+        .form-info {
+          font-weight: 500;
+          font-size: 18px;
+          line-height: 32px;
+          color: #fff;
+
+          input {
+            font-size: 16px !important;
+            height: 32px !important;
+            border: 1px solid #D9D9D9 !important;
+            margin-bottom: 8px !important;
+            padding: 12px !important;
+          }
+
+          textarea {
+            font-size: 16px !important;
+            border: 1px solid #D9D9D9 !important;
+            padding: 12px !important;
+          }
+        }
+      }
+      .info-section {
+        .header {
+          font-size: 16px !important;
+          color: #00FF90;
+          margin: 18px 0 !important;
+        }
+        .title {
+          font-size: 14px !important;
+        }
+        .info-group {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          .btn-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 240px !important;
+            border: 1px solid #FFF !important;
+            height: 40px !important;
+  
+            &:nth-child(1) {
+              margin: 20px 0 !important;
+            }
+
+            img {
+              height: 24px !important;
+            }
+            span {
+              padding-left: 8px !important;
+              flex: unset;
+            }
+          }
+        }
+      }
+    }
+  }
+  .contact-container {
+    height: 120px !important;
+
+    .contact-background {
+      height: 118% !important;
+    }
+    .main-contact-info {
+      flex-direction: column;
+
+      .contact-button-group {
+        gap: 16px !important;
+        margin-bottom: 20px;
+
+        .contact-icon {
+          width: 32px !important;
+          height: 32px !important;
+        }
+      }
+      .copyright-info {
+        font-size: 12px !important;
+        letter-spacing: 0.48px;
       }
     }
   }

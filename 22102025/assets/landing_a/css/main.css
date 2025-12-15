@@ -4,6 +4,11 @@
     box-sizing: border-box;
     font-family: 'Outfit', sans-serif;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
 .container {
     position: relative;
 }

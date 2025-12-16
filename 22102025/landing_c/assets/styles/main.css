@@ -95,8 +95,13 @@ img {
     background: #0000002b;
     display: flex;
     align-items: center;
+    z-index: 999;
     justify-content: space-between;
-    padding: 10px 0;
+    padding: 10px 20px;
+}
+
+.navbar:hover {
+    background:#2b49db59;
 }
 
 .navbar .logo {
@@ -207,7 +212,7 @@ img {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    background: linear-gradient(180deg, #1a237e 0%, #0d1442 100%);
+    background: linear-gradient(180deg, #1a237eab 0%, #0d1442bf 100%);
     position: fixed;
     top: 0;
     right: 0;

@@ -75,7 +75,7 @@ img {
     bottom: -20px;
     width: 450px;
     height: auto;
-    z-index: 10;
+    z-index: 2;
 }
 
 .hero-content {
@@ -88,6 +88,11 @@ img {
 
 /* ===== NAVIGATION ===== */
 .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: #0000002b;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -143,7 +148,6 @@ img {
     filter: brightness(0) invert(1);
 }
 
-/* Hamburger Menu */
 .hamburger {
     display: none;
     flex-direction: column;
@@ -152,8 +156,7 @@ img {
     border: none;
     cursor: pointer;
     padding: 10px;
-    z-index: 99999;
-    position: fixed;
+    z-index: 99;
     top: 20px;
     right: 15px;
 }
@@ -187,7 +190,7 @@ img {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, 0.5);
-    z-index: 99997;
+    z-index: 99;
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
@@ -203,7 +206,7 @@ img {
     display: none;
     flex-direction: column;
     gap: 20px;
-    padding: 80px 30px 30px;
+    padding: 20px;
     background: linear-gradient(180deg, #1a237e 0%, #0d1442 100%);
     position: fixed;
     top: 0;
@@ -1075,6 +1078,8 @@ img {
     }
 
     .hamburger {
+        top: 2px;
+        right: 2px;
         display: flex;
     }
 
@@ -1091,7 +1096,7 @@ img {
         height: 80%;
     }
     .hero-ball {
-        width: 100%;
+        width: 70%;
         right: -10px;
     }
 

@@ -82,7 +82,7 @@ const providerLogos = [
 ];
 
 // Populate provider logos
-const providersPath = "../assets/icons/providers/";
+const providersPath = "assets/icons/providers/";
 const logosContainer = document.getElementById("provider-logos");
 providerLogos.forEach((name) => {
   const img = document.createElement("img");

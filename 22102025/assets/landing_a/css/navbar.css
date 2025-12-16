@@ -2,10 +2,10 @@
     display: flex !important;
     background: transparent;
     width: 100%;
-    line-height: 100px;
     align-items: center;
-    gap: 20px;
     justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }
 .navbar-container a {
     color: #ffffff;

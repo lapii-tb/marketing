@@ -425,20 +425,30 @@ img {
 .features {
     position: relative;
     padding: 80px 40px;
-    background: #ffffff;
+    background: linear-gradient(360deg, #000474 0%, #4a6cf7 100%);
     overflow: hidden;
     z-index: 2;
 }
-
-.features-bg {
+.features::before {
+    content: "";
     position: absolute;
-    top: 0;
-    right: 0;
-    width: 75%;
-    height: 100%;
-    background: url('../images/bg-02.png') no-repeat top right;
-    background-size: cover;
-    z-index: 0;
+    width: 50%;
+    height: 1400px;
+    top: -350px;
+    left: -54px;
+    background: white;
+    transform: rotate(30deg);
+}
+
+.features::after {
+    content: "";
+    position: absolute;
+    width: 20%;
+    height: 1200px;
+    top: -150px;
+    right: -272px;
+    background: white;
+    transform: rotate(30deg);
 }
 
 .features-player {
@@ -457,10 +467,6 @@ img {
     width: 100px;
     height: auto;
     z-index: 3;
-}
-
-.features::before {
-    display: none;
 }
 
 .features-container {
@@ -548,33 +554,48 @@ img {
     position: relative;
     padding: 80px 40px;
     background: transparent;
+    background: linear-gradient(180deg, #000474 0%, #4a6cf7 100%);
     overflow: visible;
     z-index: 1;
 }
 
-.contact-bg {
+.contact::before {
+    content: "";
+    background: white;
+    width: 50%;
+    height: 1200px;
+    left: -50px;
     position: absolute;
-    top: 0;
-    right: -8px;
-    width: 75%;
-    height: 100%;
-    background: url('../images/bg-03.png') no-repeat top right;
-    background-size: cover;
-    z-index: 0;
+    top: -200px;
+    z-index: -1;
+    transform: rotate(332deg);
+}
+
+.contact::after {
+    content: "";
+    background: white;
+    width: 20%;
+    height: 1200px;
+    right: -320px;
+    position: absolute;
+    top: -200px;
+    z-index: -1;
+    transform: rotate(332deg);
 }
 
 .contact-container {
     position: relative;
     z-index: 2;
-    max-width: 1200px;
     margin: 0 auto;
     display: flex;
     align-items: flex-start;
+    justify-content: space-between;
     gap: 40px;
 }
 
 .contact-form-wrapper {
     flex: 1;
+    max-width: 400px;
 }
 
 .contact-form-wrapper h3 {
@@ -648,6 +669,7 @@ img {
 .contact-details {
     flex: 1;
     padding: 35px;
+    max-width: 400px;
     border-radius: 16px;
 }
 
@@ -704,6 +726,26 @@ img {
     background: linear-gradient(180deg, #000474 0%, #4a6cf7 100%);
     overflow: hidden;
     z-index: 1;
+}
+.why-choose::after {
+    content: "";
+    position: absolute;
+    width: 600px;
+    height: 150%;
+    right: -200px;
+    top: -350px;
+    transform: rotate(325deg);
+    background: white;
+}
+.why-choose::before {
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 150%;
+    left: -180px;
+    top: -100px;
+    transform: rotate(325deg);
+    background: white;
 }
 
 .why-choose-bg {
@@ -1013,7 +1055,7 @@ img {
 
 
 /* ===== RESPONSIVE DESIGN ===== */
-@media (max-width: 1024px) {
+@media (max-width: 1000px) {
     .hero-text {
         max-width: 450px;
     }
@@ -1024,6 +1066,13 @@ img {
 
     .countdown-number {
         font-size: 44px;
+    }
+
+    .features-bg {
+        top: -150px;
+        right: 75px;
+        width: 50%;
+        height: 2000px;
     }
 
     .features-container {
@@ -1042,6 +1091,7 @@ img {
 
     .contact-container {
         flex-wrap: wrap;
+
     }
 
     .contact-decoration {
@@ -1052,6 +1102,10 @@ img {
     .contact-details {
         max-width: 100%;
         flex: 1 1 300px;
+    }
+
+    .contact-bg {
+        display: none;
     }
 
     .why-choose-container {
@@ -1071,7 +1125,7 @@ img {
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1000px) {
     .nav-links,
     .nav-social {
         display: none;
@@ -1231,6 +1285,21 @@ img {
         display: none;
     }
 
+    .features {
+        background: transparent;
+    }
+
+    .features::after, .features::before {
+        display: none;
+    }
+
+    .contact {
+        background: transparent;
+    }
+    .contact::before, .contact::after {
+        display: none;
+    }
+
     .check-icon {
         width: 24px;
         height: 24px;
@@ -1340,6 +1409,10 @@ img {
 
     .why-choose-header h2 {
         font-size: 32px;
+    }
+
+    .why-choose::after, .why-choose::before {
+        display: none;
     }
 
     .feature-cards {

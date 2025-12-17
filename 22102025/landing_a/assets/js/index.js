@@ -68,3 +68,15 @@ window.addEventListener("scroll", () => {
     mobileNavbar.classList.remove("scrolled");
   }
 });
+
+function toggleLangDropdown() {
+  const langSwitcher = document.querySelector(".lang-switcher");
+  langSwitcher.classList.toggle("active");
+}
+
+document.addEventListener("click", (e) => {
+  const langSwitcher = document.querySelector(".lang-switcher");
+  if (langSwitcher && !langSwitcher.contains(e.target)) {
+    langSwitcher.classList.remove("active");
+  }
+});

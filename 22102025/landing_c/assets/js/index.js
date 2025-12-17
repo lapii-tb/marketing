@@ -26,6 +26,15 @@ mobileMenu.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", closeMenu);
 });
 
+const navbar = document.querySelector(".navbar");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    navbar.classList.add("scrolled");
+  } else {
+    navbar.classList.remove("scrolled");
+  }
+});
+
 const targetDate = new Date("2026-06-11T00:00:00").getTime();
 
 function updateCountdown() {

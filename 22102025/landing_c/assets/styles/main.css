@@ -98,10 +98,18 @@ img {
     z-index: 999;
     justify-content: space-between;
     padding: 10px 20px;
+    transition: background 0.4s ease, box-shadow 0.4s ease, backdrop-filter 0.4s ease;
 }
 
 .navbar:hover {
     background:#2b49db59;
+}
+
+.navbar.scrolled {
+    background: #020566d9;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
 }
 
 .navbar .logo {
@@ -120,6 +128,9 @@ img {
     letter-spacing: 0.5px;
     color: var(--text-white);
     transition: color 0.3s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .nav-links a:hover {
@@ -1059,7 +1070,16 @@ img {
 }
 
 
-/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1200px) {
+    .nav-links {
+        gap: 15px;
+    }
+
+    .nav-links a {
+        font-size: 14px;
+    }
+}
+
 @media (max-width: 1000px) {
     .hero-text {
         max-width: 450px;

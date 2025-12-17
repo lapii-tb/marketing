@@ -2,6 +2,9 @@
     --primary: #00D177;
     --secondary: #6C4EF1;
     --text-1: white;
+
+    /* Size */
+    --max-width: 1200px;
 }
 
 .text-primary {

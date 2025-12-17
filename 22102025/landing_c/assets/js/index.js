@@ -20,15 +20,12 @@ function closeMenu() {
 
 hamburger.addEventListener("click", toggleMenu);
 
-// Close menu when clicking overlay
 mobileMenuOverlay.addEventListener("click", closeMenu);
 
-// Close menu when clicking a link
 mobileMenu.querySelectorAll("a").forEach((link) => {
   link.addEventListener("click", closeMenu);
 });
 
-// Countdown Timer - Set target date to World Cup 2026 (June 11, 2026)
 const targetDate = new Date("2026-06-11T00:00:00").getTime();
 
 function updateCountdown() {
@@ -101,8 +98,19 @@ tabBtns.forEach((btn) => {
   });
 });
 
-// Contact form submission
 document.getElementById("contact-form").addEventListener("submit", (e) => {
   e.preventDefault();
   alert("Thank you for your message! We will contact you soon.");
+});
+
+function toggleLangDropdown() {
+  const langSwitcher = document.querySelector(".lang-switcher");
+  langSwitcher.classList.toggle("active");
+}
+
+document.addEventListener("click", (e) => {
+  const langSwitcher = document.querySelector(".lang-switcher");
+  if (langSwitcher && !langSwitcher.contains(e.target)) {
+    langSwitcher.classList.remove("active");
+  }
 });

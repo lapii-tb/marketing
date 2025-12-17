@@ -353,9 +353,13 @@ img {
     font-weight: 600;
     border-radius: 30px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
     border: none;
     text-align: center;
+}
+
+.btn:active {
+    transform: translateY(1px) scale(0.98);
 }
 
 .btn-primary {
@@ -364,8 +368,9 @@ img {
 }
 
 .btn-primary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(57, 73, 171, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(57, 73, 171, 0.4);
+    filter: brightness(1.1);
 }
 
 .btn-secondary {
@@ -374,8 +379,9 @@ img {
 }
 
 .btn-secondary:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(197, 230, 38, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(197, 230, 38, 0.4);
+    filter: brightness(1.05);
 }
 
 .btn-book {
@@ -385,8 +391,9 @@ img {
 }
 
 .btn-book:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(255, 107, 53, 0.4);
+    filter: brightness(1.1);
 }
 
 .btn-send {
@@ -396,8 +403,9 @@ img {
 }
 
 .btn-send:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(108, 78, 241, 0.4);
+    filter: brightness(1.1);
 }
 
 .btn-cta {
@@ -407,8 +415,9 @@ img {
 }
 
 .btn-cta:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(197, 230, 38, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(197, 230, 38, 0.4);
+    filter: brightness(1.05);
 }
 
 .btn-outline {
@@ -420,6 +429,8 @@ img {
 .btn-outline:hover {
     background: var(--primary-blue);
     color: var(--text-white);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(108, 78, 241, 0.3);
 }
 
 .btn-primary-alt {
@@ -428,8 +439,9 @@ img {
 }
 
 .btn-primary-alt:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 10px 30px rgba(26, 35, 126, 0.4);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(26, 35, 126, 0.4);
+    filter: brightness(1.1);
 }
 
 .hero-buttons {

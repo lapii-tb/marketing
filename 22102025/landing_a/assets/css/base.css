@@ -76,6 +76,10 @@
     color: var(--text-1);
 }
 
+a:has(.base-button) {
+    text-decoration: none;
+}
+
 .flex-center {
     display: flex;
     justify-content: center;

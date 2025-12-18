@@ -351,6 +351,7 @@ img {
     transition: all 0.2s ease;
     border: none;
     text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .btn:active {
@@ -402,6 +403,9 @@ img {
     box-shadow: 0 8px 25px rgba(108, 78, 241, 0.4);
     filter: brightness(1.1);
 }
+.btn-primary-new {
+    background: #00D177;
+}
 
 .btn-cta {
     background: var(--accent-yellow);
@@ -448,7 +452,7 @@ img {
 .features {
     position: relative;
     padding: 80px 40px;
-    background: linear-gradient(360deg, #000474 0%, #4a6cf7 100%);
+    background: linear-gradient(360deg, #020aec9e 0%, #001c90 100%);
     overflow: hidden;
     z-index: 2;
 }
@@ -578,7 +582,7 @@ img {
     position: relative;
     padding: 80px 40px;
     background: transparent;
-    background: linear-gradient(180deg, #000474 0%, #4a6cf7 100%);
+    background: linear-gradient(180deg, #0009ff9e 0%, #000c3c 100%);
     overflow: visible;
     z-index: 1;
 }
@@ -792,7 +796,11 @@ img {
     flex: 1;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
+}
+
+.why-choose-content .btn {
+    margin: auto;
 }
 
 .why-choose-header {
@@ -957,6 +965,7 @@ img {
     background: var(--primary-blue);
     color: var(--text-white);
     border-color: var(--primary-blue);
+    box-shadow: 0 4px 15px rgba(0, 102, 255, 0.4);
 }
 
 .provider-logos {
@@ -1335,6 +1344,7 @@ img {
     }
 
     .features-list {
+        padding-top: 20px;
         text-align: left;
         margin: 0 auto 25px;
     }
@@ -1665,7 +1675,7 @@ img {
     }
 
     .features-list {
-        padding: 0;
+        padding: 20px 0 0 0;
     }
     .features-content h2 {
         font-size: 18px;

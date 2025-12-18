@@ -71,7 +71,7 @@ img {
 
 .hero-ball {
     position: absolute;
-    left: 20%;
+    left: 0%;
     bottom: -20px;
     width: 450px;
     height: auto;
@@ -287,13 +287,13 @@ img {
 
 /* ===== HERO TEXT ===== */
 .hero-text {
-    max-width: 550px;
+    max-width: 650px;
     margin-left: auto;
     padding: 80px 0;
 }
 
 .hero-text h1 {
-    font-size: 42px;
+    font-size: 52px;
     font-weight: 700;
     line-height: 1.2;
     color: var(--text-white);
@@ -304,7 +304,7 @@ img {
 }
 
 .hero-text .subtitle {
-    font-size: 14px;
+    font-size: 24px;
     font-weight: 700;
     color: var(--text-white);
     margin-top: 10px;
@@ -325,14 +325,13 @@ img {
 }
 
 .countdown-number {
-    font-size: 56px;
+    font-size: 72px;
     font-weight: 700;
     color: var(--accent-yellow);
-    line-height: 1;
 }
 
 .countdown-label {
-    font-size: 10px;
+    font-size: 13px;
     font-weight: 500;
     color: var(--text-white);
     letter-spacing: 1px;
@@ -447,6 +446,9 @@ img {
     display: flex;
     gap: 20px;
 }
+.btn {
+    font-size: 24px;
+}
 
 /* ===== FEATURES SECTION ===== */
 .features {
@@ -513,7 +515,7 @@ img {
 }
 
 .features-content h2 {
-    font-size: 28px;
+    font-size: 32px;
     font-weight: 700;
     color: var(--primary-blue);
     line-height: 1.3;
@@ -521,9 +523,9 @@ img {
 }
 
 .features-desc {
-    font-size: 14px;
+    font-size: 18px;
+    font-weight: 500;
     color: var(--text-dark);
-    line-height: 1.7;
     margin-bottom: 30px;
 }
 
@@ -646,7 +648,7 @@ img {
 }
 
 .contact-form-wrapper h3 {
-    font-size: 22px;
+    font-size: 28px;
     font-weight: 700;
     color: var(--text-dark);
     margin-bottom: 25px;
@@ -723,9 +725,9 @@ img {
 }
 
 .contact-details h3 {
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 700;
-    color: var(--accent-yellow);
+    color: var(--text-white);
     margin-bottom: 15px;
 }
 
@@ -836,12 +838,14 @@ img {
 
 .why-choose-header .text-light {
     color: rgba(255, 255, 255, 0.9);
-    font-weight: 400;
+    font-weight: 500;
+    font-size: 42px;
 }
 
 .why-choose-header .text-dark {
     color: var(--text-white);
     font-weight: 700;
+    font-size: 60px;
 }
 
 .header-icon {
@@ -942,14 +946,12 @@ img {
 }
 
 .text-gradient {
-    background: linear-gradient(135deg, #1a237e 0%, #3949ab 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--primary-blue-light);
+    font-size: 52px;
 }
 
 .providers-subtitle {
-    font-size: 16px;
+    font-size: 20px;
     color: var(--text-dark);
     margin-bottom: 30px;
 }
@@ -1125,6 +1127,10 @@ img {
         font-size: 34px;
     }
 
+    .btn {
+        font-size: 16px !important;
+    }
+
     .countdown-number {
         font-size: 44px;
     }
@@ -1194,6 +1200,10 @@ img {
 
     .provider-logos {
         grid-template-columns: repeat(4, 1fr);
+    }
+
+    .text-gradient {
+        font-size: 32px;
     }
 
     .providers-decoration {
@@ -1320,6 +1330,13 @@ img {
         display: none;
     }
 
+    .why-choose-header .text-light {
+        font-size: 24px;
+    }
+
+    .why-choose-header .text-dark {
+        font-size: 32px;
+    }
     .features-container {
         text-align: center;
         flex-direction: column-reverse;
@@ -1362,8 +1379,7 @@ img {
         font-weight: 700;
         line-height: 1.3;
         margin-bottom: 20px;
-        color: var(--primary-blue-light);
-        text-decoration-color: white;
+        color: var(--primary-blue);
     }
 
     .features-desc {
@@ -1824,6 +1840,12 @@ img {
 
     .countdown-number {
         font-size: 42px;
+    }
+
+    .features-content h2 {
+        background: linear-gradient(109deg, #3549ff 50%, #d8d8d8 50%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 
     .feature-cards {

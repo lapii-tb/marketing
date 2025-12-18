@@ -303,14 +303,9 @@ img {
     color: var(--accent-yellow);
 }
 
-.hero-text h1 .italic,
-.hero-text h1.italic {
-    font-style: italic;
-}
-
 .hero-text .subtitle {
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 700;
     color: var(--text-white);
     margin-top: 10px;
     opacity: 0.9;
@@ -363,7 +358,7 @@ img {
 }
 
 .btn-primary {
-    background: linear-gradient(135deg, #3949ab 0%, #5c6bc0 100%);
+    background: #6C4EF1;
     color: var(--text-white);
 }
 
@@ -375,7 +370,7 @@ img {
 
 .btn-secondary {
     background: var(--accent-yellow);
-    color: var(--text-dark);
+    color: var(--primary-blue-light);
 }
 
 .btn-secondary:hover {
@@ -410,7 +405,7 @@ img {
 
 .btn-cta {
     background: var(--accent-yellow);
-    color: var(--text-dark);
+    color: var(--primary-blue-light);
     padding: 14px 50px;
 }
 
@@ -559,7 +554,7 @@ img {
 
 .features-list li strong {
     font-weight: 700;
-    color: var(--primary-blue);
+    color: var(--primary-blue-light);
 }
 
 .features-image {
@@ -671,6 +666,8 @@ img {
 
 .contact-form .btn {
     margin-top: 10px;
+    width: 200px;
+    margin: auto;
 }
 
 /* Contact Decoration */
@@ -812,7 +809,6 @@ img {
 
 .why-choose-header .text-light {
     color: rgba(255, 255, 255, 0.9);
-    font-style: italic;
     font-weight: 400;
 }
 
@@ -886,7 +882,7 @@ img {
 
 .why-choose .btn-cta {
     background: var(--accent-yellow);
-    color: var(--text-dark);
+    color: var(--primary-blue-light);
     padding: 12px 40px;
 }
 
@@ -926,7 +922,7 @@ img {
 }
 
 .providers-subtitle {
-    font-size: 14px;
+    font-size: 16px;
     color: var(--text-dark);
     margin-bottom: 30px;
 }
@@ -952,7 +948,7 @@ img {
     transition: all 0.3s ease;
 }
 
-/* .tab-btn:hover {
+.tab-btn:hover {
     border-color: var(--primary-blue);
     color: var(--primary-blue);
 }
@@ -961,7 +957,7 @@ img {
     background: var(--primary-blue);
     color: var(--text-white);
     border-color: var(--primary-blue);
-} */
+}
 
 .provider-logos {
     display: grid;
@@ -1105,6 +1101,10 @@ img {
         font-size: 44px;
     }
 
+    .features {
+        padding: 0 20px !important;
+    }
+
     .features-bg {
         top: -150px;
         right: 75px;
@@ -1114,7 +1114,7 @@ img {
 
     .features-container {
         flex-direction: column-reverse;
-        margin-top: -60px;
+        margin-top: 0;
     }
 
     .features-content > h2 {
@@ -1123,7 +1123,9 @@ img {
     }
 
     .features-content {
-        padding-top: -20px;
+        width: 100%;
+        /* padding-top: -20px; */
+        padding-bottom: 20px;
         background: white;
     }
 
@@ -1183,6 +1185,12 @@ img {
     .mobile-menu-overlay {
         display: block;
     }
+    .btn {
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
     .hero-player {
         height: 80%;
@@ -1224,7 +1232,7 @@ img {
     }
 
     .hero-text .subtitle {
-        font-size: 13px;
+        font-size: 16px;
         margin-top: 8px;
     }
 
@@ -1279,7 +1287,12 @@ img {
     .features-container {
         text-align: center;
         flex-direction: column-reverse;
-        margin-top: -60px;
+        margin-top: 0;
+    }
+
+    .features-content .btn {
+        width: 200px;
+        margin: auto;
     }
 
      .features-content > h2 {
@@ -1289,7 +1302,7 @@ img {
 
     .features-image {
         position: relative;
-        top: 50px;
+        top: 80px;
     }
 
     .features-image img {
@@ -1298,10 +1311,10 @@ img {
 
     .features-image::after {
         content: "";
-        height: 1000px;
+        height: 1200px;
         width: 50%;
         background-image: linear-gradient(174deg, #001cff, #00005c);
-        top: -150px;
+        top: -200px;
         right: -11px;
         position: absolute;
         z-index: -1;
@@ -1309,27 +1322,25 @@ img {
     }
 
     .features-content h2 {
-        font-size: 20px;
-        text-align: center;
-        margin-bottom: 15px;
-        z-index: 4;
+        font-size: 28px;
+        font-weight: 700;
+        line-height: 1.3;
+        margin-bottom: 20px;
         color: var(--primary-blue-light);
+        text-decoration-color: white;
     }
 
     .features-desc {
-        font-size: 13px;
-        text-align: center;
-        margin-bottom: 25px;
+        display: none;
     }
 
     .features-list {
         text-align: left;
-        max-width: 320px;
         margin: 0 auto 25px;
     }
 
     .features-list li {
-        font-size: 14px;
+        font-size: 18px;
         margin-bottom: 15px;
         align-items: center;
     }
@@ -1354,8 +1365,8 @@ img {
     }
 
     .check-icon {
-        width: 24px;
-        height: 24px;
+        width: 40px;
+        height: 40px;
     }
 
     .btn-book {
@@ -1382,10 +1393,11 @@ img {
     .contact-form-wrapper {
         width: 100%;
         text-align: center;
-        padding: 0 50px;
+        padding: 0 20px;
     }
 
     .contact-form-wrapper h3 {
+        text-align: left;
         font-size: 18px;
         margin-bottom: 20px;
     }
@@ -1413,7 +1425,9 @@ img {
     }
 
     .contact-details h3 {
-        font-size: 20px;
+        font-size: 16px;
+        font-weight: bold;
+        color: var(--text-white);
         margin-bottom: 12px;
     }
 
@@ -1423,7 +1437,7 @@ img {
     }
 
     .contact-links {
-        align-items: flex-start;
+        align-items: center;
     }
 
     .contact-link {
@@ -1443,6 +1457,7 @@ img {
         display: flex;
         flex-direction: column;
         align-items: center;
+        width: 100%;
         gap: 20px;
     }
 
@@ -1511,7 +1526,7 @@ img {
     }
 
     .providers h2 {
-        font-size: 22px;
+        font-size: 24px;
         line-height: 1.3;
         margin-bottom: 10px;
         display: flex;
@@ -1536,6 +1551,10 @@ img {
         border-radius: 20px;
     }
 
+    .providers {
+        height: 850px;
+    }
+
     .provider-logos {
         grid-template-columns: repeat(3, 1fr);
         gap: 12px;
@@ -1554,6 +1573,11 @@ img {
     }
 
     .providers-buttons .btn {
+        height: 40px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         width: 100%;
         max-width: 200px;
     }
@@ -1587,6 +1611,9 @@ img {
 }
 
 @media (max-width: 720px) {
+    .logo {
+        height: 26px;
+    }
     .hero {
         min-height: auto;
     }
@@ -1596,11 +1623,11 @@ img {
     }
 
     .hero-text h1 {
-        font-size: 22px;
+        font-size: 32px;
     }
 
     .hero-text .subtitle {
-        font-size: 12px;
+        font-size: 16px;
     }
 
     .countdown {
@@ -1610,14 +1637,15 @@ img {
     .countdown-item {
         padding: 5px 6px;
         min-width: auto;
+        flex-direction: column-reverse;
     }
 
     .countdown-number {
-        font-size: 24px;
+        font-size: 42px;
     }
 
     .countdown-label {
-        font-size: 7px;
+        font-size: 12px;
     }
 
     .btn {
@@ -1626,11 +1654,18 @@ img {
     }
 
     /* Features Mobile Small */
+    .features {
+        padding: 0;
+    }
     .features-image::after {
-        height: 800px;
-        top: -80px;
+        height: 1000px;
+        top: -100px;
         width: 300px;
         right: -10px;
+    }
+
+    .features-list {
+        padding: 0;
     }
     .features-content h2 {
         font-size: 18px;
@@ -1641,7 +1676,7 @@ img {
     }
 
     .features-list li {
-        font-size: 13px;
+        font-size: 18px;
         gap: 10px;
     }
 
@@ -1710,11 +1745,12 @@ img {
 
     /* Providers Mobile Small */
     .providers h2 {
-        font-size: 18px;
+        font-size: 24px;
     }
 
     .providers-subtitle {
-        font-size: 12px;
+        font-size: 13px;
+        font-weight: 500;
     }
 
     .tab-btn {
@@ -1729,7 +1765,7 @@ img {
 
     .provider-logo {
         max-width: 60px;
-        height: 24px;
+        height: 35px;
     }
 }
 
@@ -1741,7 +1777,7 @@ img {
 
 @media (max-width: 500px) {
     .hero-text h1 {
-        font-size: 20px;
+        font-size: 32px;
     }
 
     .countdown-item {
@@ -1750,7 +1786,7 @@ img {
     }
 
     .countdown-number {
-        font-size: 20px;
+        font-size: 42px;
     }
 
     .feature-cards {
@@ -1759,8 +1795,9 @@ img {
     }
 
     .features-image::after {
+        top: -200px;
         width: 70%;
-        height: 600px;
+        height: 700px;
     }
 
     .feature-card {
@@ -1782,8 +1819,7 @@ img {
     }
 
     .provider-logo {
-        max-width: 50px;
-        height: 20px;
+        height: 35px;
     }
 }
 

@@ -65,8 +65,40 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-// Provider logos - simple provider names
-const providerLogos = [
+const providersByCategory = {
+  slots: [
+    "Pragmaticplay",
+    "PGSoft",
+    "Jili",
+    "Spribe",
+    "Yggdrasil",
+    "MicroGaming",
+    "Playtech",
+  ],
+  sports: [
+    "SBObet",
+    "568Win",
+    "SabaSports",
+    "PandaSports",
+    "BTISports",
+  ],
+  "fishing-arcade": [
+    "FunkyGames",
+    "Aviatrix",
+    "Jili",
+    "Spribe",
+  ],
+  "live-dealer": [
+    "Evolution",
+    "SexyGaming",
+    "BigGaming",
+    "SAGaming",
+    "Pragmaticplay",
+    "Playtech",
+  ],
+};
+
+const allProviders = [
   "SBObet",
   "568Win",
   "SabaSports",
@@ -87,23 +119,40 @@ const providerLogos = [
   "MicroGaming",
 ];
 
-// Populate provider logos
+const tabCategoryMap = {
+  "Slots": "slots",
+  "Sports": "sports",
+  "Fishing / Arcade": "fishing-arcade",
+  "Live Dealer": "live-dealer",
+};
+
 const providersPath = "assets/icons/providers/";
 const logosContainer = document.getElementById("provider-logos");
-providerLogos.forEach((name) => {
-  const img = document.createElement("img");
-  img.src = `${providersPath}${name}.png`;
-  img.alt = name;
-  img.className = "provider-logo";
-  logosContainer.appendChild(img);
-});
 
-// Tab functionality
+function renderProviders(category) {
+  logosContainer.innerHTML = "";
+  const providers = category === "all" ? allProviders : (providersByCategory[category] || []);
+  providers.forEach((name) => {
+    const img = document.createElement("img");
+    img.src = `${providersPath}${name}.png`;
+    img.alt = name;
+    img.className = "provider-logo";
+    logosContainer.appendChild(img);
+  });
+}
+
+renderProviders("all");
+
 const tabBtns = document.querySelectorAll(".tab-btn");
 tabBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
     tabBtns.forEach((b) => b.classList.remove("active"));
     btn.classList.add("active");
+
+    const category = tabCategoryMap[btn.textContent.trim()];
+    if (category) {
+      renderProviders(category);
+    }
   });
 });
 

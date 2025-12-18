@@ -88,6 +88,14 @@ const TEMPLATE = `<!DOCTYPE html>
         card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(card);
       });
+
+      document.querySelectorAll('.sports-render, .slots-render, .dealers-render, .fishings-render').forEach(container => {
+        container.style.display = 'none';
+      });
+      const defaultRender = document.querySelector('.default-render');
+      if (defaultRender) {
+        defaultRender.style.display = 'flex';
+      }
     });
     function toggleFaq(element) {
       const answer = element.nextElementSibling;
@@ -101,6 +109,37 @@ const TEMPLATE = `<!DOCTYPE html>
       } else {
         icon.textContent = '+';
       }
+    }
+    function toggleCategory(element, category) {
+      document.querySelectorAll('.category-button').forEach(btn => {
+        btn.classList.remove('active');
+      });
+      element.classList.add('active');
+      const container = document.querySelector('.one-api-container');
+      if (container && category === 'slots') {
+        container.classList.add('large-height-render');
+      } else if (container) {
+        container.classList.remove('large-height-render');
+      }
+      document.querySelectorAll('.default-render, .sports-render, .slots-render, .dealers-render, .fishings-render').forEach(container => {
+        container.style.display = 'none';
+      });
+      const targetContainer = document.querySelector('.' + category + '-render');
+      if (targetContainer) {
+        targetContainer.style.display = 'flex';
+      }
+    }
+    function handleSubmit(event) {
+      event.preventDefault();
+      const form = event.target;
+      const name = form.Name.value;
+      const email = form.Mail.value;
+      const message = form.Message.value;
+      
+      const subject = '568Win Registration - ' + name;
+      const body = message + '%0D%0A%0D%0AFrom: ' + name + '%0D%0AEmail: ' + email;
+      
+      window.location.href = 'mailto:lapykn@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + body;
     }
   </script>
   </body>

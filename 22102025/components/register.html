@@ -4,12 +4,12 @@
       <div class="mask-chip-1"><img src="assets/image/register_chip_1.png" /></div>
       <div class="mask-chip-2"><img src="assets/image/register_chip_2.png" /></div>
       <div class="mask-gift"><img src="assets/image/register_gift.png" /></div>
-      <form action="mailto:lapykn@gmail.com" method="post" enctype="text/plain" class="form-section">
+      <form class="form-section" onsubmit="handleSubmit(event)">
         <div class="title">Start Your 2026 World Cup Journey <span>with 568Win</span></div>
         <div class="form-info">
-          <input type="text" name="Name" placeholder="Name" />
-          <input type="text" name="Mail" placeholder="Mail" />
-          <textarea cols="" rows="10" name="Message" placeholder="Message ..."></textarea>
+          <input type="text" name="Name" placeholder="Name" required/>
+          <input type="text" name="Mail" placeholder="Mail" required/>
+          <textarea cols="" rows="10" name="Message" placeholder="Message ..." required></textarea>
         </div>
         <div class="button-group">
           <button class="btn-primary" type="submit">Submit Request</button>

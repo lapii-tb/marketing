@@ -2,6 +2,9 @@
     --primary: #00D177;
     --secondary: #6C4EF1;
     --text-1: white;
+
+    /* Size */
+    --max-width: 1200px;
 }
 
 .text-primary {
@@ -71,6 +74,10 @@
 .btn-secondary {
     background: var(--secondary);
     color: var(--text-1);
+}
+
+a:has(.base-button) {
+    text-decoration: none;
 }
 
 .flex-center {

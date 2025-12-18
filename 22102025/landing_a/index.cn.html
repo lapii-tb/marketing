@@ -19,7 +19,6 @@
             <div class="bg-4"></div>
             <div class="bg-5"></div>
             <div class="bg-6"></div>
-            <div class="bg-7"></div>
         </div>
         <div class="content">
            <div class="mobile-header">
@@ -30,36 +29,52 @@
            </div>
             <div class="hamburger-menu" id="hamburger-menu">
                 <nav>
-                    <a href="#">您的机会</a>
+                    <a href="#your-chance">您的机会</a>
                     <a href="#why-pick-us">为什么选择我们</a>
                     <a href="#stable-container">始终稳定运行</a>
-                    <a href="#">您将获得什么</a>
+                    <a href="#providers">您将获得什么</a>
                     <a href="#contact-us">联系我们</a>
+                    <div class="lang-switcher">
+                        <div class="lang-current" onclick="toggleLangDropdown()">
+                            <span>CHINESE</span>
+                            <svg class="lang-arrow" width="12" height="8" viewBox="0 0 12 8" fill="none">
+                                <path d="M1 1L6 6L11 1" stroke="white" stroke-width="2"/>
+                            </svg>
+                        </div>
+                        <div class="lang-dropdown">
+                            <a href="./index.html" class="lang-option">ENGLISH</a>
+                            <a href="./index.cn.html" class="lang-option active">CHINESE</a>
+                        </div>
+                    </div>
                 </nav>
                 <div class="contact">
-                   <a href="./index.html">
-                     <img src="assets/icons/website.png" alt="">
-                   </a>
-                    <img src="assets/icons/telegram.png" alt="">
-                    <img src="assets/icons/instagram.png" alt="">
+                    <a href="./index.html">
+                        <img src="assets/icons/website.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="assets/icons/telegram.png" alt="">
+                    </a>
+                    <a href="#">
+                        <img src="assets/icons/instagram.png" alt="">
+                    </a>
                 </div>
             </div>
             <nav class="navbar-container">
                 <img class="logo" src="assets/images/568win.png" alt="">
-                <a href="#">您的机会</a>
+                <a href="#your-chance">您的机会</a>
                 <a href="#why-pick-us">为什么选择我们</a>
                 <a href="#stable-container">始终稳定运行</a>
-                <a href="#">您将获得什么</a>
+                <a href="#providers">您将获得什么</a>
                 <a href="#contact-us">联系我们</a>
                 <a href="./index.html">
                     <img src="assets/icons/website.png" alt="">
                 </a>
-                <button>
+                <a>
                     <img src="assets/icons/telegram.png" alt="">
-                </button>
-                <button>
+                </a>
+                <a>
                     <img src="assets/icons/instagram.png" alt="">
-                </button>
+                </a>
             </nav>
             <!-- Text and button -->
             <div class="hero-text">
@@ -67,12 +82,12 @@
                 <h1>一键搞定</h1>
                 <p>接入568Win体育博彩平台，开启FIFA 2026世界杯投注</p>
                 <div class="button-container">
-                    <button class="base-button btn-secondary">联系我们</button>
+                    <a href="#contact-us"><button class="base-button btn-secondary">联系我们</button></a>
                     <button class="base-button btn-primary">访问官网</button>
                 </div>
             </div>
             <!-- Introduce -->
-            <div class="introduce-container">
+            <div class="introduce-container" id="your-chance">
                 <div class="title">
                     <span class="text-primary font-42 font-bold">世界杯即将来临</span>
                     <span class="text-1 font-42 font-bold">让您的网站做好准备！</span>
@@ -113,7 +128,7 @@
                     </div>
                 </div>
                 <div class="button-container">
-                    <button class="btn-primary base-button">联系我们</button>
+                    <a href="#contact-us"><button class="btn-primary base-button">联系我们</button></a>
                 </div>
             </div>
             <div class="flex-col-center bg-3 why-pick-us" id="why-pick-us" style="margin-top: 100px; gap: 10px;">
@@ -151,10 +166,10 @@
                     </div>
                 </div>
                 <div class="flex-center" style="margin-top: 20px;">
-                    <button class="base-button btn-secondary">联系我们</button>
+                    <a href="#contact-us"><button class="base-button btn-secondary">联系我们</button></a>
                 </div>
             </div>
-            <div id="stable-container" class="bg-4 stable-container" style="width: 100%; display: flex; justify-content: space-evenly; align-items: center;">
+            <div id="stable-container" class="stable-container" style="width: 100%; display: flex; justify-content: space-evenly; align-items: center;">
                 <div class="flex-col-center" style="width: 100%">
                     <div style="margin-bottom: 20px;">
                         <div class="font-42 font-bold">始终稳定。</div>
@@ -166,14 +181,14 @@
                         <li>您的体育博彩平台全程稳定上线。</li>
                     </ul>
                     <div class="desktop-button">
-                        <button class="base-button btn-secondary">联系我们</button>
+                        <a href="#contact-us"><button class="base-button btn-secondary">联系我们</button></a>
                     </div>
                 </div>
                 <div class="flex-col-start alway-stabl-icon">
                     <img style="height: 100%; width: auto; object-fit: contain;" src="assets/images/ready.png" alt="">
                 </div>
                 <div class="mobile-button">
-                    <button class="base-button btn-secondary">联系我们</button>
+                    <a href="#contact-us"><button class="base-button btn-secondary">联系我们</button></a>
                 </div>
             </div>
             <div class="providers bg-5 flex-col-center" id="providers">
@@ -191,7 +206,7 @@
                  </div>
                  <div class="provider-logos"></div>
                  <div class="flex-center gap-16 provider-button">
-                    <button class="base-button btn-secondary">联系我们</button>
+                    <a href="#contact-us"><button class="base-button btn-secondary">联系我们</button></a>
                     <button class="base-button btn-primary">访问官网</button>
                  </div>
             </div>
@@ -238,7 +253,7 @@
                     </div>
                 </div>
                 <div class="flex-center gap-16 package-button" style="margin-top: 60px; z-index: 10;">
-                    <button class="base-button btn-secondary">联系我们</button>
+                    <a href="#contact-us"><button class="base-button btn-secondary">联系我们</button></a>
                     <button class="base-button btn-primary">访问官网</button>
                 </div>
             </div>
@@ -286,64 +301,6 @@
             </div>
         </div>
     </div>
-    <script>
-        const hamburgerIcon = document.querySelector('.hamburger-icon');
-        const hamburgerMenu = document.getElementById('hamburger-menu');
-        const menuLinks = hamburgerMenu.querySelectorAll('a');
-
-        hamburgerIcon.addEventListener('click', (e) => {
-            hamburgerMenu.classList.toggle('active');
-            e.stopPropagation();
-        });
-
-        document.addEventListener('click', (e) => {
-            if (!hamburgerMenu.contains(e.target)) {
-                hamburgerMenu.classList.remove('active');
-            }
-        });
-
-        hamburgerMenu.addEventListener('click', (e) => {
-            e.stopPropagation();
-        });
-
-        menuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                hamburgerMenu.classList.remove('active');
-            });
-        });
-        const providerLogos = [
-            'assets/images/providers/568win.png',
-            'assets/images/providers/AFBCasino.png',
-            'assets/images/providers/Aviatrix.png',
-            'assets/images/providers/BigGaming.png',
-            'assets/images/providers/EvolutionGaming.png',
-            'assets/images/providers/Fachai.png',
-            'assets/images/providers/FunkyGame.png',
-            'assets/images/providers/Habanero.png',
-            'assets/images/providers/JDB.png',
-            'assets/images/providers/MicroGaming.png',
-            'assets/images/providers/PandaSport.png',
-            'assets/images/providers/PG.png',
-            'assets/images/providers/PlayAce.png',
-            'assets/images/providers/Playtech.png',
-            'assets/images/providers/Pragmaticplay.png',
-            'assets/images/providers/RelaxGaming.png',
-            'assets/images/providers/SabaSport.png',
-            'assets/images/providers/SBObet.png',
-            'assets/images/providers/SexyGaming.png',
-            'assets/images/providers/Yggdrasil.png',
-            'assets/images/providers/YGR.png',
-        ];
-        const elProviderLogo = document.querySelector('.provider-logos');
-        if (elProviderLogo) {
-            providerLogos.forEach((logoPath) => {
-                const img = document.createElement('img');
-                img.src = logoPath;
-                img.alt = 'Provider Logo';
-                img.className = 'provider-logo'; 
-                elProviderLogo.appendChild(img);
-            });
-        }
-    </script>
+    <script src="./assets/js/index.js"></script>
 </body>
 </html>

@@ -587,6 +587,25 @@ img {
     z-index: 1;
 }
 
+.contact > .coin-1 {
+    position: absolute;
+    right: 0;
+}
+
+.contact > .coin-2 {
+    position: absolute;
+    right: 40%;
+    top: 0;
+}
+
+.contact > .gift {
+    position: absolute;
+    width: 300px;
+    bottom: -150px;
+    opacity: 60%;
+    right: 30%;
+}
+
 .contact::before {
     content: "";
     background: white;
@@ -1141,6 +1160,14 @@ img {
     .contact-container {
         flex-wrap: wrap;
 
+    }
+
+    .contact > .coin-1 {
+        display: none;
+    }
+
+    .contact > .coin-2 {
+        display: none;
     }
 
     .contact-decoration {

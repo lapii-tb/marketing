@@ -120,10 +120,16 @@ const allProviders = [
 ];
 
 const tabCategoryMap = {
+  // English
   "Slots": "slots",
   "Sports": "sports",
   "Fishing / Arcade": "fishing-arcade",
   "Live Dealer": "live-dealer",
+  // Chinese
+  "老虎机": "slots",
+  "体育": "sports",
+  "捕鱼 / 街机": "fishing-arcade",
+  "真人荷官": "live-dealer",
 };
 
 const providersPath = "assets/icons/providers/";

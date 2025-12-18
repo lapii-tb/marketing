@@ -58,7 +58,7 @@ body {
     flex-direction: column;
     align-items: center;
 
-    .btn-primary, .btn-secondary {
+    .btn-primary, .btn-secondary, .btn-tertiary {
       line-height: 40px !important;
       font-size: 16px !important;
       padding: 0 27px !important;
@@ -80,7 +80,7 @@ body {
   margin-top: 35px;
   height: 60px;
 
-  .btn-primary, .btn-secondary {
+  .btn-primary, .btn-secondary, .btn-tertiary {
     cursor: pointer;
     min-width: 260px;
     line-height: 60px;
@@ -92,7 +92,7 @@ body {
     font-style: Bold;
     font-size: 24px;
 
-    color: inherit;
+    color: #fff;
     text-decoration: none;
     transition: transform 0.3s ease;
     &:hover {
@@ -100,10 +100,10 @@ body {
       text-decoration: none;
     }
     &:visited {
-      color: inherit;
+      color: #fff;
     }
     &:active {
-      color: inherit;
+      color: #fff;
     }
   }
   .btn-primary {
@@ -111,5 +111,8 @@ body {
   }
   .btn-secondary {
     background: #00D177;
+  }
+  .btn-tertiary {
+    background:#2B49DB;
   }
 }

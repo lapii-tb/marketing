@@ -1,28 +1,49 @@
 .register-container {
   width: 100%;
-  aspect-ratio: 1440 / 720;
+  height: 720px;
+  aspect-ratio: 2/1;
   overflow: hidden;
   position: relative;
   margin: auto;
+  background: center / cover no-repeat url("../image/register.png");
 
-  .background-container {
-    width: 100%;
-    height: 100%;
-
-    .register-background {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: top;
-    }
-  }
   .register-content {
-    width: 100%;
+    width: 1440px;
+    height: 100%;
     display: flex;
     justify-content: center;
-    position: absolute;
+    align-items: center;
+    margin: auto;
     gap: 100px;
-    top: 100px;
+    position: relative;
+
+    .mask-chip-1 {
+      position: absolute;
+      top: 0;
+      width: 180px;
+      height: 180px;
+      transform: rotate(-16.067deg);
+      aspect-ratio: 1/1;
+    }
+    .mask-chip-2 {
+      position: absolute;
+      top: 40%;
+      right: 0;
+      width: 279px;
+      height: 185px;
+      aspect-ratio: 279/185;
+      filter: blur(4px);
+    }
+    .mask-gift {
+      position: absolute;
+      bottom: 0;
+      width: 463.791px;
+      height: 501.273px;
+      aspect-ratio: 463.79/501.27;
+      filter: blur(2px);
+      top: 62%;
+      left: 48%;
+    }
 
     .form-section {
       max-width: 572px;
@@ -59,6 +80,10 @@
           border-radius: 4px;
           fill: none;
           background: transparent;
+
+          &::placeholder {
+            color: #fff;
+          }
         }
 
         textarea {
@@ -72,13 +97,23 @@
           border-radius: 4px;
           fill: none;
           background: transparent;
+
+          &::placeholder {
+            color: #fff;
+          }
         }
       }
       .button-group {
         justify-content: start;
+
+        .btn-primary {
+          border: unset !important;
+          outline: unset !important;
+        }
       }
     }
     .info-section {
+      height: 80%;
       max-width: 400px;
       text-align: center;
       color: #fff;
@@ -211,14 +246,20 @@
 
 @media screen and (max-width: 1024px) {
   .register-container {
-    height: 780px;
-    aspect-ratio: 18/41;
+    height: 722px;
+    aspect-ratio: 180/361;
+    background: center / cover no-repeat url("../image/register_mobile.png");
 
     .register-content {
+      width: 100% !important;
       flex-direction: column !important;
       gap: 20px !important;
       top: 0 !important;
       padding: 30px 20px;
+
+      .mask-chip-1, .mask-chip-2, .mask-gift {
+        display: none;
+      }
 
       .form-section {
         .title {
@@ -238,23 +279,40 @@
             border: 1px solid #D9D9D9 !important;
             margin-bottom: 8px !important;
             padding: 12px !important;
+
+            &::placeholder {
+              color: #fff;
+            }
           }
 
           textarea {
             font-size: 16px !important;
             border: 1px solid #D9D9D9 !important;
             padding: 12px !important;
+
+            &::placeholder {
+              color: #fff;
+            }
           }
+        }
+        .button-group {
+          margin-top: 24px !important;
         }
       }
       .info-section {
         .header {
           font-size: 16px !important;
+          line-height: 20px;
+          margin-top: 8px !important;
+          margin-bottom: 12px !important;
           color: #00FF90;
-          margin: 18px 0 !important;
         }
         .title {
-          font-size: 14px !important;
+          color: #D9D9D9;
+          font-family: Roboto;
+          font-size: 13px !important;
+          font-weight: 500;
+          line-height: 20px;
         }
         .info-group {
           display: flex;

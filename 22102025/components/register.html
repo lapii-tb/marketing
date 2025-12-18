@@ -1,20 +1,20 @@
 <div id="start">
   <div class="register-container">
-    <div class="background-container">
-      <img src="assets/image/register.jpg" class="register-background" />
-    </div>
     <div class="register-content">
-      <div class="form-section">
+      <div class="mask-chip-1"><img src="assets/image/register_chip_1.png" /></div>
+      <div class="mask-chip-2"><img src="assets/image/register_chip_2.png" /></div>
+      <div class="mask-gift"><img src="assets/image/register_gift.png" /></div>
+      <form action="mailto:lapykn@gmail.com" method="post" enctype="text/plain" class="form-section">
         <div class="title">Start Your 2026 World Cup Journey <span>with 568Win</span></div>
         <div class="form-info">
-          <input type="text" placeholder="Name" />
-          <input type="text" placeholder="Mail" />
-          <textarea cols="" rows="10" placeholder="Message ..."></textarea>
+          <input type="text" name="Name" placeholder="Name" />
+          <input type="text" name="Mail" placeholder="Mail" />
+          <textarea cols="" rows="10" name="Message" placeholder="Message ..."></textarea>
         </div>
         <div class="button-group">
-          <div class="btn-primary">Send</div>
+          <button class="btn-primary" type="submit">Submit Request</button>
         </div>
-      </div>
+      </form>
       <div class="info-section">
         <div class="header">Contact Details</div>
         <div class="title">Rooted in Asia, 568win has established 15+ years of collaboration with eGR award-winning Asian operator</div>
@@ -31,7 +31,7 @@
       </div>
     </div>
   </div>
-  <div class="contact-container">
+  <div class="contact-container" style="display:none">
     <div class="background-container">
       <img src="assets/image/contact.jpg" class="contact-background" />
     </div>

@@ -89,6 +89,19 @@ const TEMPLATE = `<!DOCTYPE html>
         observer.observe(card);
       });
     });
+    function toggleFaq(element) {
+      const answer = element.nextElementSibling;
+      const icon = element.querySelector('.faq-icon');
+      
+      answer.classList.toggle('active');
+      icon.classList.toggle('rotated');
+      
+      if (answer.classList.contains('active')) {
+        icon.textContent = '×';
+      } else {
+        icon.textContent = '+';
+      }
+    }
   </script>
   </body>
 </html>`;

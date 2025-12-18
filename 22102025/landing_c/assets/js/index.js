@@ -162,9 +162,41 @@ tabBtns.forEach((btn) => {
   });
 });
 
+const EMAILJS_PUBLIC_KEY = ""; // Input your key
+const EMAILJS_SERVICE_ID = ""; // Input your ID
+const EMAILJS_TEMPLATE_ID = "template_";  // Input your template ID
+
+emailjs.init(EMAILJS_PUBLIC_KEY);
+
 document.getElementById("contact-form").addEventListener("submit", (e) => {
   e.preventDefault();
-  alert("Thank you for your message! We will contact you soon.");
+
+  const form = e.target;
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalBtnText = submitBtn.textContent;
+
+  submitBtn.disabled = true;
+  submitBtn.textContent = "Sending...";
+
+  const templateParams = {
+    from_name: form.name.value,
+    from_email: form.email.value,
+    message: form.message.value,
+    to_email: "", // Put your setup email account
+  };
+
+  emailjs
+    .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
+    .then(() => {
+      form.reset();
+    })
+    .catch((error) => {
+      console.error("EmailJS Error:", error);
+    })
+    .finally(() => {
+      submitBtn.disabled = false;
+      submitBtn.textContent = originalBtnText;
+    });
 });
 
 function toggleLangDropdown() {

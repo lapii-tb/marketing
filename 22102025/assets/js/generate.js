@@ -11,6 +11,66 @@ const TEMPLATE = `<!DOCTYPE html>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{TITLE}</title>
     {CSS_LINKS}
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Product",
+            "name": "Sportsbook API Aggregator for 2026 World Cup",
+            "description": "Get your website ready for the 2026 World Cup with a single API. Access 80+ game providers, real-time odds, and seamless integration for all sportsbook and virtual sports bets.",
+            "brand": {
+              "@type": "Brand",
+              "name": "568Win"
+            },
+            "slogan": "YOUR 2026 WORLD CUP IN ONE CLICK",
+            "category": "Software > API",
+            "audience": {
+              "@type": "Audience",
+              "audienceType": "Business",
+              "name": "Sportsbook Operators & iGaming Platforms"
+            }
+          },
+          {
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How to integrate our API?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "我們提供詳細的技術文件和 24/7 技術支援，多數客戶可以在 1-3 天內完成整合。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is your pricing model?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "我們提供彈性的定價方案，包含月費制和依流量計費。請聯繫我們的業務團隊以取得客製化報價。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Which sports are covered?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "我們的 API 涵蓋所有主流體育賽事，包括足球（世界盃、歐洲冠軍聯賽）、籃球、網球、棒球以及虛擬體育等。"
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How do I get a demo?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "您可以點擊頁面上的「Demo」按鈕，或填寫下方的聯繫表單，我們的專員會立即與您安排線上產品演示。"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    </script>
   </head>
   <body>{CONTENT}
   <script src="assets/js/menu.js"></script>
@@ -136,10 +196,11 @@ const TEMPLATE = `<!DOCTYPE html>
       const email = form.Mail.value;
       const message = form.Message.value;
       
-      const subject = '568Win Registration - ' + name;
+      const subject = '568Win Submission Request - ' + name;
       const body = message + '%0D%0A%0D%0AFrom: ' + name + '%0D%0AEmail: ' + email;
       
-      window.location.href = 'mailto:lapykn@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + body;
+      window.location.href = 'mailto:568winmk@568win.com?subject=' + encodeURIComponent(subject) + '&body=' + body;
+      form.reset();
     }
   </script>
   </body>

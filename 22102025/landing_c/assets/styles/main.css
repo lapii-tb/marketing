@@ -447,7 +447,8 @@ img {
     filter: brightness(1.1);
 }
 .btn-primary-new {
-    background: #00D177;
+    color: var(--primary-blue-light);
+    background: var(--accent-yellow);
 }
 
 .btn-cta {

@@ -227,6 +227,25 @@ function renderFeaturesList() {
 
 renderFeaturesList();
 
+function toggleCategory(element, category) {
+  document.querySelectorAll('.category-button').forEach(btn => {
+    btn.classList.remove('active');
+  });
+  element.classList.add('active');
+  const container = document.querySelector('.providers');
+  if (container && category === 'slots') {
+    container.classList.add('large-height-render');
+  } else if (container) {
+    container.classList.remove('large-height-render');
+  }
+  document.querySelectorAll('.default-render, .sports-render, .slots-render, .dealers-render, .fishings-render').forEach(container => {
+    container.style.display = 'none';
+  });
+  const targetContainer = document.querySelector('.' + category + '-render');
+  if (targetContainer) {
+    targetContainer.style.display = 'flex';
+  }
+}
 function handleSubmit(event) {
   event.preventDefault();
   const form = event.target;

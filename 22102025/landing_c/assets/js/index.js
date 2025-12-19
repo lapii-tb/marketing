@@ -162,43 +162,6 @@ tabBtns.forEach((btn) => {
   });
 });
 
-const EMAILJS_PUBLIC_KEY = ""; // Input your key
-const EMAILJS_SERVICE_ID = ""; // Input your ID
-const EMAILJS_TEMPLATE_ID = "template_";  // Input your template ID
-
-emailjs.init(EMAILJS_PUBLIC_KEY);
-
-document.getElementById("contact-form").addEventListener("submit", (e) => {
-  e.preventDefault();
-
-  const form = e.target;
-  const submitBtn = form.querySelector('button[type="submit"]');
-  const originalBtnText = submitBtn.textContent;
-
-  submitBtn.disabled = true;
-  submitBtn.textContent = "Sending...";
-
-  const templateParams = {
-    from_name: form.name.value,
-    from_email: form.email.value,
-    message: form.message.value,
-    to_email: "", // Put your setup email account
-  };
-
-  emailjs
-    .send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, templateParams)
-    .then(() => {
-      form.reset();
-    })
-    .catch((error) => {
-      console.error("EmailJS Error:", error);
-    })
-    .finally(() => {
-      submitBtn.disabled = false;
-      submitBtn.textContent = originalBtnText;
-    });
-});
-
 function toggleLangDropdown() {
   const langSwitcher = document.querySelector(".lang-switcher");
   langSwitcher.classList.toggle("active");
@@ -266,3 +229,17 @@ document.addEventListener("click", (e) => {
     langSwitcher.classList.remove("active");
   }
 });
+
+function handleSubmit(event) {
+  event.preventDefault();
+  const form = event.target;
+  const name = form.Name.value;
+  const email = form.Mail.value;
+  const message = form.Message.value;
+  
+  const subject = '568Win Submission Request - ' + name;
+  const body = message + '%0D%0A%0D%0AFrom: ' + name + '%0D%0AEmail: ' + email;
+  
+  window.location.href = 'mailto:568winmk@568win.com?subject=' + encodeURIComponent(subject) + '&body=' + body;
+  form.reset();
+}

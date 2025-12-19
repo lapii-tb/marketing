@@ -204,6 +204,62 @@ function toggleLangDropdown() {
   langSwitcher.classList.toggle("active");
 }
 
+// Features List - English
+const featuresList = [
+  { text: "One-time integration, go live within days" },
+  { text: "No setup fee & no minimum guarantee" },
+  { text: "Multi-sports coverage — football, basketball & more" },
+  { text: "Full product suite: Sports, Live Casino, Slots, Lottery" },
+  { text: "HD sports data feed optimized for live betting" },
+  { text: "24/7 support team prepared for World Cup" },
+];
+
+// Features List - Chinese
+const featuresListCn = [
+  { text: "一次集成，数日内上线" },
+  { text: "无设置费 & 无最低保证" },
+  { text: "多体育覆盖 — 足球、篮球等" },
+  { text: "全产品套件：体育、真人娱乐、老虎机、彩票" },
+  { text: "为实时投注优化的高清体育数据源" },
+  { text: "24/7 支持团队为世界杯做好准备" },
+];
+
+function renderFeaturesList() {
+  const container = document.getElementById("features-list");
+  if (container) {
+    container.innerHTML = featuresList
+      .map(
+        (item) => `
+        <li>
+          <span class="check-icon">
+            <img src="assets/icons/icon_correct.png" alt="Check">
+          </span>
+          <span>${item.text}</span>
+        </li>
+      `
+      )
+      .join("");
+  }
+
+  const containerCn = document.getElementById("features-list-cn");
+  if (containerCn) {
+    containerCn.innerHTML = featuresListCn
+      .map(
+        (item) => `
+        <li>
+          <span class="check-icon">
+            <img src="assets/icons/icon_correct.png" alt="Check">
+          </span>
+          <span>${item.text}</span>
+        </li>
+      `
+      )
+      .join("");
+  }
+}
+
+renderFeaturesList();
+
 document.addEventListener("click", (e) => {
   const langSwitcher = document.querySelector(".lang-switcher");
   if (langSwitcher && !langSwitcher.contains(e.target)) {

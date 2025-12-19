@@ -350,7 +350,6 @@ img {
     font-weight: 700;
     color: var(--text-white);
     margin-top: 10px;
-    line-height: 0.8;
 }
 
 /* ===== COUNTDOWN TIMER ===== */
@@ -1352,7 +1351,7 @@ img {
     .hero-ball {
         width: 80%;
         right: -10px;
-        z-index: 4;
+        z-index: 2;
     }
 
     .hero-content {
@@ -1377,7 +1376,6 @@ img {
     }
 
     .hero-buttons {
-        z-index: 30;
         justify-content: start;
         align-items: start !important;
     }
@@ -1420,6 +1418,7 @@ img {
         flex-direction: column;
         align-items: center;
         gap: 12px;
+        /* z-index: 20; */
     }
 
     .hero-buttons .btn {
@@ -1932,7 +1931,7 @@ img {
     }
 
     .hero-text {
-        z-index: 2;
+        z-index: 10;
         background: linear-gradient(84deg, #2e2e89a8, #0000ff26, #0000001f);
         transform: translateY(20px);
     }

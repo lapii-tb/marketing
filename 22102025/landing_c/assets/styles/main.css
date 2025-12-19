@@ -84,6 +84,10 @@ img {
     background: linear-gradient(90deg, #00000000, #0b1b6aae, #172775);
 }
 
+.hero-text h1.highlight .mobile {
+    display: none;
+}
+
 .hero-player {
     position: absolute;
     left: 0;
@@ -1196,7 +1200,7 @@ img {
         top: unset;
         width: 100%;
         height: 200px;
-        background: linear-gradient(178deg, #00000000, #0e0e83, #21349c);
+        background: linear-gradient(177deg, #00000000, #03034bbd, #041767);
         border: none;
     }
     .hero-text {
@@ -1205,6 +1209,14 @@ img {
 
     .hero-text h1 {
         font-size: 34px;
+    }
+    .hero-text h1.highlight.italic {
+        display: none;
+    }
+    .hero-text h1.highlight .mobile {
+        display: inline-block;
+        color: var(--text-white);
+        padding-left: 8px;
     }
 
     .btn {
@@ -1306,6 +1318,11 @@ img {
         display: none;
     }
 
+    .btn {
+        padding: 12px 28px;
+        font-size: 13px;
+    }
+
     .hamburger {
         top: 2px;
         right: 2px;
@@ -1334,6 +1351,7 @@ img {
     .hero-ball {
         width: 80%;
         right: -10px;
+        z-index: 4;
     }
 
     .hero-content {
@@ -1348,7 +1366,7 @@ img {
         height: 100%;
         bottom: 0;
         z-index: 50;
-        left: 20px;
+        padding-left: 20px;
         bottom: 20px;
         display: flex;
         flex-direction: column;
@@ -1356,6 +1374,7 @@ img {
         text-align: start;
         max-width: 100%;
     }
+
     .hero-buttons {
         z-index: 30;
         justify-content: start;
@@ -1409,7 +1428,11 @@ img {
 
     /* Features Section Mobile */
     .features {
-        padding: 50px 20px;
+        padding: 0;
+    }
+    
+    .features {
+        background: linear-gradient(360deg, #020aec87 0%, #011463 100%);
     }
 
     .features-bg {
@@ -1469,6 +1492,7 @@ img {
     }
 
     .features-content h2 {
+        left: 10px;
         font-size: 28px;
         font-weight: 700;
         line-height: 1.3;
@@ -1490,10 +1514,6 @@ img {
 
     .contact-bg {
         display: none;
-    }
-
-    .features {
-        background: transparent;
     }
 
     .features::after, .features::before {
@@ -1519,7 +1539,7 @@ img {
     }
 
     .contact-details {
-        background-image: linear-gradient(174deg, #001cff, #00005c);
+        background-image: linear-gradient(174deg, #051ac4, #040859);
         border-radius: 0;
     }
 
@@ -1591,7 +1611,7 @@ img {
     /* Why Choose Section Mobile */
     .why-choose {
         padding: 50px 20px;
-        background: linear-gradient(180deg, #000474 0%, #4a6cf7 100%) !important;
+        background: linear-gradient(180deg, #040756 0%, #0725a1 100%) !important;
     }
 
     .why-choose-content {
@@ -1650,6 +1670,12 @@ img {
         height: 148px;
         border-width: 2px;
         min-width: 120px;
+    }
+
+    .features-content h2 {
+        padding: 0 10px;
+        color: var(--text-white);
+        font-size: 18px;
     }
 
     .feature-icon {
@@ -1760,7 +1786,7 @@ img {
     }
 
     .hero-text {
-        padding: 20px 0;
+        padding: 20px;
     }
 
     .hero-text h1 {
@@ -1778,6 +1804,7 @@ img {
     .countdown-item:first-child {
         flex: 0 0 100%;
         gap: 0;
+        margin-bottom: -25px;
     }
 
     .countdown-item {
@@ -1794,32 +1821,10 @@ img {
         font-size: 12px;
     }
 
-    .btn {
-        padding: 12px 28px;
-        font-size: 13px;
-    }
-
     /* Features Mobile Small */
     .features {
         padding: 0;
     }
-
-    .features-image::after {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        height: 500px;
-        background: linear-gradient(164deg, #1A2B7F, #2C4ADB);
-    }
-
-    .features-content h2 {
-        padding: 0 10px;
-        color: var(--text-white);
-        font-size: 18px;
-    }
-
     .features-desc {
         font-size: 13px;
     }
@@ -1925,6 +1930,12 @@ img {
         font-size: 32px;
     }
 
+    .hero-text {
+        z-index: 2;
+        background: linear-gradient(84deg, #2e2e89a8, #0000ff26, #0000001f);
+        transform: translateY(20px);
+    }
+
     .hero-ball {
         width: 100%;
         bottom: 0;
@@ -1945,8 +1956,13 @@ img {
         gap: 20px;
     }
 
+    .features-content h2 {
+        left: 0;
+    }
+
     .feature-card {
         padding: 15px 8px;
+        width: auto;
         border-radius: 12px;
     }
 

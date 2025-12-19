@@ -162,6 +162,10 @@ tabBtns.forEach((btn) => {
   });
 });
 
+function toggleDesktopLangDropdown() {
+  const langSwitcher = document.querySelector(".desktop-lang-switcher");
+  langSwitcher.classList.toggle("active");
+}
 function toggleLangDropdown() {
   const langSwitcher = document.querySelector(".lang-switcher");
   langSwitcher.classList.toggle("active");
@@ -222,13 +226,6 @@ function renderFeaturesList() {
 }
 
 renderFeaturesList();
-
-document.addEventListener("click", (e) => {
-  const langSwitcher = document.querySelector(".lang-switcher");
-  if (langSwitcher && !langSwitcher.contains(e.target)) {
-    langSwitcher.classList.remove("active");
-  }
-});
 
 function handleSubmit(event) {
   event.preventDefault();

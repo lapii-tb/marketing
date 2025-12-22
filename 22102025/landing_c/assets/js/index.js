@@ -1,3 +1,20 @@
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    if (href.length > 1 && document.querySelector(href)) {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      const offset = 50;
+      const rect = target.getBoundingClientRect();
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const top = rect.top + scrollTop - offset;
+      window.scrollTo({
+        top,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
 const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobile-menu");
 const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");

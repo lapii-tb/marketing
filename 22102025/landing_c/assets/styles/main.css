@@ -149,7 +149,6 @@ img {
 
 .navbar.scrolled {
     background: rgba(2, 7, 140, 0.67);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
 }
@@ -281,7 +280,7 @@ img {
     flex-direction: column;
     gap: 20px;
     padding: 20px;
-    background: linear-gradient(180deg, rgba(26, 35, 126, 0.67) 0%, rgba(13, 20, 66, 0.75) 100%);
+    background: linear-gradient(180deg, rgb(26 35 126 / 94%) 0%, rgb(13 20 66) 100%);
     position: fixed;
     top: 0;
     right: 0;
@@ -829,6 +828,7 @@ img {
     display: flex;
     align-items: center;
     gap: 12px;
+    max-width: 320px;
     background: transparent;
     padding: 12px 20px;
     border-radius: 30px;
@@ -952,15 +952,33 @@ img {
 }
 
 .feature-card {
+    position: relative;
     background: linear-gradient(180deg, #ffffff 0%, rgba(255, 255, 255, 0.29) 100%);
     padding: 25px 15px;
     border-radius: 32px;
     width: 160px;
     height: 180px;
+    overflow: hidden;
     text-align: center;
     transition: all var(--transition-base);
-    border: 2px solid rgba(100, 120, 200, 0.3);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    padding: 4px;
+    border-radius: 32px;
+    background: linear-gradient(166deg, #2B49DB, #6375ff, #ffffff);
+    -webkit-mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask:
+        linear-gradient(#fff 0 0) content-box,
+        linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    pointer-events: none;
+    z-index: 1;
 }
 
 .feature-card:hover {
@@ -1718,7 +1736,7 @@ img {
     .contact-form-wrapper {
         width: 100%;
         text-align: center;
-        padding: 0 20px;
+        padding: 20px;
     }
 
     .contact-form-wrapper h3 {
@@ -2139,7 +2157,7 @@ img {
     }
 
     .feature-card p {
-        font-size: 11px;
+        font-size: 15px;
     }
 
     .provider-logos {
@@ -2154,8 +2172,6 @@ img {
 /* ===== LANGUAGE SWITCHER ===== */
 .lang-switcher {
     position: relative;
-    padding-top: 15px;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .desktop-lang-current {

@@ -742,10 +742,9 @@
       });
       element.classList.add('active');
       const container = document.querySelector('.one-api-container');
-      if (container && category === 'slots') {
-        container.classList.add('large-height-render');
-      } else if (container) {
-        container.classList.remove('large-height-render');
+      if (container) {
+        container.classList.remove('sports-container-render', 'slots-container-render', 'dealers-container-render', 'fishings-container-render');
+        container.classList.add(category + '-container-render');
       }
       document.querySelectorAll('.default-render, .sports-render, .slots-render, .dealers-render, .fishings-render').forEach(container => {
         container.style.display = 'none';

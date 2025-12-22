@@ -535,6 +535,18 @@ img {
     transform-origin: bottom left;
 }
 
+.features::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 100px;
+    height: 300px;
+    background: linear-gradient(360deg, #020aecc7 0%, #091e75 100%);
+    transform: skewX(325deg);
+    transform-origin: top left;
+}
+
 .features-player {
     position: absolute;
     right: 15%;

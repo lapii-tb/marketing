@@ -1839,9 +1839,12 @@ img {
     .feature-card {
         padding: 30px 15px;
         border-radius: 32px !important;
-        height: 148px;
+        height: 156px;
         border-width: 2px;
         min-width: 120px;
+    }
+    .feature-card::before {
+        padding: 2px;
     }
 
     .features-content h2 {
@@ -2024,6 +2027,7 @@ img {
     .contact-link {
         padding: 10px 16px;
         display: flex;
+        height: 40px;
         justify-content: center;
     }
 
@@ -2179,6 +2183,7 @@ img {
     .category-button {
         min-width: 120px;
         font-size: 12px;
+        height: 28px;
     }
 
 

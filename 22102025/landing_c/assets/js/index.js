@@ -1,3 +1,20 @@
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    const href = this.getAttribute('href');
+    if (href.length > 1 && document.querySelector(href)) {
+      e.preventDefault();
+      const target = document.querySelector(href);
+      const offset = 50;
+      const rect = target.getBoundingClientRect();
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const top = rect.top + scrollTop - offset;
+      window.scrollTo({
+        top,
+        behavior: 'smooth'
+      });
+    }
+  });
+});
 const hamburger = document.getElementById("hamburger");
 const mobileMenu = document.getElementById("mobile-menu");
 const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
@@ -65,90 +82,6 @@ function updateCountdown() {
 updateCountdown();
 setInterval(updateCountdown, 1000);
 
-const providersByCategory = {
-  slots: [
-    "Pragmaticplay",
-    "PGSoft",
-    "Jili",
-    "Spribe",
-    "Yggdrasil",
-    "MicroGaming",
-    "Playtech",
-  ],
-  sports: [
-    "SBObet",
-    "568Win",
-    "SabaSports",
-    "PandaSports",
-    "BTISports",
-  ],
-  "fishing-arcade": [
-    "FunkyGames",
-    "Aviatrix",
-    "Jili",
-    "Spribe",
-  ],
-  "live-dealer": [
-    "Evolution",
-    "SexyGaming",
-    "BigGaming",
-    "SAGaming",
-    "Pragmaticplay",
-    "Playtech",
-  ],
-};
-
-const allProviders = [
-  "SBObet",
-  "568Win",
-  "SabaSports",
-  "PandaSports",
-  "BTISports",
-  "FunkyGames",
-  "Aviatrix",
-  "Evolution",
-  "Pragmaticplay",
-  "SexyGaming",
-  "Jili",
-  "Spribe",
-  "Yggdrasil",
-  "BigGaming",
-  "Playtech",
-  "PGSoft",
-  "SAGaming",
-  "MicroGaming",
-];
-
-const tabCategoryMap = {
-  // English
-  "Slots": "slots",
-  "Sports": "sports",
-  "Fishing / Arcade": "fishing-arcade",
-  "Live Dealer": "live-dealer",
-  // Chinese
-  "老虎机": "slots",
-  "体育": "sports",
-  "捕鱼 / 街机": "fishing-arcade",
-  "真人荷官": "live-dealer",
-};
-
-const providersPath = "assets/icons/providers/";
-const logosContainer = document.getElementById("provider-logos");
-
-function renderProviders(category) {
-  logosContainer.innerHTML = "";
-  const providers = category === "all" ? allProviders : (providersByCategory[category] || []);
-  providers.forEach((name) => {
-    const img = document.createElement("img");
-    img.src = `${providersPath}${name}.png`;
-    img.alt = name;
-    img.className = "provider-logo";
-    logosContainer.appendChild(img);
-  });
-}
-
-renderProviders("all");
-
 const tabBtns = document.querySelectorAll(".tab-btn");
 tabBtns.forEach((btn) => {
   btn.addEventListener("click", () => {
@@ -170,62 +103,6 @@ function toggleLangDropdown() {
   const langSwitcher = document.querySelector(".lang-switcher");
   langSwitcher.classList.toggle("active");
 }
-
-// Features List - English
-const featuresList = [
-  { text: "One-time integration, go live within days" },
-  { text: "No setup fee & no minimum guarantee" },
-  { text: "Multi-sports coverage — football, basketball & more" },
-  { text: "Full product suite: Sports, Live Casino, Slots, Lottery" },
-  { text: "HD sports data feed optimized for live betting" },
-  { text: "24/7 support team prepared for World Cup" },
-];
-
-// Features List - Chinese
-const featuresListCn = [
-  { text: "一次集成，数日内上线" },
-  { text: "无设置费 & 无最低保证" },
-  { text: "多体育覆盖 — 足球、篮球等" },
-  { text: "全产品套件：体育、真人娱乐、老虎机、彩票" },
-  { text: "为实时投注优化的高清体育数据源" },
-  { text: "24/7 支持团队为世界杯做好准备" },
-];
-
-function renderFeaturesList() {
-  const container = document.getElementById("features-list");
-  if (container) {
-    container.innerHTML = featuresList
-      .map(
-        (item) => `
-        <li>
-          <span class="check-icon">
-            <img src="assets/icons/icon_correct.png" alt="Check">
-          </span>
-          <span>${item.text}</span>
-        </li>
-      `
-      )
-      .join("");
-  }
-
-  const containerCn = document.getElementById("features-list-cn");
-  if (containerCn) {
-    containerCn.innerHTML = featuresListCn
-      .map(
-        (item) => `
-        <li>
-          <span class="check-icon">
-            <img src="assets/icons/icon_correct.png" alt="Check">
-          </span>
-          <span>${item.text}</span>
-        </li>
-      `
-      )
-      .join("");
-  }
-}
-
-renderFeaturesList();
 
 function toggleCategory(element, category) {
   document.querySelectorAll('.category-button').forEach(btn => {

@@ -519,30 +519,32 @@ img {
 .features {
     position: relative;
     padding: 80px 40px;
-    background: linear-gradient(360deg, #020aec9e 0%, #001c90 100%);
+    background: white;
     overflow: hidden;
     z-index: 2;
 }
 .features::before {
     content: "";
     position: absolute;
-    width: 50%;
-    height: 1400px;
-    top: -350px;
-    left: -54px;
-    background: white;
-    transform: rotate(30deg);
+    left: 40dvw;
+    bottom: 0;
+    width: 50dvw;
+    height: 100%;             
+    background: linear-gradient(360deg, #020aecc7 0%, #091e75 100%);
+    transform: skewX(335deg);
+    transform-origin: bottom left;
 }
 
 .features::after {
     content: "";
     position: absolute;
-    width: 20%;
-    height: 1200px;
-    top: -150px;
-    right: -272px;
-    background: white;
-    transform: rotate(30deg);
+    top: 0;
+    left:0;
+    width: 100px;
+    height: 300px;
+    background: linear-gradient(360deg, #020aecc7 0%, #091e75 100%);
+    transform: skewX(325deg);
+    transform-origin: top left;
 }
 
 .features-player {
@@ -653,9 +655,9 @@ img {
 /* ===== CONTACT SECTION ===== */
 .contact {
     position: relative;
-    padding: 80px 40px;
+    padding: 0 40px;
     background: transparent;
-    background: linear-gradient(180deg, #0009f49e 0%, #000c3c 100%);
+    background: white;
     overflow: visible;
     z-index: 1;
 }
@@ -681,26 +683,14 @@ img {
 
 .contact::before {
     content: "";
-    background: white;
-    width: 50%;
-    height: 1200px;
-    left: -50px;
+    background: linear-gradient(180deg, #0500e2c7 0%, #031e8c 100%);
+    width: 50dvw;
+    height: 100%;
+    left: 40dvw;
     position: absolute;
-    top: -200px;
     z-index: -1;
-    transform: rotate(332deg);
-}
-
-.contact::after {
-    content: "";
-    background: white;
-    width: 20%;
-    height: 1200px;
-    right: -320px;
-    position: absolute;
-    top: -200px;
-    z-index: -1;
-    transform: rotate(332deg);
+    transform: skewX(-335deg);
+    transform-origin: top left;
 }
 
 .contact-container {
@@ -712,6 +702,7 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+    padding: 80px 0;
 }
 
 .contact-form-wrapper {
@@ -1142,7 +1133,7 @@ img {
           .categories-render {
             margin: 18px auto;
             height: unset;
-            gap: 16px !important;
+            gap: 12px !important;
           }
     
           .default-render, .sports-render, .slots-render, .dealers-render, .fishings-render {
@@ -1446,6 +1437,7 @@ img {
     }
 
     .contact-container {
+        padding: 0;
         display: flex;
         flex-wrap: wrap;
 
@@ -1615,7 +1607,7 @@ img {
     }
     
     .features {
-        background: linear-gradient(360deg, #020aec87 0%, #011463 100%);
+        background: linear-gradient(360deg, #020aecde 0%, #011463 100%);
     }
 
     .features-bg {
@@ -1668,6 +1660,7 @@ img {
     .features-image {
         position: relative;
         top: 85px;
+        margin: 25px 0;
         right: 0;
         left: 0;
     }
@@ -1688,7 +1681,7 @@ img {
     .features-list {
         padding: 20px;
         text-align: left;
-        margin: 0 auto 25px;
+        margin: 0 auto;
     }
 
     .features-list li {
@@ -2034,11 +2027,13 @@ img {
 
     .contact-link {
         padding: 10px 16px;
+        display: flex;
+        justify-content: center;
     }
 
     .contact-link img {
-        width: 18px;
-        height: 18px;
+        width: 20px;
+        height: 20px;
     }
 
     .contact-link span {
@@ -2107,6 +2102,12 @@ img {
 }
 
 @media (max-width: 500px) {
+    .navbar {
+        padding: 15px;
+    }
+    .hamburger {
+        padding: 0;
+    }
     .hero {
         overflow: hidden;
     }
@@ -2141,6 +2142,11 @@ img {
         gap: 20px;
     }
 
+    .check-icon {
+        height: 31px;
+        width: 31px;
+    }
+
     .features-content h2 {
         left: 0;
     }
@@ -2159,6 +2165,16 @@ img {
     .feature-card p {
         font-size: 15px;
     }
+
+    .text-gradient {
+        font-size: 24px;
+    }
+
+    .category-button {
+        min-width: 120px;
+        font-size: 12px;
+    }
+
 
     .provider-logos {
         grid-template-columns: repeat(3, 1fr);

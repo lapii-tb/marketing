@@ -854,10 +854,10 @@ img {
     content: "";
     position: absolute;
     width: 600px;
-    height: 150%;
-    right: -200px;
+    height: 200%;
+    right: -245px;
     top: -390px;
-    transform: rotate(325deg);
+    transform: rotate(331deg);
     background: white;
 }
 .why-choose::before {
@@ -865,9 +865,9 @@ img {
     position: absolute;
     width: 120px;
     height: 150%;
-    left: -190px;
+    left: -150px;
     top: -100px;
-    transform: rotate(325deg);
+    transform: rotate(335deg);
     background: white;
 }
 
@@ -1479,10 +1479,6 @@ img {
 
     .text-gradient {
         font-size: 32px;
-    }
-
-    .providers-decoration {
-        display: none;
     }
 }
 
@@ -2098,6 +2094,16 @@ img {
 
     .provider-logo {
         height: 35px;
+    }
+
+    .gift-left {
+        width: 150px;
+        left: -98px;
+        top: -200px;
+        opacity: 70%;
+    }
+    .gift-right {
+        display: none;
     }
 }
 

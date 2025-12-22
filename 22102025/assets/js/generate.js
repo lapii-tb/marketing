@@ -160,14 +160,19 @@ const TEMPLATE = `<!DOCTYPE html>
     function toggleFaq(element) {
       const answer = element.nextElementSibling;
       const icon = element.querySelector('.faq-icon');
+      const parent = element.closest('.faq-item');
       
+      // Toggle active class
       answer.classList.toggle('active');
-      icon.classList.toggle('rotated');
+      parent.classList.toggle('collapsed');
       
+      // Smooth height transition
       if (answer.classList.contains('active')) {
         icon.textContent = '×';
+        answer.style.maxHeight = '110px';
       } else {
         icon.textContent = '+';
+        answer.style.maxHeight = '0px';
       }
     }
     function toggleCategory(element, category) {

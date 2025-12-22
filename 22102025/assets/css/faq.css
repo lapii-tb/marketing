@@ -82,7 +82,7 @@
             width: 4px;
             height: 62px;
           }
-          &.active {
+          &.collapsed {
             background: #fff;
           }
         }
@@ -109,7 +109,7 @@
           max-height: 0;
           overflow: hidden;
           overflow-y: scroll;
-          transition: max-height 0.3s ease;
+          transition: max-height 0.4s ease, padding 0.4s ease;
           padding: 0 0;
           font-size: 16px;
           line-height: normal;
@@ -122,6 +122,21 @@
 
         .faq-icon.rotated {
           transform: rotate(45deg);
+        }
+
+        .faq-answer.active {
+          padding: 20px;
+        }
+
+        .faq-icon {
+          transition: all 0.3s ease;
+          font-size: 18px;
+          font-weight: bold;
+        }
+
+        .faq-question {
+          cursor: pointer;
+          transition: background-color 0.2s ease;
         }
       }
     }

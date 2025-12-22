@@ -19,14 +19,14 @@
   .nav-container {
     display: flex;
     align-items: center;
-    min-height: 60px;
+    min-height: 80px;
     max-width: 1200px;
     width: 100%;
     gap: 8px;
     padding: 0 20px;
 
     .logo {
-      width: 120px;
+      height: 80px;
 
       img {
         width: 100%;
@@ -145,9 +145,11 @@
   .navbar {
     .nav-container {
       padding: 0 10px;
+      min-height: unset !important;
 
       .logo {
-        width: 80px;
+        width: 100px;
+        height: 60px;
       }
 
       .nav-menu {
@@ -295,12 +297,12 @@
 }
 
 /* Language Selector */
-.language-selector {
+.desktop-language-selector, .language-selector {
   position: relative;
-  width: 100%;
+  padding: 0 8px;
 }
 
-.language-btn {
+.language-btn, .desktop-language-btn {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -310,17 +312,17 @@
   background: transparent;
   border: none;
   color: #fff;
-  font-family: Arial, sans-serif;
-  font-size: 12px;
-  font-weight: 700;
+  font-size: 14px;
+  font-weight: 500;
   text-transform: uppercase;
   cursor: pointer;
   gap: 4px;
 }
 
-.language-text {
+.desktop-language-text, .language-text {
   flex: 1;
   text-align: left;
+  font-family: "Outfit", sans-serif;
 }
 
 .caret-icon {
@@ -330,12 +332,12 @@
   transition: transform 0.2s ease;
 }
 
-.language-btn[aria-expanded="true"] .caret-icon {
+.language-btn[aria-expanded="true"] .caret-icon, .desktop-language-btn[aria-expanded="true"] .caret-icon {
   transform: rotate(180deg);
 }
 
 /* Language Dropdown */
-.language-dropdown {
+.desktop-language-dropdown, .language-dropdown {
   position: absolute;
   top: 100%;
   left: 0;
@@ -348,7 +350,7 @@
   transition: max-height 0.2s ease, opacity 0.2s ease;
 }
 
-.language-dropdown.active {
+.desktop-language-dropdown.active, .language-dropdown.active {
   max-height: 100px;
   opacity: 1;
 }
@@ -362,7 +364,6 @@
   background: transparent;
   border: none;
   color: #fff;
-  font-family: Arial, sans-serif;
   font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
@@ -416,6 +417,14 @@
   .mobile-menu-overlay,
   .mobile-menu {
     display: block;
+  }
+  .language-selector {
+    width: 100%;
+    padding: 0 !important;
+
+    .language-btn {
+      font-size: 12px !important;
+    }
   }
 }
 

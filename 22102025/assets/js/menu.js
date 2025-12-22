@@ -1,8 +1,3 @@
-/**
- * Mobile Menu Toggle Functionality
- * Handles hamburger menu, slide-out sidebar, and language selector
- */
-
 (function() {
   'use strict';
 
@@ -11,15 +6,35 @@
   const mobileMenu = document.querySelector('.mobile-menu');
   const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
   const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
+  
+  // Mobile language elements
   const languageBtn = document.querySelector('.language-btn');
   const languageDropdown = document.querySelector('.language-dropdown');
+  
+  // Desktop language elements
+  const desktopLanguageBtn = document.querySelector('.desktop-language-btn');
+  const desktopLanguageDropdown = document.querySelector('.desktop-language-dropdown');
+  
+  // Language options (both mobile and desktop)
   const languageOptions = document.querySelectorAll('.language-option');
-  const navbar = document.querySelector('.navbar');
+  const language = document.querySelector('.language-text');
+  const desktopLanguage = document.querySelector('.desktop-language-text');
+
+  // Set language text based on current page
+  function setLanguageText() {
+    const path = new URL(document.location.href).pathname;
+    const target = path.endsWith('/') ? '' : path.split('/').pop();
+    const langText = target.toLowerCase() === 'index_cn.html' ? '简体中文' : 'ENGLISH';
+    
+    if (language) language.innerHTML = langText;
+    if (desktopLanguage) desktopLanguage.innerHTML = langText;
+  }
+
+  setLanguageText();
 
   // Toggle mobile menu
   function toggleMobileMenu() {
     const isOpen = mobileMenu.classList.contains('active');
-
     if (isOpen) {
       closeMobileMenu();
     } else {
@@ -43,32 +58,47 @@
     mobileMenu.classList.remove('active');
     mobileMenuOverlay.classList.remove('active');
     document.body.classList.remove('menu-open');
-
-    // Also close language dropdown
-    closeLanguageDropdown();
+    closeMobileLanguageDropdown();
   }
 
-  // Toggle language dropdown
-  function toggleLanguageDropdown() {
+  // Mobile language dropdown functions
+  function toggleMobileLanguageDropdown() {
     const isOpen = languageDropdown.classList.contains('active');
-
     if (isOpen) {
-      closeLanguageDropdown();
+      closeMobileLanguageDropdown();
     } else {
-      openLanguageDropdown();
+      openMobileLanguageDropdown();
     }
   }
 
-  // Open language dropdown
-  function openLanguageDropdown() {
-    languageBtn.setAttribute('aria-expanded', 'true');
-    languageDropdown.classList.add('active');
+  function openMobileLanguageDropdown() {
+    if (languageBtn) languageBtn.setAttribute('aria-expanded', 'true');
+    if (languageDropdown) languageDropdown.classList.add('active');
   }
 
-  // Close language dropdown
-  function closeLanguageDropdown() {
-    languageBtn.setAttribute('aria-expanded', 'false');
-    languageDropdown.classList.remove('active');
+  function closeMobileLanguageDropdown() {
+    if (languageBtn) languageBtn.setAttribute('aria-expanded', 'false');
+    if (languageDropdown) languageDropdown.classList.remove('active');
+  }
+
+  // Desktop language dropdown functions
+  function toggleDesktopLanguageDropdown() {
+    const isOpen = desktopLanguageDropdown.classList.contains('active');
+    if (isOpen) {
+      closeDesktopLanguageDropdown();
+    } else {
+      openDesktopLanguageDropdown();
+    }
+  }
+
+  function openDesktopLanguageDropdown() {
+    if (desktopLanguageBtn) desktopLanguageBtn.setAttribute('aria-expanded', 'true');
+    if (desktopLanguageDropdown) desktopLanguageDropdown.classList.add('active');
+  }
+
+  function closeDesktopLanguageDropdown() {
+    if (desktopLanguageBtn) desktopLanguageBtn.setAttribute('aria-expanded', 'false');
+    if (desktopLanguageDropdown) desktopLanguageDropdown.classList.remove('active');
   }
 
   // Event Listeners
@@ -85,11 +115,19 @@
     item.addEventListener('click', closeMobileMenu);
   });
 
-  // Language selector toggle
+  // Mobile language selector toggle
   if (languageBtn) {
     languageBtn.addEventListener('click', function(e) {
       e.stopPropagation();
-      toggleLanguageDropdown();
+      toggleMobileLanguageDropdown();
+    });
+  }
+
+  // Desktop language selector toggle
+  if (desktopLanguageBtn) {
+    desktopLanguageBtn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      toggleDesktopLanguageDropdown();
     });
   }
 
@@ -98,26 +136,33 @@
     option.addEventListener('click', function() {
       const lang = this.getAttribute('data-lang');
 
-      closeLanguageDropdown();
+      closeMobileLanguageDropdown();
+      closeDesktopLanguageDropdown();
 
       // Navigate to the appropriate language page
       const currentPath = window.location.pathname;
       const isEnglish = !currentPath.includes('_cn');
 
       if (lang === 'cn' && isEnglish) {
-        // Switch to Chinese
         window.location.href = currentPath.replace('index.html', 'index_cn.html').replace(/\/$/, '/index_cn.html');
       } else if (lang === 'en' && !isEnglish) {
-        // Switch to English
         window.location.href = currentPath.replace('index_cn.html', 'index.html');
       }
     });
   });
 
-  // Close language dropdown when clicking outside
+  // Close language dropdowns when clicking outside
   document.addEventListener('click', function(e) {
-    if (languageDropdown && !languageDropdown.contains(e.target) && !languageBtn.contains(e.target)) {
-      closeLanguageDropdown();
+    // Close mobile dropdown
+    if (languageDropdown && !languageDropdown.contains(e.target) && 
+        languageBtn && !languageBtn.contains(e.target)) {
+      closeMobileLanguageDropdown();
+    }
+    
+    // Close desktop dropdown
+    if (desktopLanguageDropdown && !desktopLanguageDropdown.contains(e.target) && 
+        desktopLanguageBtn && !desktopLanguageBtn.contains(e.target)) {
+      closeDesktopLanguageDropdown();
     }
   });
 
@@ -127,10 +172,12 @@
       if (mobileMenu && mobileMenu.classList.contains('active')) {
         closeMobileMenu();
       }
+      closeMobileLanguageDropdown();
+      closeDesktopLanguageDropdown();
     }
   });
 
-  // Handle resize - close mobile menu if window is resized to desktop
+  // Handle resize
   window.addEventListener('resize', function() {
     if (window.innerWidth > 1024 && mobileMenu && mobileMenu.classList.contains('active')) {
       closeMobileMenu();

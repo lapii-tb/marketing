@@ -126,6 +126,7 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        padding: 0 20px;
 
         .api-aggregator-info {
           max-width: 100% !important;
@@ -159,6 +160,10 @@
           font-size: 16px !important;
           line-height: 18px !important;
 
+          &:first-child {
+            padding: 0 !important;
+          }
+
           &.active {
             color: #fff !important;
             background: #2B49DB !important;
@@ -177,6 +182,10 @@
           text-align: start !important;
           padding: 0 10px !important;
           height: 50px !important;
+
+          &:first-child {
+            padding: 0 !important;
+          }
 
           &.active {
             color: #2B49DB;

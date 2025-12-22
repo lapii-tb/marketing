@@ -84,6 +84,8 @@
           }
           &.collapsed {
             background: #fff;
+            border-radius: 8px;
+            border-top-left-radius: unset;
           }
         }
 

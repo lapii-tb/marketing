@@ -519,30 +519,20 @@ img {
 .features {
     position: relative;
     padding: 80px 40px;
-    background: linear-gradient(360deg, #020aec9e 0%, #001c90 100%);
+    background: white;
     overflow: hidden;
     z-index: 2;
 }
 .features::before {
     content: "";
     position: absolute;
-    width: 50%;
-    height: 1400px;
-    top: -350px;
-    left: -54px;
-    background: white;
-    transform: rotate(30deg);
-}
-
-.features::after {
-    content: "";
-    position: absolute;
-    width: 20%;
-    height: 1200px;
-    top: -150px;
-    right: -272px;
-    background: white;
-    transform: rotate(30deg);
+    left: 40dvw;
+    bottom: 0;
+    width: 50dvw;
+    height: 100%;             
+    background: linear-gradient(360deg, #020aecc7 0%, #091e75 100%);
+    transform: skewX(335deg);
+    transform-origin: bottom left;
 }
 
 .features-player {
@@ -653,9 +643,9 @@ img {
 /* ===== CONTACT SECTION ===== */
 .contact {
     position: relative;
-    padding: 80px 40px;
+    padding: 0 40px;
     background: transparent;
-    background: linear-gradient(180deg, #0009f49e 0%, #000c3c 100%);
+    background: white;
     overflow: visible;
     z-index: 1;
 }
@@ -681,26 +671,14 @@ img {
 
 .contact::before {
     content: "";
-    background: white;
-    width: 50%;
-    height: 1200px;
-    left: -50px;
+    background: linear-gradient(180deg, #0500e2c7 0%, #031e8c 100%);
+    width: 50dvw;
+    height: 100%;
+    left: 40dvw;
     position: absolute;
-    top: -200px;
     z-index: -1;
-    transform: rotate(332deg);
-}
-
-.contact::after {
-    content: "";
-    background: white;
-    width: 20%;
-    height: 1200px;
-    right: -320px;
-    position: absolute;
-    top: -200px;
-    z-index: -1;
-    transform: rotate(332deg);
+    transform: skewX(-335deg);
+    transform-origin: top left;
 }
 
 .contact-container {
@@ -712,6 +690,7 @@ img {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+    padding: 80px 0;
 }
 
 .contact-form-wrapper {
@@ -1446,6 +1425,7 @@ img {
     }
 
     .contact-container {
+        padding: 0;
         display: flex;
         flex-wrap: wrap;
 
@@ -1615,7 +1595,7 @@ img {
     }
     
     .features {
-        background: linear-gradient(360deg, #020aec87 0%, #011463 100%);
+        background: linear-gradient(360deg, #020aecde 0%, #011463 100%);
     }
 
     .features-bg {

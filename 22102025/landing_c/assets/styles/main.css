@@ -1029,7 +1029,7 @@ img {
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 16px;
     height: 40px;
 }
 
@@ -1498,7 +1498,7 @@ img {
     }
     .hero-ball {
         width: 80%;
-        right: -10px;
+        left: 0;
         z-index: 2;
     }
 
@@ -2054,6 +2054,11 @@ img {
     }
 
     /* Providers Mobile Small */
+    .categories-render {
+        display: grid;
+        grid-template-columns: repeat(2, 120px);
+        gap: 12px;
+    }
     .providers h2 {
         font-size: 24px;
     }

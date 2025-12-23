@@ -1690,7 +1690,7 @@ img {
     }
 
     .contact-details {
-        background-image: linear-gradient(174deg, #102aff, #060d96);
+        background-image: linear-gradient(174deg, #102aff, #060a66);
         border-radius: 0;
     }
 
@@ -1760,7 +1760,7 @@ img {
     /* Why Choose Section Mobile */
     .why-choose {
         padding: 50px 20px;
-        background: linear-gradient(180deg, #020530 0%, #0f27f4 100%) !important;
+        background: linear-gradient(180deg, #050a6c 0%, #0f27f4 100%) !important;
     }
 
     .why-choose-content {
@@ -1906,7 +1906,7 @@ img {
     .footer {
         padding: 25px 20px;
         left: 0;
-        background-image: linear-gradient(50deg, #2B49DB, #172775);
+        background-image: linear-gradient(173deg, #4262ff, #07134d);
 
     }
 

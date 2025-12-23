@@ -207,10 +207,17 @@
           width: 90px !important;
           height: 36px !important;
           aspect-ratio: 5/2;
+          z-index: 10;
 
           &:nth-child(1), &:nth-child(3n + 1) {
             margin-left: 0;
           }
+        }
+      }
+
+      .button-group {
+        a {
+          z-index: 10;
         }
       }
     }

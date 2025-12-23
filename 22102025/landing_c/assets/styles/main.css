@@ -2037,6 +2037,7 @@ img {
     }
 
     .contact-details {
+        margin-bottom: -1px;
         padding: 20px 15px;
     }
 
@@ -2180,6 +2181,10 @@ img {
     .check-icon {
         height: 31px;
         width: 31px;
+    }
+
+    .features {
+        background: linear-gradient(180deg, #041361 0%, #4d6cff 80%, #ffffff 100%);
     }
 
     .features-content h2 {

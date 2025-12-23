@@ -1841,6 +1841,11 @@ img {
     }
 
     /* Providers Section Mobile */
+    .providers-container {
+        height: auto !important;
+        margin-bottom: 130px;
+    }
+
     .providers {
         padding: 20px 0;
     }
@@ -1891,6 +1896,7 @@ img {
         align-items: center;
         gap: 12px;
     }
+
 
     .providers-buttons .btn {
         height: 40px;

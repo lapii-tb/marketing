@@ -676,9 +676,10 @@ img {
 .contact > .gift {
     position: absolute;
     width: 300px;
-    bottom: -180px;
+    bottom: -100px;
     right: 30%;
-    rotate: calc(330deg);
+    rotate: calc(305deg);
+    filter: blur(2px)
 }
 
 .contact::before {
@@ -699,15 +700,13 @@ img {
     margin: 0 auto;
     z-index: 2;
     width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
     gap: 40px;
     padding: 80px 0;
 }
 
 .contact-form-wrapper {
-    flex: 0 0 50%;
-    max-width: 500px;
+    max-width: 600px;
 }
 
 .contact-form-wrapper h3 {
@@ -786,8 +785,8 @@ img {
 /* Contact Details */
 .contact-details {
     width: 100%;
-    padding: 0 35px;
-    max-width: 400px;
+    padding: 50px 35px;
+    max-width: 450px;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
@@ -802,24 +801,31 @@ img {
 }
 
 .contact-details > p {
-    font-size: 13px;
+    font-family: Roboto;
+    font-size: 16px;
     color: var(--text-white);
     opacity: 0.9;
     line-height: 1.7;
-    margin-bottom: 25px;
+    margin-bottom: 50px;
 }
 
 .contact-links {
     display: flex;
     flex-direction: column;
-    gap: 40px;
+    gap: 20px;
+
+    .btn-primary {
+        width: 320px;
+        height: 60px;
+    }
 }
 
 .contact-link {
     display: flex;
     align-items: center;
     gap: 12px;
-    max-width: 320px;
+    width: 320px;
+    height: 60px;
     background: transparent;
     padding: 12px 20px;
     border-radius: 30px;
@@ -827,18 +833,14 @@ img {
     transition: background var(--transition-base);
 }
 
-.contact-link:hover {
-    background: rgba(255, 255, 255, 0.25);
-}
-
 .contact-link img {
-    width: 22px;
-    height: 22px;
+    width: 40px;
+    height: 40px;
     filter: brightness(0) invert(1);
 }
 
 .contact-link span {
-    font-size: 14px;
+    font-size: 20px;
     font-weight: 500;
 }
 
@@ -1355,6 +1357,11 @@ img {
     opacity: 0.7;
 }
 
+.btn-mobile-section {
+    margin: 16px auto;
+    display: none;
+}
+
 
 @media (max-width: 1200px) {
     .nav-links {
@@ -1363,6 +1370,13 @@ img {
 
     .nav-links a {
         font-size: 14px;
+    }
+
+    .btn-mobile-section {
+        display: block;
+    }
+    .btn-desktop-section {
+        display: none;
     }
 }
 
@@ -1499,7 +1513,7 @@ img {
     }
 
     .btn {
-        padding: 12px 28px;
+        padding: 0 28px;
         font-size: 13px;
     }
 
@@ -1518,7 +1532,8 @@ img {
         display: block;
     }
     .btn {
-        height: 40px;
+        height: 40px !important;
+        width: 200px !important;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -1729,7 +1744,7 @@ img {
 
     .contact-container {
         flex-direction: column;
-        gap: 30px;
+        gap: unset;
     }
 
     .contact-form-wrapper {
@@ -1971,6 +1986,13 @@ img {
         order: 2;
         font-size: 11px;
     }
+
+    .btn-mobile-section {
+        display: block;
+    }
+    .btn-desktop-section {
+        display: none;
+    }
 }
 
 @media (max-width: 720px) {
@@ -2053,12 +2075,13 @@ img {
     }
 
     .contact-link img {
-        width: 20px;
-        height: 20px;
+        width: 24px;
+        height: 24px;
     }
 
     .contact-link span {
-        font-size: 13px;
+        font-size: 15px;
+        line-height: 28px;
     }
     .contact-form .btn {
         margin: 0 auto;
@@ -2133,6 +2156,13 @@ img {
         opacity: 70%;
     }
     .gift-right {
+        display: none;
+    }
+
+    .btn-mobile-section {
+        display: block;
+    }
+    .btn-desktop-section {
         display: none;
     }
 }
@@ -2224,6 +2254,13 @@ img {
 
     .provider-logo {
         height: 35px;
+    }
+
+    .btn-mobile-section {
+        display: block;
+    }
+    .btn-desktop-section {
+        display: none;
     }
 }
 

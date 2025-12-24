@@ -454,24 +454,20 @@
     <div id="start-now">
   <div class="register-container">
     <div class="register-content">
-      <div class="mask-chip-1"><img src="assets/image/register_chip_1.png" /></div>
-      <div class="mask-chip-2"><img src="assets/image/register_chip_2.png" /></div>
-      <div class="mask-gift"><img src="assets/image/register_gift.png" /></div>
-      <form class="form-section" onsubmit="handleSubmit(event)">
-        <div class="title">Start Your 2026 World Cup Journey <span>with 568Win</span></div>
-        <div class="form-info">
-          <input type="text" name="Name" placeholder="Name" required/>
-          <input type="text" name="Mail" placeholder="Mail" required/>
-          <textarea cols="" rows="10" name="Message" placeholder="Message ..." required></textarea>
-        </div>
-        <div class="button-group">
-          <button class="B_WC26_form_SubmitRequest btn-primary" type="submit">Submit Request</button>
-        </div>
-      </form>
-      <div class="info-section">
+      <div class="info-mobile-section">
         <div class="header">Contact Details</div>
         <div class="title">Rooted in Asia, 568win has established 15+ years of collaboration with eGR award-winning Asian operator</div>
+      </div>
+      <div class="mask-chip-1"><img src="assets/image/register_chip_1.png" /></div>
+      <div class="mask-chip-2"><img src="assets/image/register_chip_2.png" /></div>
+      <div class="register-mask"><img src="assets/image/register_mask.png" /></div>
+      <div class="info-section">
+        <div class="info-desktop-section">
+          <div class="header">Contact Details</div>
+          <div class="title">Rooted in Asia, 568win has established 15+ years of collaboration with eGR award-winning Asian operator</div>
+        </div>
         <div class="info-group">
+          <button onclick="handleSubmit()" class="B_WC26_form_SubmitRequest btn-primary">Submit Request</button>
           <a href="https://t.me/sbo568winmk" class="B_WC26_form_TGBtn btn-info" target="_blank">
             <img src="assets/image/icons/telegram40x40.png" />
             <span>@sbo568winmk</span>
@@ -775,18 +771,9 @@
         targetContainer.style.display = 'flex';
       }
     }
-    function handleSubmit(event) {
-      event.preventDefault();
-      const form = event.target;
-      const name = form.Name.value;
-      const email = form.Mail.value;
-      const message = form.Message.value;
-      
-      const subject = '568Win Submission Request - ' + name;
-      const body = message + '%0D%0A%0D%0AFrom: ' + name + '%0D%0AEmail: ' + email;
-      
-      window.location.href = 'mailto:568winmk@568win.com?subject=' + encodeURIComponent(subject) + '&body=' + body;
-      form.reset();
+    function handleSubmit() {
+      const subject = '568Win Submission Request';
+      window.location.href = 'mailto:568winmk@568win.com?subject=' + encodeURIComponent(subject);
     }
   </script>
   </body>

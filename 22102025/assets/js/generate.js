@@ -214,18 +214,9 @@ const TEMPLATE = `<!DOCTYPE html>
         targetContainer.style.display = 'flex';
       }
     }
-    function handleSubmit(event) {
-      event.preventDefault();
-      const form = event.target;
-      const name = form.Name.value;
-      const email = form.Mail.value;
-      const message = form.Message.value;
-      
-      const subject = '568Win Submission Request - ' + name;
-      const body = message + '%0D%0A%0D%0AFrom: ' + name + '%0D%0AEmail: ' + email;
-      
-      window.location.href = 'mailto:568winmk@568win.com?subject=' + encodeURIComponent(subject) + '&body=' + body;
-      form.reset();
+    function handleSubmit() {
+      const subject = '568Win Submission Request';
+      window.location.href = 'mailto:568winmk@568win.com?subject=' + encodeURIComponent(subject);
     }
   </script>
   </body>

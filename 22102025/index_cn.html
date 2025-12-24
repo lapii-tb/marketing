@@ -454,24 +454,20 @@
     <div id="start-now">
   <div class="register-container">
     <div class="register-content">
-      <div class="mask-chip-1"><img src="assets/image/register_chip_1.png" /></div>
-      <div class="mask-chip-2"><img src="assets/image/register_chip_2.png" /></div>
-      <div class="mask-gift"><img src="assets/image/register_gift.png" /></div>
-      <form class="form-section" onsubmit="handleSubmit(event)">
-        <div class="title">开始您的2026世界杯之旅 <span>与568Win同行</span></div>
-        <div class="form-info">
-          <input type="text" name="Name" placeholder="姓名" required/>
-          <input type="text" name="Mail" placeholder="邮箱" required/>
-          <textarea cols="" rows="10" name="Message" placeholder="留言 ..." required></textarea>
-        </div>
-        <div class="button-group">
-          <button class="B_WC26_form_SubmitRequest btn-primary" type="submit">提交请求</button>
-        </div>
-      </form>
-      <div class="info-section">
+      <div class="info-mobile-section">
         <div class="header">联系方式</div>
         <div class="title">扎根亚洲，568win与eGR获奖亚洲运营商建立了15+年的合作关系</div>
+      </div>
+      <div class="mask-chip-1"><img src="assets/image/register_chip_1.png" /></div>
+      <div class="mask-chip-2"><img src="assets/image/register_chip_2.png" /></div>
+      <div class="register-mask"><img src="assets/image/register_mask.png" /></div>
+      <div class="info-section">
+        <div class="info-desktop-section">
+          <div class="header">联系方式</div>
+          <div class="title">扎根亚洲，568win与eGR获奖亚洲运营商建立了15+年的合作关系</div>
+        </div>
         <div class="info-group">
+          <button onclick="handleSubmit()" class="B_WC26_form_SubmitRequest btn-primary">提交请求</button>
           <a href="https://t.me/sbo568winmk" class="B_WC26_form_TGBtn btn-info" target="_blank">
             <img src="assets/image/icons/telegram40x40.png" />
             <span>@sbo568winmk</span>
@@ -775,18 +771,9 @@
         targetContainer.style.display = 'flex';
       }
     }
-    function handleSubmit(event) {
-      event.preventDefault();
-      const form = event.target;
-      const name = form.Name.value;
-      const email = form.Mail.value;
-      const message = form.Message.value;
-      
-      const subject = '568Win Submission Request - ' + name;
-      const body = message + '%0D%0A%0D%0AFrom: ' + name + '%0D%0AEmail: ' + email;
-      
-      window.location.href = 'mailto:568winmk@568win.com?subject=' + encodeURIComponent(subject) + '&body=' + body;
-      form.reset();
+    function handleSubmit() {
+      const subject = '568Win Submission Request';
+      window.location.href = 'mailto:568winmk@568win.com?subject=' + encodeURIComponent(subject);
     }
   </script>
   </body>

@@ -34,90 +34,21 @@
       aspect-ratio: 279/185;
       filter: blur(4px);
     }
-    .mask-gift {
-      position: absolute;
-      bottom: 0;
-      width: 463.791px;
-      height: 501.273px;
-      aspect-ratio: 463.79/501.27;
-      filter: blur(2px);
-      top: 62%;
-      left: 48%;
+
+    .info-mobile-section {
+      display: none;
     }
+    .register-mask {
+      width: 600px;
+      height: 600px;
 
-    .form-section {
-      max-width: 572px;
-      text-align: center;
-      color: #fff;
-
-      .title {
-        max-width: 352px;
-        font-weight: 600;
-        font-size: 28px;
-        letter-spacing: 0%;
-        text-align: start;
-        margin-bottom: 20px;
-
-        span {
-          color: #00FF90;
-        }
-      }
-      .form-info {
-        font-weight: 500;
-        font-size: 18px;
-        line-height: 32px;
-        color: #fff;
-
-        input {
-          font-size: 20px;
-          height: 40px;
-          width: 100%;
-          color: #fff;
-          outline: unset;
-          border: 2px solid #D9D9D9;
-          margin-bottom: 20px;
-          padding: 10px 20px 10px;
-          border-radius: 4px;
-          fill: none;
-          background: transparent;
-
-          &::placeholder {
-            color: #fff;
-          }
-        }
-
-        textarea {
-          font-size: 20px;
-          width: 100%;
-          color: #fff;
-          resize: vertical;
-          outline: unset;
-          border: 2px solid #D9D9D9;
-          padding: 10px 20px 10px;
-          border-radius: 4px;
-          fill: none;
-          background: transparent;
-
-          &::placeholder {
-            color: #fff;
-          }
-        }
-      }
-      .button-group {
-        justify-content: start;
-
-        .btn-primary {
-          border: unset !important;
-          outline: unset !important;
-        }
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
       }
     }
-    .info-section {
-      height: 80%;
-      max-width: 400px;
-      text-align: center;
-      color: #fff;
-
+    .info-desktop-section, .info-mobile-section {
       .header {
         font-weight: 800;
         font-size: 28px;
@@ -133,8 +64,26 @@
         color: #D9D9D9;
         text-align: start;
       }
+    }
+    .info-section {
+      height: 70%;
+      max-width: 400px;
+      text-align: center;
+      color: #fff;
+
       .info-group {
-        .btn-info {
+        .btn-primary {
+          width: 100%;
+          color: #fff;
+          justify-content: center;
+          background:#6C4EF1;
+          font-weight: 700;
+          font-style: Bold;
+          font-size: 24px;
+          border: unset !important;
+          margin-top: 60px;
+        }
+        .btn-info, .btn-primary {
           display: flex;
           align-items: center;
           padding: 0 20px;
@@ -146,6 +95,9 @@
           transition: transform 0.3s ease;
           color: #fff;
           text-decoration: none;
+          margin-bottom: 20px;
+          font-size: 20px;
+          line-height: 28px;
           
           &:visited {
             color: inherit;
@@ -154,11 +106,8 @@
             color: inherit;
           }
           &:hover {
-            transform: scale(1.1);
+            transform: scale(1.05);
             text-decoration: none;
-          }
-          &:nth-child(1) {
-            margin: 40px 0;
           }
 
           img {
@@ -246,64 +195,34 @@
 
 @media screen and (max-width: 1024px) {
   .register-container {
-    height: 722px;
+    height: 680px;
     aspect-ratio: 180/361;
     background: center / cover no-repeat url("../image/register_mobile.png");
 
     .register-content {
       width: 100% !important;
-      flex-direction: column !important;
-      gap: 20px !important;
-      top: 0 !important;
-      padding: 30px 20px;
+      padding: 50px 20px;
+      display: block !important;
 
-      .mask-chip-1, .mask-chip-2, .mask-gift {
+      .mask-chip-1, .mask-chip-2 {
         display: none;
       }
-
-      .form-section {
-        .title {
-          width: 285px;
-          font-size: 16px !important;
-          line-height: 24px !important;
-        }
-        .form-info {
-          font-weight: 500;
-          font-size: 18px;
-          line-height: 32px;
-          color: #fff;
-
-          input {
-            font-size: 16px !important;
-            height: 32px !important;
-            border: 1px solid #D9D9D9 !important;
-            margin-bottom: 8px !important;
-            padding: 12px !important;
-
-            &::placeholder {
-              color: #fff;
-            }
-          }
-
-          textarea {
-            font-size: 16px !important;
-            border: 1px solid #D9D9D9 !important;
-            padding: 12px !important;
-
-            &::placeholder {
-              color: #fff;
-            }
-          }
-        }
-        .button-group {
-          margin-top: 24px !important;
-        }
+      .info-mobile-section {
+        display: block;
       }
-      .info-section {
+      .register-mask {
+        width: 320px;
+        height: 320px;
+        margin: 20px auto;
+      }
+      .info-desktop-section {
+        display: none;
+      }
+      .info-desktop-section, .info-mobile-section {
         .header {
           font-size: 16px !important;
           line-height: 20px;
-          margin-top: 8px !important;
+          margin-top: 0 !important;
           margin-bottom: 12px !important;
           color: #00FF90;
         }
@@ -314,23 +233,29 @@
           font-weight: 500;
           line-height: 20px;
         }
+      }
+      .info-section {
         .info-group {
           display: flex;
           flex-direction: column;
           justify-content: center;
           align-items: center;
 
+          .btn-primary {
+            margin-top: 0 !important;
+            padding: 0 27px !important;
+          }
           .btn-info {
+            border: 1px solid #FFF !important;
+          }
+          .btn-info, .btn-primary {
             display: flex;
             justify-content: center;
             align-items: center;
             width: 240px !important;
-            border: 1px solid #FFF !important;
             height: 40px !important;
-  
-            &:nth-child(1) {
-              margin: 20px 0 !important;
-            }
+            font-size: 16px !important;
+            line-height: 28px;
 
             img {
               height: 24px !important;

@@ -1,24 +1,20 @@
 <div id="start-now">
   <div class="register-container">
     <div class="register-content">
-      <div class="mask-chip-1"><img src="assets/image/register_chip_1.png" /></div>
-      <div class="mask-chip-2"><img src="assets/image/register_chip_2.png" /></div>
-      <div class="mask-gift"><img src="assets/image/register_gift.png" /></div>
-      <form class="form-section" onsubmit="handleSubmit(event)">
-        <div class="title">{register_title}</div>
-        <div class="form-info">
-          <input type="text" name="Name" placeholder="{placeholder_name}" required/>
-          <input type="text" name="Mail" placeholder="{placeholder_email}" required/>
-          <textarea cols="" rows="10" name="Message" placeholder="{placeholder_message}" required></textarea>
-        </div>
-        <div class="button-group">
-          <button class="B_WC26_form_SubmitRequest btn-primary" type="submit">{submit_request}</button>
-        </div>
-      </form>
-      <div class="info-section">
+      <div class="info-mobile-section">
         <div class="header">{contact_header}</div>
         <div class="title">{contact_subtitle}</div>
+      </div>
+      <div class="mask-chip-1"><img src="assets/image/register_chip_1.png" /></div>
+      <div class="mask-chip-2"><img src="assets/image/register_chip_2.png" /></div>
+      <div class="register-mask"><img src="assets/image/register_mask.png" /></div>
+      <div class="info-section">
+        <div class="info-desktop-section">
+          <div class="header">{contact_header}</div>
+          <div class="title">{contact_subtitle}</div>
+        </div>
         <div class="info-group">
+          <button onclick="handleSubmit()" class="B_WC26_form_SubmitRequest btn-primary">{submit_request}</button>
           <a href="https://t.me/sbo568winmk" class="B_WC26_form_TGBtn btn-info" target="_blank">
             <img src="assets/image/icons/telegram40x40.png" />
             <span>{telegram_handle}</span>

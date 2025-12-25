@@ -72,6 +72,22 @@
       color: #fff;
 
       .info-group {
+        a {
+          cursor: pointer;
+          text-decoration: none;
+
+          &:visited {
+            color: inherit;
+          }
+          &:active {
+            color: inherit;
+          }
+          &:hover {
+            transform: scale(1.05);
+            text-decoration: none;
+          }
+        }
+
         .btn-primary {
           width: 100%;
           color: #fff;
@@ -94,17 +110,10 @@
           cursor: pointer;
           transition: transform 0.3s ease;
           color: #fff;
-          text-decoration: none;
           margin-bottom: 20px;
           font-size: 20px;
           line-height: 28px;
-          
-          &:visited {
-            color: inherit;
-          }
-          &:active {
-            color: inherit;
-          }
+
           &:hover {
             transform: scale(1.05);
             text-decoration: none;

@@ -214,10 +214,6 @@ const TEMPLATE = `<!DOCTYPE html>
         targetContainer.style.display = 'flex';
       }
     }
-    function handleSubmit() {
-      const subject = '568Win Submission Request';
-      window.location.href = 'mailto:568winmk@568win.com?subject=' + encodeURIComponent(subject);
-    }
   </script>
   </body>
 </html>`;

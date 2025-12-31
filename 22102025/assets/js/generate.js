@@ -10,6 +10,7 @@ const TEMPLATE = `<!DOCTYPE html>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{TITLE}</title>
+    <link rel="shortcut icon" href="assets/image/icons/favicon.png">
     {CSS_LINKS}
     <script type="application/ld+json">
       {

@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="assets/css/register.css">
     <link rel="stylesheet" href="assets/css/one-api.css">
     <link rel="stylesheet" href="assets/css/copyright.css">
+    <link rel="stylesheet" href="assets/css/thankyou-popup.css">
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -128,6 +129,7 @@
           <div class="desktop-language-dropdown">
             <button class="language-option" data-lang="en">ENGLISH</button>
             <button class="language-option" data-lang="cn">简体中文</button>
+            <button class="language-option" data-lang="vn">TIẾNG VIỆT</button>
           </div>
         </div>
       </div>
@@ -169,6 +171,7 @@
         <div class="language-dropdown">
           <button class="language-option" data-lang="en">ENGLISH</button>
           <button class="language-option" data-lang="cn">简体中文</button>
+          <button class="language-option" data-lang="vn">TIẾNG VIỆT</button>
         </div>
       </div>
     </div>
@@ -207,7 +210,7 @@
     <div class="content-title">Built for Real-time Odds, Traffic Surge & Global Scale</div>
     <div class="content-info">Instant data. Seamless performance. Engineered for the highest betting demand in the world.</div>
     <div class="button-group">
-      <a href="https://t.me/sbo568winmk" class="B_WC26_Hero_DownloadGuide btn-tertiary" target="_blank">Download Guide</a>
+      <a class="B_WC26_Hero_DownloadGuide btn-tertiary show-popup-btn">Download Guide</a>
       <a href="https://www.568win.com/API.html" class="B_WC26_Hero_VisitSite btn-secondary" target="_blank">Visit Site</a>
     </div>
   </div>
@@ -654,8 +657,20 @@
     </div>
   </div>
 </div>
+    <div class="thank-you-popup">
+    <div class="popup-content">
+        <h2 class="title">Thank You!</h2>
+        <p class="sub-title">Get Your Instant API Launch Blueprint</p>
+        <p class="description">See how to integrate 80+ providers TODAY. Download the full technical specs and stability roadmap.</p>
+        <div class="button-container">
+            <button class="popup-btn" id="download-handbook">Get Technical Handbook</button>
+            <button class="popup-btn close" id="close-popup-btn">Close</button>
+        </div>
+    </div>
+</div>
   <script src="assets/js/menu.js"></script>
   <script src="assets/js/counter.js"></script>
+  <script src="assets/js/popup.js"></script>
   <script>
     window.addEventListener('scroll', function() {
       const navbar = document.querySelector('.navbar');

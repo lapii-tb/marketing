@@ -10,6 +10,7 @@ var components = [
   '../../components/register.html',
   '../../components/one-api.html',
   '../../components/copyright.html',
+  '../../components/thankyou-popup.html',
 
   // LAYOUT PAGE
   // '../../components/menu.html',

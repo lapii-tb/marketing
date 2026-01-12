@@ -21,6 +21,11 @@ const languages = [
     code: 'zh-CN',
     file: 'index_cn.html',
     locale: loadLocale('zh-CN')
+  },
+  { 
+    code: 'vi-VN',
+    file: 'index_vn.html',
+    locale: loadLocale('vi-VN')
   }
 ];
 

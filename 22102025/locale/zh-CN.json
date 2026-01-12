@@ -165,5 +165,11 @@
   "telegram_handle": "@sbo568winmk",
   "whatsapp_label": "SBO 568Win 营销团队",
   
-  "copyright": "© 2025 by 568Win 提供支持并由 SBOBET 保障"
+  "copyright": "© 2025 by 568Win 提供支持并由 SBOBET 保障",
+
+  "popup_thank_you": "感谢您！",
+  "popup_subtitle": "获取您的即时API启动蓝图",
+  "popup_description": "了解如何立即集成80+供应商。下载完整的技术规格和稳定性路线图。",
+  "popup_download_btn": "获取技术手册",
+  "popup_close_btn": "关闭"
 }

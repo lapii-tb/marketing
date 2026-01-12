@@ -165,5 +165,11 @@
   "telegram_handle": "@sbo568winmk",
   "whatsapp_label": "SBO 568Win Marketing",
   
-  "copyright": "© 2025 by 568Win Powered and secured by SBOBET"
+  "copyright": "© 2025 by 568Win Powered and secured by SBOBET",
+
+  "popup_thank_you": "Thank You!",
+  "popup_subtitle": "Get Your Instant API Launch Blueprint",
+  "popup_description": "See how to integrate 80+ providers TODAY. Download the full technical specs and stability roadmap.",
+  "popup_download_btn": "Get Technical Handbook",
+  "popup_close_btn": "Close"
 }

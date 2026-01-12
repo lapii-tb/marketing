@@ -24,8 +24,13 @@
   function setLanguageText() {
     const path = new URL(document.location.href).pathname;
     const target = path.endsWith('/') ? '' : path.split('/').pop();
-    const langText = target.toLowerCase() === 'index_cn.html' ? '简体中文' : 'ENGLISH';
-    
+    let langText = 'ENGLISH';
+    if (target.toLowerCase() === 'index_cn.html') {
+      langText = '简体中文';
+    } else if (target.toLowerCase() === 'index_vn.html') {
+      langText = 'Tiếng Việt';
+    }
+
     if (language) language.innerHTML = langText;
     if (desktopLanguage) desktopLanguage.innerHTML = langText;
   }
@@ -141,12 +146,24 @@
 
       // Navigate to the appropriate language page
       const currentPath = window.location.pathname;
-      const isEnglish = !currentPath.includes('_cn');
+      let targetPath = currentPath;
 
-      if (lang === 'cn' && isEnglish) {
-        window.location.href = currentPath.replace('index.html', 'index_cn.html').replace(/\/$/, '/index_cn.html');
-      } else if (lang === 'en' && !isEnglish) {
-        window.location.href = currentPath.replace('index_cn.html', 'index.html');
+      // Normalize to base path (remove any language suffix)
+      const basePath = currentPath
+        .replace('index_cn.html', 'index.html')
+        .replace('index_vn.html', 'index.html')
+        .replace(/\/$/, '/index.html');
+
+      if (lang === 'cn') {
+        targetPath = basePath.replace('index.html', 'index_cn.html');
+      } else if (lang === 'vn') {
+        targetPath = basePath.replace('index.html', 'index_vn.html');
+      } else if (lang === 'en') {
+        targetPath = basePath;
+      }
+
+      if (targetPath !== currentPath) {
+        window.location.href = targetPath;
       }
     });
   });

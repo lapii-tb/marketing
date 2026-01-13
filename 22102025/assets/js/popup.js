@@ -50,6 +50,7 @@ dowloadHandbookBtn.addEventListener("click", async () => {
     document.body.removeChild(link);
 
     window.URL.revokeObjectURL(blobUrl);
+    hidePopup();
   } catch (error) {
     console.error("Download failed:", error);
     window.open(pdfUrl, "_blank");

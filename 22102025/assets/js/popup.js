@@ -2,7 +2,6 @@
 const popupElement = document.querySelector(".thank-you-popup");
 
 function showPopup() {
-console.log("show popup");
 if (popupElement) {
     popupElement.classList.add("show");
     document.body.style.overflow = "hidden";

@@ -158,9 +158,16 @@ if (popupElement) {
 
 const dowloadHandbookBtn = document.getElementById('download-handbook');
 const langSelector = document.querySelector('html').getAttribute('lang') || 'en';
+const fileLanguage = (value) => {
+  let __extension = 'en';
+  if (value === 'zh-CN') {
+    __extension = 'cn';
+  }
+}
 dowloadHandbookBtn.addEventListener('click', async () => {
+  const __date = `${new Date().getDate()}${new Date().getMonth()+1}${new Date().getFullYear()}`;
   const pdfUrl = `assets/docs/${langSelector}/handbook.pdf`;
-  const fileName = langSelector === 'zh-CN' ? '2026 585win handbook-cn.pdf' : '2026 585win handbook-en.pdf';
+  const fileName = `${__date} 585win handbook-${fileLanguage(langSelector)}.pdf`;
 
   try {
     const response = await fetch(pdfUrl);

@@ -34,7 +34,7 @@ const langSelector =
 document.querySelector("html").getAttribute("lang") || "en";
 dowloadHandbookBtn.addEventListener("click", async () => {
   const pdfUrl = `assets/docs/${langSelector}/handbook.pdf`;
-  const fileName = `handbook-${new Date().toISOString().split("T")[0]}.pdf`;
+  const fileName = langSelector === 'zh-CN' ? '2026 585win handbook-cn.pdf' : '2026 585win handbook-en.pdf';
 
   try {
     const response = await fetch(pdfUrl);

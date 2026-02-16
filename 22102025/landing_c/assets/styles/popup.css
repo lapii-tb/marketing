@@ -30,7 +30,7 @@
     width: 800px;
     overflow: hidden;
     border: 2px solid transparent;
-    padding: 100px;
+    padding: 75px 100px;
     /* background: linear-gradient(90deg, #1a2f8aeb, #0007A6CC) padding-box, linear-gradient(178deg, #2544D1, transparent, #6C4EF1) border-box; */
     background: linear-gradient(140deg, #2B49DB, #172775) padding-box;
     border-radius: 20px;
@@ -77,6 +77,8 @@
     font-size: 16px;
     font-weight: 500;
     color: #D9D9D9;
+    width: 75%;
+    margin: auto;
 }
 
 .popup-btn {

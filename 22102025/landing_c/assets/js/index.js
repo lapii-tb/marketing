@@ -44,13 +44,22 @@ mobileMenu.querySelectorAll("a").forEach((link) => {
 });
 
 const navbar = document.querySelector(".navbar");
+const isThankYouDialog = localStorage.getItem("thankYouDialog") === '0';
 window.addEventListener("scroll", () => {
   if (window.scrollY > 50) {
     navbar.classList.add("scrolled");
   } else {
     navbar.classList.remove("scrolled");
   }
+  const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+  if (scrollPercentage > 50) {
+    if (isThankYouDialog) {
+      showPopup();
+    }
+    localStorage.setItem("thankYouDialog", "1");
+  }
 });
+setInterval(() => { localStorage.setItem("thankYouDialog", "0"); }, 20 * 60 * 1000);
 
 const targetDate = new Date("2026-06-11T00:00:00").getTime();
 
@@ -141,9 +150,6 @@ function hidePopup() {
   }
 }
 
-const getStartedBtn = document.querySelector('.show-popup-btn');
-getStartedBtn.addEventListener('click', showPopup);
-
 if (popupElement) {
   const closeBtn = popupElement.querySelector('#close-popup-btn');
   closeBtn.addEventListener('click', hidePopup);
@@ -166,7 +172,7 @@ const fileLanguage = (value) => {
 }
 dowloadHandbookBtn.addEventListener('click', async () => {
   const __date = `${new Date().getDate()}${new Date().getMonth()+1}${new Date().getFullYear()}`;
-  const pdfUrl = `assets/docs/${langSelector}/handbook.pdf`;
+  const pdfUrl = `assets/docs/${langSelector === 'zh-CN' ? 'zh-CN' : 'en'}/handbook.pdf`;
   const fileName = `${__date} 585win handbook-${fileLanguage(langSelector)}.pdf`;
 
   try {

@@ -39,7 +39,7 @@ const fileLanguage = (value) => {
 }
 dowloadHandbookBtn.addEventListener("click", async () => {
   const __date = `${new Date().getDate()}${new Date().getMonth()+1}${new Date().getFullYear()}`;
-  const pdfUrl = `assets/docs/${langSelector}/handbook.pdf`;
+  const pdfUrl = `assets/docs/${langSelector === 'zh-CN' ? 'zh-CN' : 'en'}/handbook.pdf`;
   const fileName = `${__date} 585win handbook-${fileLanguage(langSelector)}.pdf`;
 
   try {

@@ -30,12 +30,12 @@ const languages = [
   {
     code: 'th',
     file: 'index_th.html',
-    locale: loadLocale('th')
+    locale: loadLocale('th-TH')
   },
   {
     code: 'id',
     file: 'index_id.html',
-    locale: loadLocale('id')
+    locale: loadLocale('id-ID')
   }
 
 ];

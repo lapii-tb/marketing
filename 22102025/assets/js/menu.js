@@ -1,4 +1,4 @@
-(function() {
+(function () {
   'use strict';
 
   // DOM Elements
@@ -6,15 +6,15 @@
   const mobileMenu = document.querySelector('.mobile-menu');
   const mobileMenuOverlay = document.querySelector('.mobile-menu-overlay');
   const mobileNavItems = document.querySelectorAll('.mobile-nav-item');
-  
+
   // Mobile language elements
   const languageBtn = document.querySelector('.language-btn');
   const languageDropdown = document.querySelector('.language-dropdown');
-  
+
   // Desktop language elements
   const desktopLanguageBtn = document.querySelector('.desktop-language-btn');
   const desktopLanguageDropdown = document.querySelector('.desktop-language-dropdown');
-  
+
   // Language options (both mobile and desktop)
   const languageOptions = document.querySelectorAll('.language-option');
   const language = document.querySelector('.language-text');
@@ -28,7 +28,11 @@
     if (target.toLowerCase() === 'index_cn.html') {
       langText = '简体中文';
     } else if (target.toLowerCase() === 'index_vn.html') {
-      langText = 'Tiếng Việt';
+      langText = 'TIẾNG VIỆT';
+    } else if (target.toLowerCase() === 'index_th.html') {
+      langText = 'ภาษาไทย';
+    } else if (target.toLowerCase() === 'index_id.html') {
+      langText = 'INDONESIA';
     }
 
     if (language) language.innerHTML = langText;
@@ -122,7 +126,7 @@
 
   // Mobile language selector toggle
   if (languageBtn) {
-    languageBtn.addEventListener('click', function(e) {
+    languageBtn.addEventListener('click', function (e) {
       e.stopPropagation();
       toggleMobileLanguageDropdown();
     });
@@ -130,7 +134,7 @@
 
   // Desktop language selector toggle
   if (desktopLanguageBtn) {
-    desktopLanguageBtn.addEventListener('click', function(e) {
+    desktopLanguageBtn.addEventListener('click', function (e) {
       e.stopPropagation();
       toggleDesktopLanguageDropdown();
     });
@@ -138,7 +142,7 @@
 
   // Language option selection
   languageOptions.forEach(option => {
-    option.addEventListener('click', function() {
+    option.addEventListener('click', function () {
       const lang = this.getAttribute('data-lang');
 
       closeMobileLanguageDropdown();
@@ -152,12 +156,18 @@
       const basePath = currentPath
         .replace('index_cn.html', 'index.html')
         .replace('index_vn.html', 'index.html')
+        .replace('index_th.html', 'index.html')
+        .replace('index_id.html', 'index.html')
         .replace(/\/$/, '/index.html');
 
       if (lang === 'cn') {
         targetPath = basePath.replace('index.html', 'index_cn.html');
       } else if (lang === 'vn') {
         targetPath = basePath.replace('index.html', 'index_vn.html');
+      } else if (lang === 'th') {
+        targetPath = basePath.replace('index.html', 'index_th.html');
+      } else if (lang === 'id') {
+        targetPath = basePath.replace('index.html', 'index_id.html');
       } else if (lang === 'en') {
         targetPath = basePath;
       }
@@ -169,22 +179,22 @@
   });
 
   // Close language dropdowns when clicking outside
-  document.addEventListener('click', function(e) {
+  document.addEventListener('click', function (e) {
     // Close mobile dropdown
-    if (languageDropdown && !languageDropdown.contains(e.target) && 
-        languageBtn && !languageBtn.contains(e.target)) {
+    if (languageDropdown && !languageDropdown.contains(e.target) &&
+      languageBtn && !languageBtn.contains(e.target)) {
       closeMobileLanguageDropdown();
     }
-    
+
     // Close desktop dropdown
-    if (desktopLanguageDropdown && !desktopLanguageDropdown.contains(e.target) && 
-        desktopLanguageBtn && !desktopLanguageBtn.contains(e.target)) {
+    if (desktopLanguageDropdown && !desktopLanguageDropdown.contains(e.target) &&
+      desktopLanguageBtn && !desktopLanguageBtn.contains(e.target)) {
       closeDesktopLanguageDropdown();
     }
   });
 
   // Handle escape key
-  document.addEventListener('keydown', function(e) {
+  document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') {
       if (mobileMenu && mobileMenu.classList.contains('active')) {
         closeMobileMenu();
@@ -195,7 +205,7 @@
   });
 
   // Handle resize
-  window.addEventListener('resize', function() {
+  window.addEventListener('resize', function () {
     if (window.innerWidth > 1024 && mobileMenu && mobileMenu.classList.contains('active')) {
       closeMobileMenu();
     }

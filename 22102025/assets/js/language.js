@@ -12,21 +12,32 @@ function loadLocale(langCode) {
 }
 
 const languages = [
-  { 
+  {
     code: 'en',
     file: 'index.html',
     locale: loadLocale('en')
   },
-  { 
+  {
     code: 'zh-CN',
     file: 'index_cn.html',
     locale: loadLocale('zh-CN')
   },
-  { 
+  {
     code: 'vi-VN',
     file: 'index_vn.html',
     locale: loadLocale('vi-VN')
+  },
+  {
+    code: 'th',
+    file: 'index_th.html',
+    locale: loadLocale('th')
+  },
+  {
+    code: 'id',
+    file: 'index_id.html',
+    locale: loadLocale('id')
   }
+
 ];
 
 module.exports = { languages };

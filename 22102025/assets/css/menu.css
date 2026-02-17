@@ -87,6 +87,13 @@
             width: 80%;
           }
 
+          &.start-now,
+          &.btn-contact-us {
+            &:after {
+              display: none;
+            }
+          }
+
           &.start-now {
             background: #ffd700;
             color: #0a1128;
@@ -94,10 +101,6 @@
             border-radius: 6px;
             margin-left: 8px;
             font-weight: 600;
-
-            &:after {
-              display: none;
-            }
 
             &:hover {
               background: #ffed4e;

@@ -30,26 +30,43 @@ if (popupElement) {
   });
 }
 
-// Scroll Trigger Logic
+// Scroll Trigger Logic with 15-minute cooldown
 document.addEventListener("DOMContentLoaded", () => {
-  const riskMarginSection = document.getElementById("risk-margin");
+  const navbar = document.querySelector(".navbar");
+  let lastScrollY = window.scrollY;
+  const COOLDOWN_MS = 15 * 60 * 1000;
 
-  if (riskMarginSection) {
-    const observerOptions = {
-      threshold: 0.3 // Trigger when 30% of the section is visible
-    };
+  window.addEventListener("scroll", () => {
+    const currentScrollY = window.scrollY;
 
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          showPopup();
-          // We don't unobserve so it can trigger again if the user leaves and returns
-        }
-      });
-    }, observerOptions);
+    // Navbar scroll effect
+    if (navbar) {
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    }
 
-    observer.observe(riskMarginSection);
-  }
+    // Popup trigger logic
+    const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercentage = (window.scrollY / scrollHeight) * 100;
+
+    if (scrollPercentage > 50) {
+      const isScrollingDown = currentScrollY > lastScrollY;
+
+      // Check cooldown
+      const lastShown = localStorage.getItem("blueprint_popup_last_shown");
+      const now = Date.now();
+      const isCooldownOver = !lastShown || (now - parseInt(lastShown) > COOLDOWN_MS);
+
+      if (isScrollingDown && isCooldownOver) {
+        showPopup();
+        localStorage.setItem("blueprint_popup_last_shown", now.toString());
+      }
+    }
+    lastScrollY = currentScrollY;
+  });
 });
 
 const dowloadHandbookBtn = document.getElementById("download-handbook");

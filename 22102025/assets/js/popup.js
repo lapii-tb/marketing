@@ -15,7 +15,6 @@ function hidePopup() {
   }
 }
 
-// Keep button click support if any element still has show-popup-btn
 const showPopupBtns = document.querySelectorAll(".show-popup-btn");
 showPopupBtns.forEach(btn => btn.addEventListener("click", showPopup));
 
@@ -31,7 +30,6 @@ if (popupElement) {
 }
 
 // Scroll Trigger Logic with 15-minute cooldown
-document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.querySelector(".navbar");
   let lastScrollY = window.scrollY;
   const COOLDOWN_MS = 15 * 60 * 1000;
@@ -67,7 +65,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     lastScrollY = currentScrollY;
   });
-});
 
 const dowloadHandbookBtn = document.getElementById("download-handbook");
 const langSelector = document.querySelector("html").getAttribute("lang") || "en";

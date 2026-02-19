@@ -44,8 +44,11 @@ mobileMenu.querySelectorAll("a").forEach((link) => {
 });
 
 const navbar = document.querySelector(".navbar");
-const isThankYouDialog = localStorage.getItem("thankYouDialog") === '0';
+let lastScrollY = window.scrollY;
+
 window.addEventListener("scroll", () => {
+  const currentScrollY = window.scrollY;
+
   if (window.scrollY > 50) {
     navbar.classList.add("scrolled");
   } else {
@@ -53,13 +56,17 @@ window.addEventListener("scroll", () => {
   }
   const scrollPercentage = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
   if (scrollPercentage > 50) {
-    if (isThankYouDialog) {
+    const isScrollingDown = currentScrollY > lastScrollY;
+    const shouldShowDialog = localStorage.getItem("thankYouDialog") === null;
+
+    if (isScrollingDown && shouldShowDialog) {
       showPopup();
+      localStorage.setItem("thankYouDialog", "1");
     }
-    localStorage.setItem("thankYouDialog", "1");
   }
+  lastScrollY = currentScrollY;
 });
-setInterval(() => { localStorage.setItem("thankYouDialog", "0"); }, 20 * 60 * 1000);
+setInterval(() => { localStorage.removeItem("thankYouDialog"); }, 15 * 60 * 1000);
 
 const targetDate = new Date("2026-06-11T00:00:00").getTime();
 

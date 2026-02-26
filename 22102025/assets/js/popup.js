@@ -69,10 +69,10 @@ if (popupElement) {
 const dowloadHandbookBtn = document.getElementById("download-handbook");
 const langSelector = document.querySelector("html").getAttribute("lang") || "en";
 const fileLanguage = (value) => {
-  let __extension = 'en';
   if (value === 'zh-CN') {
-    __extension = 'cn';
+    return 'cn';
   }
+  return 'en';
 }
 dowloadHandbookBtn.addEventListener("click", async () => {
   const __date = `${new Date().getDate()}${new Date().getMonth() + 1}${new Date().getFullYear()}`;

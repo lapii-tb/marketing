@@ -239,6 +239,7 @@ img {
 }
 
 .btn-contact-us {
+    white-space: nowrap;
     &.mobile {
         display: none;
         min-width: 100px !important;
@@ -453,7 +454,7 @@ img {
     cursor: pointer;
     transition: all 0.2s ease;
     border: none;
-
+    white-space: nowrap;
 }
 
 .btn:active {
@@ -1399,6 +1400,12 @@ img {
 .btn-mobile-section {
     margin: 16px auto;
     display: none;
+    text-align: center;
+}
+
+.btn-mobile-section .btn {
+    display: inline-flex;
+    width: auto;
 }
 
 
@@ -1558,6 +1565,7 @@ img {
 
     .btn-contact-us.mobile {
         display: block;
+        white-space: nowrap;
     }
     .nav-bar-menu {
         gap: 15px !important;
@@ -1586,11 +1594,10 @@ img {
     }
     .btn {
         height: 40px !important;
-        width: 200px !important;
+        width: auto !important;
         display: flex;
         justify-content: center;
-        align-items: center;
-        margin: auto;
+        white-space: nowrap;
     }
 
     .hero-player {
@@ -1672,8 +1679,8 @@ img {
     }
 
     .hero-buttons .btn {
-        width: 100%;
-        max-width: 160px;
+        width: auto;
+        align-self: center;
     }
 
     /* Features Section Mobile */
@@ -1723,8 +1730,9 @@ img {
     }
 
     .features-content .btn {
-        width: 200px;
+        width: auto;
         margin: auto;
+        display: inline-flex;
     }
 
      .features-content > h2 {
@@ -2006,12 +2014,11 @@ img {
 
     .providers-buttons .btn {
         height: 40px;
-        padding: 0;
+        padding: 0 28px;
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 100%;
-        max-width: 200px;
+        width: auto;
     }
 
     /* Footer Mobile */

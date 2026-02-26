@@ -169,18 +169,27 @@ if (popupElement) {
 }
 
 
-const dowloadHandbookBtn = document.getElementById('download-handbook');
+const downloadHandbookBtns = document.querySelectorAll('#download-handbook');
 const langSelector = document.querySelector('html').getAttribute('lang') || 'en';
-const fileLanguage = (value) => {
-  let __extension = 'en';
-  if (value === 'zh-CN') {
-    __extension = 'cn';
-  }
+
+const langToFolder = { 'zh-CN': 'zh-CN' };
+const langToLabel = { 'zh-CN': 'cn' };
+
+function getPdfUrl() {
+  return `assets/docs/${langToFolder[langSelector] || 'en'}/handbook.pdf`;
 }
-dowloadHandbookBtn.addEventListener('click', async () => {
-  const __date = `${new Date().getDate()}${new Date().getMonth()+1}${new Date().getFullYear()}`;
-  const pdfUrl = `assets/docs/${langSelector === 'zh-CN' ? 'zh-CN' : 'en'}/handbook.pdf`;
-  const fileName = `${__date} 585win handbook-${fileLanguage(langSelector)}.pdf`;
+
+function getFileName() {
+  const d = new Date();
+  const __date = `${d.getDate()}${d.getMonth() + 1}${d.getFullYear()}`;
+  const label = langToLabel[langSelector] || 'en';
+  return `${__date} 585win handbook-${label}.pdf`;
+}
+
+async function handleDownload(e) {
+  e.preventDefault();
+  const pdfUrl = getPdfUrl();
+  const fileName = getFileName();
 
   try {
     const response = await fetch(pdfUrl);
@@ -200,4 +209,6 @@ dowloadHandbookBtn.addEventListener('click', async () => {
     console.error('Download failed:', error);
     window.open(pdfUrl, '_blank');
   }
-});
+}
+
+downloadHandbookBtns.forEach(btn => btn.addEventListener('click', handleDownload));

@@ -1671,16 +1671,16 @@ img {
     }
 
     .hero-buttons {
-        justify-content: center;
+        justify-content: start;
         flex-direction: column;
-        align-items: center;
+        align-items: flex-start;
         gap: 12px;
         /* z-index: 20; */
     }
 
     .hero-buttons .btn {
         width: auto;
-        align-self: center;
+        align-self: flex-start;
     }
 
     /* Features Section Mobile */

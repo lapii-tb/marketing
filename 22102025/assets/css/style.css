@@ -116,3 +116,24 @@ body {
     background:#2B49DB;
   }
 }
+
+.btn-tooltip {
+  position: relative;
+}
+.btn-tooltip::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 5px;
+  bottom: -40px;
+  font-size: 14px;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 768px) {
+  .btn-tooltip::after {
+    left: 0;
+    right: 0;
+    bottom: -25px;
+    font-size: 12px;
+  }
+}

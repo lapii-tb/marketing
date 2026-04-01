@@ -19,7 +19,7 @@
     }
   }
   .banner-content {
-    max-width: 875px;
+    /* max-width: 875px; */
     position: absolute;
     text-align: center;
     color: #fff;

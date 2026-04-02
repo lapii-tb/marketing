@@ -123,8 +123,9 @@ body {
 .btn-tooltip::after {
   content: attr(data-tooltip);
   position: absolute;
-  left: 5px;
-  bottom: -40px;
+  left: 0;
+  right: 0;
+  top: 90%;
   font-size: 14px;
   font-weight: normal;
 }
@@ -133,7 +134,7 @@ body {
   .btn-tooltip::after {
     left: 0;
     right: 0;
-    bottom: -25px;
+    top: 70%;
     font-size: 12px;
   }
 }

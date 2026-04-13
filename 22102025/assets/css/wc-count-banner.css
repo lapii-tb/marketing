@@ -1,6 +1,6 @@
 .banner-container {
   width: 100%;
-  aspect-ratio: 1440 / 800;
+  aspect-ratio: 1440 / 720;
   overflow: hidden;
   display: flex;
   justify-content: center;
@@ -81,7 +81,7 @@
 
 @media screen and (max-width: 1024px) {
   .banner-container {
-    height: 746px;
+    height: 680px;
     aspect-ratio: 180/373;
 
     .banner-content {

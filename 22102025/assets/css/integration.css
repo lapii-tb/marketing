@@ -82,6 +82,7 @@
   font-weight: 500;
   margin-bottom: 28px;
   backdrop-filter: blur(12px);
+  width: fit-content;
 }
 
 .developer-card .integration-pill {

@@ -89,8 +89,8 @@
 
 @media screen and (max-width: 1024px) {
   .banner-container {
-    height: min(720px, calc(100vh - 72px));
-    min-height: 660px;
+    height: min(460px, calc(100vh - 72px));
+    min-height: 420px;
 
     .banner-content {
       width: 320px;
@@ -100,18 +100,7 @@
         gap: unset !important;
         margin-bottom: 20px;
 
-        .days {
-          width: 100%;
-
-          label {
-            color: #FFF;
-            text-align: center;
-            font-size: 12px !important;
-            font-weight: 300 !important;
-            line-height: normal !important;
-          }
-        }
-        .hours, .minutes, .seconds {
+        .days, .hours, .minutes, .seconds {
           text-align: center;
           height: 70px;
 
@@ -127,8 +116,11 @@
             line-height: 42px !important;
           }
         }
+        .hours {
+          margin: 0 16px 0 32px;
+        }
         .minutes {
-          margin: 0 32px;
+          margin: 0 32px 0 16px;
         }
       }
 
@@ -162,8 +154,8 @@
 
 @media screen and (max-width: 768px) {
   .banner-container {
-    height: min(720px, calc(100svh - 70px));
-    min-height: 700px;
+    height: min(460px, calc(100svh - 70px));
+    min-height: 420px;
 
     .banner-content {
       width: 320px;
@@ -171,11 +163,7 @@
       .countdown-plate-container {
         margin-bottom: 10px;
 
-        .days {
-          margin-bottom: 8px;
-        }
-
-        .hours, .minutes, .seconds {
+        .days, .hours, .minutes, .seconds {
           height: 58px;
         }
       }
@@ -201,7 +189,7 @@
         margin-top: 20px !important;
         height: auto !important;
         gap: 24px;
-        padding-bottom: 34px;
+        padding-bottom: 0;
       }
     }
   }
